@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "id": "ring8",
+  "title": "Ring-8 exhaustive correctness benchmark",
+  "adapter": "mfobs.models.ring:Adapter",
+  "rules": [
+    {
+      "id": "basal_bind",
+      "file": "rules/basal_bind.gml",
+      "rate": "k_on",
+      "per_match": "1",
+      "kind": "abstract"
+    },
+    {
+      "id": "cooperative_bind",
+      "file": "rules/cooperative_bind.gml",
+      "rate": "k_coop",
+      "per_match": "1",
+      "kind": "abstract"
+    },
+    {
+      "id": "unbind",
+      "file": "rules/unbind.gml",
+      "rate": "k_off",
+      "per_match": "1",
+      "kind": "abstract"
+    }
+  ],
+  "observables": [
+    {
+      "id": "P0",
+      "file": "observables/occupied.gml"
+    }
+  ],
+  "initial_observables": [
+    "P0"
+  ],
+  "composition": {
+    "mode": "public",
+    "connected": true,
+    "include_empty": false
+  },
+  "forbidden": null,
+  "state_language": "state-language.json",
+  "reduction": "reduction.json",
+  "normalisation": {},
+  "initial_state": {
+    "bits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "parameters": "parameters.json",
+  "reference": "expected.json"
+}

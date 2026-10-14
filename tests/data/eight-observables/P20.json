@@ -1,0 +1,50 @@
+[
+  {
+    "coefficient": "1",
+    "file": "P20-0.gml"
+  },
+  {
+    "coefficient": "-1",
+    "file": "P20-1.gml"
+  },
+  {
+    "coefficient": "2",
+    "file": "P20-2.gml"
+  },
+  {
+    "coefficient": "-2",
+    "file": "P20-3.gml"
+  },
+  {
+    "coefficient": "2",
+    "file": "P20-4.gml"
+  },
+  {
+    "coefficient": "2",
+    "file": "P20-5.gml"
+  },
+  {
+    "coefficient": "2",
+    "file": "P20-6.gml"
+  },
+  {
+    "coefficient": "2",
+    "file": "P20-7.gml"
+  },
+  {
+    "coefficient": "2",
+    "file": "P20-8.gml"
+  },
+  {
+    "coefficient": "2",
+    "file": "P20-9.gml"
+  },
+  {
+    "coefficient": "-1",
+    "file": "P20-10.gml"
+  },
+  {
+    "coefficient": "2",
+    "file": "P20-11.gml"
+  }
+]

@@ -1,0 +1,137 @@
+[
+  {
+    "id": "tutorial",
+    "title": "Graph tutorial",
+    "script": "graph_closure_tutorial",
+    "notebook": null,
+    "sources": {
+      "counting": "src/mfobs/backends/simple_graphs.py"
+    },
+    "scope": "Inline GML and explicit calls to Algorithms 1 and 2."
+  },
+  {
+    "id": "aba",
+    "title": "ABA: growing paths",
+    "script": "aba_analysis",
+    "notebook": "02_aba",
+    "sources": {
+      "inputs": "src/mfobs/models/aba/inputs.py",
+      "counting": "src/mfobs/models/aba/counting.py",
+      "events": "src/mfobs/models/aba/events.py"
+    },
+    "scope": "Typed-path ABA model with an optional missing-edge gate. Polynomial jump closure does not imply a finite expectation ODE."
+  },
+  {
+    "id": "rop",
+    "title": "Molecular ROP",
+    "script": "rop_analysis",
+    "notebook": "07_molecular_rop",
+    "sources": {
+      "inputs": "src/mfobs/models/molecular_rop/inputs.py",
+      "counting": "src/mfobs/models/molecular_rop/counting.py",
+      "events": "src/mfobs/models/molecular_rop/events.py"
+    },
+    "scope": "Atom-resolved lactone ROP with the ABA query and no gate. The existing constructor language and counting assumptions are part of the backend."
+  },
+  {
+    "id": "tcs",
+    "title": "TCS: aldol composition",
+    "script": "aldol_analysis",
+    "notebook": "01_aldol",
+    "sources": {
+      "inputs": "examples/tcs/aldol.gml",
+      "counting": "examples/tcs/inputs.py"
+    },
+    "scope": "Conditional aldol composition; selected local overlap, not closure or a full chemical CTMC."
+  },
+  {
+    "id": "chlorination",
+    "title": "Chlorination with a NAC",
+    "script": "chlorination_analysis",
+    "notebook": "03_chlorination",
+    "sources": {
+      "inputs": "src/mfobs/models/chlorination/inputs.py",
+      "counting": "src/mfobs/models/chlorination/counting.py",
+      "events": "src/mfobs/models/chlorination/events.py"
+    },
+    "scope": "Single-site chlorination with and without the neighbour NAC, on the unbounded-tail family."
+  },
+  {
+    "id": "remy",
+    "title": "Rémy trees",
+    "script": "remy_analysis",
+    "notebook": "04_remy",
+    "sources": {
+      "inputs": "src/mfobs/models/remy/inputs.py",
+      "counting": "src/mfobs/models/remy/counting.py",
+      "events": "src/mfobs/models/remy/events.py"
+    },
+    "scope": "Rooted planar trees; DPO projection with the checked valid-tree counting reduction."
+  },
+  {
+    "id": "eight-sites",
+    "title": "Eight sites",
+    "script": "eight_slots_analysis",
+    "notebook": "05_eight_slots",
+    "sources": {
+      "inputs": "examples/eight-slots/model.json",
+      "counting": "src/mfobs/models/eight_slots.py",
+      "events": "src/mfobs/models/eight_slots_common.py"
+    },
+    "scope": "Fresh symbolic synthesis for eight sites, with connected and disconnected topologies."
+  },
+  {
+    "id": "dna-walker",
+    "title": "DNA walker",
+    "script": "dna_walker_inspection",
+    "notebook": "06_dna_walker",
+    "sources": {
+      "inputs": "src/mfobs/models/dna_walker/inputs.py",
+      "counting": "src/mfobs/models/dna_walker/counting.py"
+    },
+    "scope": "Fresh closure synthesis from the four original graph rules and one query."
+  },
+  {
+    "id": "query-variation",
+    "title": "ABA: five queries",
+    "script": "query_variation_analysis",
+    "notebook": "08_query_variation",
+    "sources": {
+      "inputs": "src/mfobs/models/aba/inputs.py",
+      "counting": "src/mfobs/models/aba/counting.py",
+      "events": "src/mfobs/models/aba/events.py"
+    },
+    "scope": "Five motifs with fixed ungated typed-path rules and explicit search budgets."
+  },
+  {
+    "id": "comparison",
+    "title": "FRAGGER comparison",
+    "script": "composition_comparison_inspection",
+    "notebook": "09_composition_comparison",
+    "sources": {},
+    "scope": "Read retained A/B benchmark measurements. This does not rerun either benchmark or establish equality of all composite expressions."
+  },
+  {
+    "id": "brusselator",
+    "title": "Brusselator–ROP",
+    "script": "brusselator_analysis",
+    "notebook": "10_brusselator",
+    "sources": {
+      "inputs": "src/mfobs/models/brusselator_growth_chemistry.py",
+      "counting": "src/mfobs/models/brusselator_growth_projection.py",
+      "events": "src/mfobs/models/brusselator_pjc.py"
+    },
+    "scope": "Exact event analysis. Oscillatory macroscopic dynamics in the full notebook are a separate approximation."
+  },
+  {
+    "id": "growing-ring",
+    "title": "Growing ring",
+    "script": "growing_ring_analysis",
+    "notebook": "11_growing_ring",
+    "sources": {
+      "inputs": "examples/structural-nac-oscillator/model.json",
+      "counting": "src/mfobs/models/structural_nac_words.py"
+    },
+    "scope": "Bounded exact search on an unbounded ring language. A budget stop is not a non-closure proof; R1 dynamics are a separate approximation."
+  }
+]

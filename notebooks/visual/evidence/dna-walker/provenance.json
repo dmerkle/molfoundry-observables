@@ -1,0 +1,18 @@
+{
+  "manuscript_base": "803e59fd862b884ee74d1b026e978033a8ff12a1",
+  "fragger_core": "0d9595c5d6e8918fc605f7d65778568a74f5e2d4",
+  "fragger_audit_commit": "ab432a9d6c48d05d6bc758621bb370aaedf660d0",
+  "fragger_workflow_run": 35866705340,
+  "fragger_job": 107200017997,
+  "fragger_upstream_src_main_dirty": false,
+  "executed_harness_sha256": {
+    "DnaWalkerHarness.scala": "2d29c2c1c76b361c5f23b6f915313d7632bdd6b8ca052737a578c76a7b55b3dc",
+    "DnaWalkerIncidenceHarness.scala": "6342f70d0bc4185141ba3e1dc603ad3000816ff87bde5999fb20f8be277ca358"
+  },
+  "molfoundry_execution": "fresh local Python 3.13.5 Linux execution with uploaded pinned wheel; 42 installed package files verified against wheel",
+  "molfoundry_engine_modified": false,
+  "comparison_driver_sha256": "69a2918729468d087c2814ef566bc13ece5fb1e249ea44dc1b3ae14404735058",
+  "regression_tests": 17,
+  "test_status": "PASS",
+  "scope": "DNA-walker comparison only; no general benchmark, Docker profile or molecular-pruning rerun"
+}

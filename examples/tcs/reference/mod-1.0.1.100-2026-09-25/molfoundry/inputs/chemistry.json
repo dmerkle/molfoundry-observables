@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "atom_labels": ["H", "C", "O"],
+  "bond_orders": {"-": 1, "=": 2, "#": 3},
+  "max_valence": {"H": 1, "C": 4, "O": 2},
+  "rule_constraints": {
+    "balanced_atom_valence": true,
+    "maximum_atom_valence": true
+  },
+  "reported_constraints": {
+    "C1": {
+      "kind": "incident_edge_count",
+      "center_label": "C",
+      "edge_label": "=",
+      "minimum": 2,
+      "description": "a carbon has at least two incident double bonds"
+    },
+    "C2": {
+      "kind": "neighbour_label_count",
+      "center_label": "C",
+      "neighbour_label": "O",
+      "minimum": 2,
+      "description": "a carbon has more than one oxygen neighbour"
+    }
+  }
+}

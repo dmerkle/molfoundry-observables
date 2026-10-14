@@ -1,0 +1,46 @@
+[
+  {
+    "coefficient": "2",
+    "file": "P13-0.gml"
+  },
+  {
+    "coefficient": "-2",
+    "file": "P13-1.gml"
+  },
+  {
+    "coefficient": "-1",
+    "file": "P13-2.gml"
+  },
+  {
+    "coefficient": "-2",
+    "file": "P13-3.gml"
+  },
+  {
+    "coefficient": "-2",
+    "file": "P13-4.gml"
+  },
+  {
+    "coefficient": "2",
+    "file": "P13-5.gml"
+  },
+  {
+    "coefficient": "1",
+    "file": "P13-6.gml"
+  },
+  {
+    "coefficient": "1",
+    "file": "P13-7.gml"
+  },
+  {
+    "coefficient": "-1",
+    "file": "P13-8.gml"
+  },
+  {
+    "coefficient": "-1",
+    "file": "P13-9.gml"
+  },
+  {
+    "coefficient": "-1",
+    "file": "P13-10.gml"
+  }
+]

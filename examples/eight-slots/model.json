@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "eight_slots_all_topologies",
+  "title": "Eight locally owned slots, degree two, all compatible topologies",
+  "adapter": "mfobs.models.eight_slots:Adapter",
+  "rules": [
+    {"id": "basal_bind", "file": "../ring8/rules/basal_bind.gml", "rate": "k_on", "per_match": "1", "kind": "abstract"},
+    {"id": "cooperative_bind", "file": "../ring8/rules/cooperative_bind.gml", "rate": "k_coop", "per_match": "1", "kind": "abstract"},
+    {"id": "unbind", "file": "../ring8/rules/unbind.gml", "rate": "k_off", "per_match": "1", "kind": "abstract"}
+  ],
+  "observables": [{"id": "P0", "file": "../ring8/observables/occupied.gml"}],
+  "initial_observables": ["P0"],
+  "composition": {"mode": "public", "connected": false, "include_empty": true},
+  "forbidden": null,
+  "state_language": "invariants.json",
+  "reduction": "reduction.json",
+  "normalisation": {},
+  "initial_state": {},
+  "parameters": null,
+  "reference": null
+}

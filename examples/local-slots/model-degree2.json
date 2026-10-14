@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "local_slots_degree2",
+  "title": "Local slot invariants without finite-state reduction: degree2",
+  "adapter": "mfobs.models.local_slots:Adapter",
+  "rules": [
+    {
+      "id": "basal_bind",
+      "file": "../ring8/rules/basal_bind.gml",
+      "rate": "k_on",
+      "per_match": "1",
+      "kind": "abstract"
+    },
+    {
+      "id": "cooperative_bind",
+      "file": "../ring8/rules/cooperative_bind.gml",
+      "rate": "k_coop",
+      "per_match": "1",
+      "kind": "abstract"
+    },
+    {
+      "id": "unbind",
+      "file": "../ring8/rules/unbind.gml",
+      "rate": "k_off",
+      "per_match": "1",
+      "kind": "abstract"
+    }
+  ],
+  "observables": [
+    {
+      "id": "P0",
+      "file": "../ring8/observables/occupied.gml"
+    }
+  ],
+  "initial_observables": [
+    "P0"
+  ],
+  "composition": {
+    "mode": "public",
+    "connected": false,
+    "include_empty": true
+  },
+  "forbidden": null,
+  "state_language": "degree2-invariants.json",
+  "reduction": "reduction.json",
+  "normalisation": {},
+  "initial_state": {},
+  "parameters": null,
+  "reference": null
+}

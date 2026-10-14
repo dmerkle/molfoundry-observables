@@ -1,0 +1,816 @@
+{
+  "version": "1.0.1.100",
+  "source_path": "/tmp/21_tcs/calc.py",
+  "source_sha256": "6b034d023e555d69ab29106eab42fd7d1c3de31a7e9836c3e31d0945360c022d",
+  "method": "Original script with result-handler wrapper for export only; original match printing and evaluator order preserved. Plain rule equality checked with MOD Rule.isomorphism after all runs.",
+  "records": [
+    {
+      "name": "plain-boost",
+      "useBoostCommonSubgraph": true,
+      "colon_encoding": false,
+      "inputs": {
+        "identity": "identity.gml",
+        "reaction": "reaction.gml"
+      },
+      "orders": {
+        "before": {
+          "accepted": 18,
+          "rejected": 104
+        },
+        "after": {
+          "accepted": 9,
+          "rejected": 71
+        }
+      },
+      "rows": [
+        {
+          "id": 187,
+          "name": "'r_{187}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r187.gml",
+          "isomorphic_molfoundry_classes": [
+            "r185"
+          ]
+        },
+        {
+          "id": 91,
+          "name": "'r_{91}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r91.gml",
+          "isomorphic_molfoundry_classes": [
+            "r89"
+          ]
+        },
+        {
+          "id": 20,
+          "name": "'r_{20}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r20.gml",
+          "isomorphic_molfoundry_classes": [
+            "r18"
+          ]
+        },
+        {
+          "id": 109,
+          "name": "'r_{109}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r109.gml",
+          "isomorphic_molfoundry_classes": [
+            "r107"
+          ]
+        },
+        {
+          "id": 2,
+          "name": "'r_{2}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r2.gml",
+          "isomorphic_molfoundry_classes": [
+            "r+"
+          ]
+        },
+        {
+          "id": 44,
+          "name": "'r_{44}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r44.gml",
+          "isomorphic_molfoundry_classes": [
+            "r42"
+          ]
+        },
+        {
+          "id": 49,
+          "name": "'r_{49}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r49.gml",
+          "isomorphic_molfoundry_classes": [
+            "r47"
+          ]
+        },
+        {
+          "id": 96,
+          "name": "'r_{96}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r96.gml",
+          "isomorphic_molfoundry_classes": [
+            "r94"
+          ]
+        },
+        {
+          "id": 4,
+          "name": "'r_{4}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r4.gml",
+          "isomorphic_molfoundry_classes": [
+            "r2"
+          ]
+        },
+        {
+          "id": 9,
+          "name": "'r_{9}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r9.gml",
+          "isomorphic_molfoundry_classes": [
+            "r7"
+          ]
+        },
+        {
+          "id": 75,
+          "name": "'r_{75}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r75.gml",
+          "isomorphic_molfoundry_classes": [
+            "r73"
+          ]
+        },
+        {
+          "id": 81,
+          "name": "'r_{81}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r81.gml",
+          "isomorphic_molfoundry_classes": [
+            "r79"
+          ]
+        },
+        {
+          "id": 31,
+          "name": "'r_{31}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r31.gml",
+          "isomorphic_molfoundry_classes": [
+            "r29"
+          ]
+        },
+        {
+          "id": 182,
+          "name": "'r_{182}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r182.gml",
+          "isomorphic_molfoundry_classes": [
+            "r180"
+          ]
+        },
+        {
+          "id": 14,
+          "name": "'r_{14}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r14.gml",
+          "isomorphic_molfoundry_classes": [
+            "r12"
+          ]
+        },
+        {
+          "id": 70,
+          "name": "'r_{70}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r70.gml",
+          "isomorphic_molfoundry_classes": [
+            "r68"
+          ]
+        },
+        {
+          "id": 122,
+          "name": "'r_{122}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r122.gml",
+          "isomorphic_molfoundry_classes": [
+            "r120"
+          ]
+        },
+        {
+          "id": 193,
+          "name": "'r_{193}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r193.gml",
+          "isomorphic_molfoundry_classes": [
+            "r191"
+          ]
+        },
+        {
+          "id": 236,
+          "name": "'r_{236}'",
+          "before": 0,
+          "after": 1,
+          "gml": "r236.gml",
+          "isomorphic_molfoundry_classes": [
+            "r234"
+          ]
+        },
+        {
+          "id": 260,
+          "name": "'r_{260}'",
+          "before": 0,
+          "after": 1,
+          "gml": "r260.gml",
+          "isomorphic_molfoundry_classes": [
+            "r258"
+          ]
+        },
+        {
+          "id": 254,
+          "name": "'r_{254}'",
+          "before": 0,
+          "after": 1,
+          "gml": "r254.gml",
+          "isomorphic_molfoundry_classes": [
+            "r252"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "plain-complete",
+      "useBoostCommonSubgraph": false,
+      "colon_encoding": false,
+      "inputs": {
+        "identity": "identity.gml",
+        "reaction": "reaction.gml"
+      },
+      "orders": {
+        "before": {
+          "accepted": 18,
+          "rejected": 318
+        },
+        "after": {
+          "accepted": 13,
+          "rejected": 275
+        }
+      },
+      "rows": [
+        {
+          "id": 14,
+          "name": "'r_{14}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r14.gml",
+          "isomorphic_molfoundry_classes": [
+            "r12"
+          ]
+        },
+        {
+          "id": 81,
+          "name": "'r_{81}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r81.gml",
+          "isomorphic_molfoundry_classes": [
+            "r79"
+          ]
+        },
+        {
+          "id": 2,
+          "name": "'r_{2}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r2.gml",
+          "isomorphic_molfoundry_classes": [
+            "r+"
+          ]
+        },
+        {
+          "id": 20,
+          "name": "'r_{20}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r20.gml",
+          "isomorphic_molfoundry_classes": [
+            "r18"
+          ]
+        },
+        {
+          "id": 91,
+          "name": "'r_{91}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r91.gml",
+          "isomorphic_molfoundry_classes": [
+            "r89"
+          ]
+        },
+        {
+          "id": 9,
+          "name": "'r_{9}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r9.gml",
+          "isomorphic_molfoundry_classes": [
+            "r7"
+          ]
+        },
+        {
+          "id": 49,
+          "name": "'r_{49}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r49.gml",
+          "isomorphic_molfoundry_classes": [
+            "r47"
+          ]
+        },
+        {
+          "id": 70,
+          "name": "'r_{70}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r70.gml",
+          "isomorphic_molfoundry_classes": [
+            "r68"
+          ]
+        },
+        {
+          "id": 75,
+          "name": "'r_{75}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r75.gml",
+          "isomorphic_molfoundry_classes": [
+            "r73"
+          ]
+        },
+        {
+          "id": 122,
+          "name": "'r_{122}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r122.gml",
+          "isomorphic_molfoundry_classes": [
+            "r120"
+          ]
+        },
+        {
+          "id": 96,
+          "name": "'r_{96}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r96.gml",
+          "isomorphic_molfoundry_classes": [
+            "r94"
+          ]
+        },
+        {
+          "id": 44,
+          "name": "'r_{44}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r44.gml",
+          "isomorphic_molfoundry_classes": [
+            "r42"
+          ]
+        },
+        {
+          "id": 109,
+          "name": "'r_{109}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r109.gml",
+          "isomorphic_molfoundry_classes": [
+            "r107"
+          ]
+        },
+        {
+          "id": 31,
+          "name": "'r_{31}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r31.gml",
+          "isomorphic_molfoundry_classes": [
+            "r29"
+          ]
+        },
+        {
+          "id": 182,
+          "name": "'r_{182}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r182.gml",
+          "isomorphic_molfoundry_classes": [
+            "r180"
+          ]
+        },
+        {
+          "id": 4,
+          "name": "'r_{4}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r4.gml",
+          "isomorphic_molfoundry_classes": [
+            "r2"
+          ]
+        },
+        {
+          "id": 187,
+          "name": "'r_{187}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r187.gml",
+          "isomorphic_molfoundry_classes": [
+            "r185"
+          ]
+        },
+        {
+          "id": 193,
+          "name": "'r_{193}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r193.gml",
+          "isomorphic_molfoundry_classes": [
+            "r191"
+          ]
+        },
+        {
+          "id": 236,
+          "name": "'r_{236}'",
+          "before": 0,
+          "after": 1,
+          "gml": "r236.gml",
+          "isomorphic_molfoundry_classes": [
+            "r234"
+          ]
+        },
+        {
+          "id": 254,
+          "name": "'r_{254}'",
+          "before": 0,
+          "after": 1,
+          "gml": "r254.gml",
+          "isomorphic_molfoundry_classes": [
+            "r252"
+          ]
+        },
+        {
+          "id": 260,
+          "name": "'r_{260}'",
+          "before": 0,
+          "after": 1,
+          "gml": "r260.gml",
+          "isomorphic_molfoundry_classes": [
+            "r258"
+          ]
+        },
+        {
+          "id": 978,
+          "name": "'r_{978}'",
+          "before": 0,
+          "after": 1,
+          "gml": "r978.gml",
+          "isomorphic_molfoundry_classes": [
+            "new-f7c8786fa6b1"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "encoded-noedge-boost",
+      "useBoostCommonSubgraph": true,
+      "colon_encoding": true,
+      "inputs": {
+        "identity": "identity.gml",
+        "reaction": "reaction.gml"
+      },
+      "orders": {
+        "before": {
+          "accepted": 16,
+          "rejected": 90
+        },
+        "after": {
+          "accepted": 8,
+          "rejected": 66
+        }
+      },
+      "rows": [
+        {
+          "id": 3,
+          "name": "'r_{3}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r3.gml"
+        },
+        {
+          "id": 1072,
+          "name": "'r_{1072}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1072.gml"
+        },
+        {
+          "id": 1133,
+          "name": "'r_{1133}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1133.gml"
+        },
+        {
+          "id": 1078,
+          "name": "'r_{1078}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1078.gml"
+        },
+        {
+          "id": 1102,
+          "name": "'r_{1102}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1102.gml"
+        },
+        {
+          "id": 1107,
+          "name": "'r_{1107}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1107.gml"
+        },
+        {
+          "id": 1067,
+          "name": "'r_{1067}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r1067.gml"
+        },
+        {
+          "id": 1155,
+          "name": "'r_{1155}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r1155.gml"
+        },
+        {
+          "id": 1143,
+          "name": "'r_{1143}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1143.gml"
+        },
+        {
+          "id": 1128,
+          "name": "'r_{1128}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1128.gml"
+        },
+        {
+          "id": 1232,
+          "name": "'r_{1232}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1232.gml"
+        },
+        {
+          "id": 1167,
+          "name": "'r_{1167}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1167.gml"
+        },
+        {
+          "id": 1089,
+          "name": "'r_{1089}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1089.gml"
+        },
+        {
+          "id": 1247,
+          "name": "'r_{1247}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r1247.gml"
+        },
+        {
+          "id": 1237,
+          "name": "'r_{1237}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r1237.gml"
+        },
+        {
+          "id": 1062,
+          "name": "'r_{1062}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r1062.gml"
+        },
+        {
+          "id": 1310,
+          "name": "'r_{1310}'",
+          "before": 0,
+          "after": 1,
+          "gml": "r1310.gml"
+        },
+        {
+          "id": 1365,
+          "name": "'r_{1365}'",
+          "before": 0,
+          "after": 1,
+          "gml": "r1365.gml"
+        },
+        {
+          "id": 1316,
+          "name": "'r_{1316}'",
+          "before": 0,
+          "after": 1,
+          "gml": "r1316.gml"
+        }
+      ]
+    },
+    {
+      "name": "encoded-noedge-complete",
+      "useBoostCommonSubgraph": false,
+      "colon_encoding": true,
+      "inputs": {
+        "identity": "identity.gml",
+        "reaction": "reaction.gml"
+      },
+      "orders": {
+        "before": {
+          "accepted": 18,
+          "rejected": 287
+        },
+        "after": {
+          "accepted": 10,
+          "rejected": 211
+        }
+      },
+      "rows": [
+        {
+          "id": 1078,
+          "name": "'r_{1078}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1078.gml"
+        },
+        {
+          "id": 1067,
+          "name": "'r_{1067}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r1067.gml"
+        },
+        {
+          "id": 1107,
+          "name": "'r_{1107}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1107.gml"
+        },
+        {
+          "id": 1232,
+          "name": "'r_{1232}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1232.gml"
+        },
+        {
+          "id": 1089,
+          "name": "'r_{1089}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1089.gml"
+        },
+        {
+          "id": 1128,
+          "name": "'r_{1128}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1128.gml"
+        },
+        {
+          "id": 1247,
+          "name": "'r_{1247}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r1247.gml"
+        },
+        {
+          "id": 3,
+          "name": "'r_{3}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r3.gml"
+        },
+        {
+          "id": 1133,
+          "name": "'r_{1133}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1133.gml"
+        },
+        {
+          "id": 1072,
+          "name": "'r_{1072}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1072.gml"
+        },
+        {
+          "id": 1143,
+          "name": "'r_{1143}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1143.gml"
+        },
+        {
+          "id": 1511,
+          "name": "'r_{1511}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1511.gml"
+        },
+        {
+          "id": 1506,
+          "name": "'r_{1506}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1506.gml"
+        },
+        {
+          "id": 1102,
+          "name": "'r_{1102}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1102.gml"
+        },
+        {
+          "id": 1155,
+          "name": "'r_{1155}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r1155.gml"
+        },
+        {
+          "id": 1062,
+          "name": "'r_{1062}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r1062.gml"
+        },
+        {
+          "id": 1167,
+          "name": "'r_{1167}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1167.gml"
+        },
+        {
+          "id": 1237,
+          "name": "'r_{1237}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r1237.gml"
+        },
+        {
+          "id": 1365,
+          "name": "'r_{1365}'",
+          "before": 0,
+          "after": 1,
+          "gml": "r1365.gml"
+        },
+        {
+          "id": 1919,
+          "name": "'r_{1919}'",
+          "before": 0,
+          "after": 1,
+          "gml": "r1919.gml"
+        },
+        {
+          "id": 1310,
+          "name": "'r_{1310}'",
+          "before": 0,
+          "after": 1,
+          "gml": "r1310.gml"
+        },
+        {
+          "id": 1316,
+          "name": "'r_{1316}'",
+          "before": 0,
+          "after": 1,
+          "gml": "r1316.gml"
+        },
+        {
+          "id": 2032,
+          "name": "'r_{2032}'",
+          "before": 0,
+          "after": 1,
+          "gml": "r2032.gml"
+        }
+      ]
+    }
+  ]
+}

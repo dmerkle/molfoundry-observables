@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "observables": [
+    {
+      "name": "P3",
+      "terms": [
+        {"file": "observables/P3-I.gml"},
+        {"file": "observables/P3-L.gml"},
+        {"file": "observables/P3-R.gml"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "provenance": "Retained upstream tree-feasibility result; validation only",
+  "scope": "Bounded independent direct Remy-event check and exact linear recovery; no MolFoundry rule composition and no all-size proof.",
+  "maximum_source_internal_nodes": 8,
+  "maximum_target_internal_nodes": 9,
+  "source_trees": 2056,
+  "rewrite_events_counting_multiplicity": 66196,
+  "observables": ["E", "P1", "P2", "P3"],
+  "jump_classes": [
+    {"delta": [2, 1, 0, -1], "propensity_coefficients_E_P1_P2_P3": ["0", "0", "0", "1"]},
+    {"delta": [2, 1, 0, 0], "propensity_coefficients_E_P1_P2_P3": ["2", "-3", "2", "-1"]},
+    {"delta": [2, 1, 1, 0], "propensity_coefficients_E_P1_P2_P3": ["0", "3", "-6", "3"]},
+    {"delta": [2, 1, 1, 1], "propensity_coefficients_E_P1_P2_P3": ["0", "0", "4", "-3"]}
+  ],
+  "matches_equation": "Behr 2021 Eq.57g, after grouping exponential factors",
+  "total_event_rate": "2E",
+  "all_checks_passed": true
+}

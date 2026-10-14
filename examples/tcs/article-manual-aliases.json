@@ -1,0 +1,69 @@
+{
+  "source": "https://arxiv.org/pdf/2106.02573",
+  "equation": 104,
+  "mapping": {
+    "rA": "r73",
+    "rB": "r120",
+    "rC": "r68"
+  },
+  "exact_overlap_evidence": [
+    {
+      "article_name": "rA",
+      "computed_class": "r73",
+      "reaction_to_query_overlap": [
+        [
+          0,
+          0
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "canonical_key": "vr2;v2;12;sym;0-c;--7|1-c;=-11|2-#v-10|2-#v-11|3-#v-8|3-#v-9|4-l;-|r;=-6|4-l;=|r;--10|5-c;--7|5-c;=-10|6-l;--8|8-r;--9|9-l;=|r;--11|10-r;--11;c;H|c;O|#nE|#nE|c;C|c;C|c;O|c;O|c;H|c;O|c;C|c;C"
+    },
+    {
+      "article_name": "rB",
+      "computed_class": "r120",
+      "reaction_to_query_overlap": [
+        [
+          0,
+          5
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "canonical_key": "vr2;v2;12;sym;0-c;--7|1-c;=-10|2-#v-10|2-#v-11|3-#v-8|3-#v-9|4-l;-|r;=-6|4-l;=|r;--10|5-c;--7|5-c;=-11|6-l;--8|8-r;--9|9-l;=|r;--11|10-r;--11;c;H|c;O|#nE|#nE|c;C|c;C|c;O|c;O|c;H|c;O|c;C|c;C"
+    },
+    {
+      "article_name": "rC",
+      "computed_class": "r68",
+      "reaction_to_query_overlap": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "canonical_key": "vr2;v2;11;sym;0-c;--6|1-#v-7|1-#v-10|2-#v-8|2-#v-9|3-l;-|r;=-5|3-l;=|r;--10|4-c;--6|4-c;=-10|5-l;--8|7-l;=|r;--9|7-r;--10|8-r;--9;c;H|#nE|#nE|c;C|c;C|c;O|c;O|c;C|c;H|c;O|c;C"
+    }
+  ],
+  "count_discrepancies_after_alias_merging": [
+    {
+      "class": "new-f7c8786fa6b1",
+      "column": "r_plus_after_r_id",
+      "published_after_alias_merging": 0,
+      "computed": 1
+    }
+  ],
+  "scope": "Plain rule isomorphism and counts only; C1/C2 annotations are not audited here."
+}

@@ -1,0 +1,42 @@
+{
+  "builder": "scripts/build_structural_nac_oscillator.py",
+  "sources": {
+    "scripts/build_structural_nac_oscillator.py": "60c7e9a060cdfcc7067b64fce66166b44a9dd626279b8888b9f2a3dee5352ee0",
+    "src/mfobs/models/structural_nac_oscillator.py": "7e46c3c2b59aaf69640e4114894892cab49425cc65b491bc84f00bc3ef2e687a",
+    "src/mfobs/models/structural_nac_words.py": "8b6f640fbd809e61814f4e00d77c326893a507c81c6360d87639bc2ce316e52f",
+    "src/mfobs/core/molecules.py": "e46f7ba0884227ec7011410a976f3c75b5978e824e75855898f4f45d0a3a45ed",
+    "src/mfobs/core/gml.py": "099cb950a1923c8099a71f53203a9457fde323a5a713a0bf716d102e60c625e3"
+  },
+  "generated": {
+    "README.md": "f8670812b84c7feb9567b3b431e6235088005b588550a2492b0068a4d3411ff6",
+    "benchmark.json": "08d951aec35550efd255bb62fae04f361a655053a646393d633a23ff66d925ea",
+    "model.json": "89600e9a2686ef963e2b853db6e7b36ab5e40b91277591d4f1d953d5b6786c8f",
+    "molecules/capped_precursor_Q0.gml": "6d06162c0d3d2a562b493169e6e5a9ba2192cf35507c565d69d1d3b5b1b330d7",
+    "molecules/capped_precursor_Q1.gml": "29f9b739e85d7b3102a14cdc316f01f437f006a780f1bf5efeb105cd0f279076",
+    "molecules/capped_precursor_Q2.gml": "f184bda95718b67463adf7aa67db7fba73433cc99ab29af48dab7d2a224ccfb2",
+    "molecules/macrocycle_Q0_N12.gml": "9f17111927436d908001575786f9bf9142ffd7f02af9e8bc074e0231e408e9ab",
+    "molecules/macrocycle_mixed_N12.gml": "67e1732d61e9e80c0861d84918c14af364c7188685de7bd8018ca3cbc71c7f2f",
+    "molecules/macrocycle_wave_N18.gml": "c8341817ac4544e0e09c427ede5a121d3a53c50eccad7946017925798e1a7bfc",
+    "observables/Q0.gml": "35b6efb9dfec2cedf7db7122736dab7982fc61cb87fb7a7d67bd543d0f40506a",
+    "observables/Q1.gml": "a2367bb8e523b01d021712691fd32a2fbc9bef213e2059d22180611f4f1bbe71",
+    "observables/Q2.gml": "f0a5261f64a7f4641f8d890342a561157149ad7198acd49251cdf728d37f8f55",
+    "parameters.json": "e44757c20242663e069397d0d1e6de9bfd7a60c8b3f779a4bf5d3451183fa636",
+    "reduction.json": "5083e4cd5ec09f64577eea2a7806d27850ef50b2b482ab1191495968f2279e02",
+    "rules/base_02.gml": "1f405e9e1971209ff7cb7e2d357bbe060060596dbdf97a9513684b6a4fdd396d",
+    "rules/base_10.gml": "ee6653cf5cf42fb1a8723b2437fb856de62cc86aee7fe6e55e1a3fe97aa8ac44",
+    "rules/base_21.gml": "a51cf796cd9ddfc20c75aa982ed78c031583128ed6668a43acac2ce4cf430a23",
+    "rules/grow_copy_0.gml": "a19f2dc4f2c7a1b9a61e62cf3abf22d40240975f71b143b5663a6543736d2677",
+    "rules/grow_copy_1.gml": "70e2ec96a6a952db1492d84a5f341847aa5e402a237ffd6cd893d3737ab35f55",
+    "rules/grow_copy_2.gml": "519ef67011f5f52201562a5b83984a7e55a4351bff2ff133b55d7c09acfe4901",
+    "rules/guard_02_not0.gml": "346cc2d71d751f29c9470fc94fab3683b15882c2e2cc0532dd79e628564a621b",
+    "rules/guard_10_not1.gml": "fa21836fede15e85fa6cc58d6fd7f4467c79baeb19d4492d8f2afe9cd730d23b",
+    "rules/guard_21_not2.gml": "8a20becb27093f618d3a3d4c947e22682abeb55033ff4b58d6f9b57c27a935ad",
+    "rules/swap_01_to_10.gml": "b0c307ca4d53dd967ebafea454a6b422b883824525d1246cda70d9242646a580",
+    "rules/swap_02_to_20.gml": "d606975a956121dcae14a093321c312cd8665b9cd8ab2b003601c342524ed95f",
+    "rules/swap_10_to_01.gml": "951c21238d73790ef43612808819c16b58a214812769d61dd48c4faeae9cf771",
+    "rules/swap_12_to_21.gml": "9c84d90f429af7169aad2d95309e5c6160d4b27494dee0454f3bd6cdf6d8685e",
+    "rules/swap_20_to_02.gml": "b0445be5b6b7a2b0eeba83011c90ce064b830cbf087d2be0abde988db6e3158e",
+    "rules/swap_21_to_12.gml": "dfae7ffe0979c7f6942ec1b3c8e34b4091a5598d36b17baff5a522eff59eba8e",
+    "state-language.json": "954da7a67d4370d1d3dfbd42517dfbb4c2733a24686e421e80eace3c6ad31104"
+  }
+}

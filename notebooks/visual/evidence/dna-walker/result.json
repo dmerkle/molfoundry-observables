@@ -1,0 +1,92 @@
+{
+  "status": "CLOSED",
+  "basis": ["E", "Craw"],
+  "initial_observables": ["E"],
+  "pending": [],
+  "steps": [
+    {"expanded": "E", "before": ["E"], "after": ["E", "Craw"], "pending": ["Craw"]},
+    {"expanded": "Craw", "before": ["E", "Craw"], "after": ["E", "Craw"], "pending": []}
+  ],
+  "family": {
+    "scaffold": "one simple directed cycle of arbitrary finite length at least five",
+    "walker": "one bimotor vertex with two distinct, equally labelled leg edges",
+    "positions": "both leg targets coincide or are adjacent on the directed cycle",
+    "encoding": "each edge has an incidence vertex; src/tgt port labels retain direction",
+    "normalization": "C=Craw/2; extension rules kFE,kBE have per-match multiplier 1/2",
+    "other_rule_multipliers": "kFC,kBC have per-match multiplier 1"
+  },
+  "input_definition_sha256": "93d8f767892f6eaf95466fa41b9978f07f55c24db8b4cb4da65c4f3e51d3f683",
+  "raw_images": {
+    "kFE/E": {"Craw": 1},
+    "kFC/E": {"E": -1},
+    "kBC/E": {"E": -1},
+    "kBE/E": {"Craw": 1},
+    "kFE/Craw": {"Craw": -2},
+    "kFC/Craw": {"E": 2},
+    "kBC/Craw": {"E": 2},
+    "kBE/Craw": {"Craw": -2}
+  },
+  "ordered_composition_calls": 16,
+  "raw_composites": 800,
+  "synthesis_state_evaluations": 0,
+  "molfoundry_version": "0.1.0",
+  "python": "3.13.5",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "dependencies": {"sympy": "1.14.0", "networkx": "3.6.1"},
+  "wheel_sha256": "c471f88069fd612f447e8402c7824f467e87fdd25b422c059434768a6715929a",
+  "runtime_verification": {
+    "status": "PASS",
+    "installed_package_files_verified": 42,
+    "wheel_sha256": "c471f88069fd612f447e8402c7824f467e87fdd25b422c059434768a6715929a"
+  },
+  "fragger_core_commit": "0d9595c5d6e8918fc605f7d65778568a74f5e2d4",
+  "fragger_exports_sha256": {
+    "walker-export.json": "10251ca285994955a97a1f08f99e4a70312847fbec62b6d2bef17ec57925e973",
+    "walker-incidence.json": "e6ccd2f164458cf973c370c3b223444bc2c4facacadf5ab4523b6ce439d3bd25"
+  },
+  "driver_sha256": "69a2918729468d087c2814ef566bc13ece5fb1e249ea44dc1b3ae14404735058",
+  "comparison": {
+    "status": "PASS",
+    "raw_incidence_equations_compared": 2,
+    "single_rule_images_compared": 8,
+    "raw_incidence_discrepancies": 0,
+    "native_normalized_equations_compared": 2,
+    "native_normalized_discrepancies": 0,
+    "physical_normalization": "C=Craw/2; extension rules kFE,kBE have per-match multiplier 1/2",
+    "physical_images": {
+      "kFE/E": {"C": 1},
+      "kFC/E": {"E": -1},
+      "kBC/E": {"E": -1},
+      "kBE/E": {"C": 1},
+      "kFE/C": {"C": -1},
+      "kFC/C": {"E": 1},
+      "kBC/C": {"E": 1},
+      "kBE/C": {"C": -1}
+    },
+    "physical_equations": {
+      "E": "C*kBE + C*kFE - E*kBC - E*kFC",
+      "C": "-C*kBE - C*kFE + E*kBC + E*kFC"
+    },
+    "stationary_probabilities": {
+      "C": "(kBC + kFC)/(kBC + kBE + kFC + kFE)",
+      "E": "(kBE + kFE)/(kBC + kBE + kFC + kFE)"
+    },
+    "stationary_velocity": "-(kBC*kBE - kFC*kFE)/(kBC + kBE + kFC + kFE)",
+    "published_velocity_symbolic_difference": "0",
+    "movement_readout_from_rules": {
+      "kFE": {"displacement": "1/2", "normalized_activity": "C"},
+      "kFC": {"displacement": "1/2", "normalized_activity": "E"},
+      "kBC": {"displacement": "-1/2", "normalized_activity": "E"},
+      "kBE": {"displacement": "-1/2", "normalized_activity": "C"}
+    }
+  },
+  "validation": {
+    "status": "PASS",
+    "cycle_lengths": [5,6,7,8,9,10,11,12],
+    "hosts": 136,
+    "literal_multigraph_rule_applications": 408,
+    "generator_images_checked": 1088,
+    "original_vs_incidence_observable_counts": 272,
+    "individual_projected_pattern_checks": 4536
+  }
+}

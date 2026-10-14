@@ -1,0 +1,17 @@
+"""GrowingRing through the public analysis API."""
+from mfobs import GrowingRing, analyze
+from mfobs.inputs import with_observable_queries
+
+
+def run(*, worklist_limit: int = 80, queries=None, include_evidence=False) -> dict:
+    backend = GrowingRing()
+    if queries is not None:
+        backend = GrowingRing(manifest=with_observable_queries(backend.inputs(), queries))
+    return analyze(backend.specification(), backend=backend, worklist_limit=worklist_limit,
+                   include_evidence=include_evidence).record()
+
+
+def run_with_evidence(*, worklist_limit: int = 80, queries=None) -> tuple[dict, dict]:
+    result = run(worklist_limit=worklist_limit, queries=queries, include_evidence=True)
+    raw = result.pop("linear_evidence")
+    return result, raw

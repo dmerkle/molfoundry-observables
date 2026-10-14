@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Shared local covalent base theory",
+  "type": "object",
+  "properties": {
+    "schema": {"const": "local-covalent-theory-v1"},
+    "name": {"type": "string"},
+    "scope": {"type": "string"},
+    "atomTypes": {"type": "object", "minProperties": 1},
+    "bondTypes": {"type": "object", "minProperties": 1},
+    "allowedBondPairs": {"type": "object", "minProperties": 1}
+  },
+  "required": ["schema", "name", "scope", "atomTypes", "bondTypes", "allowedBondPairs"],
+  "additionalProperties": false
+}

@@ -1,0 +1,40 @@
+{
+  "builder": "scripts/build_brusselator_growth.py",
+  "sources": {
+    "scripts/build_brusselator_growth.py": "8336fa11b1b65a7e5b884fc69ab5ea54568c148b5f2973057b6008012e6626c5",
+    "src/mfobs/models/brusselator_growth_chemistry.py": "d6e45ca895ba2a16010143cbaaca7a9cb6aeebee78d93a839cdb858a723adc5a",
+    "src/mfobs/models/molecular_rop/inputs.py": "80f19609f8ec935d1e5c95afa988f0854a1fd05fb154923b21c4d9938d4c8ad7",
+    "src/mfobs/models/brusselator_moments.py": "54ef8cc5f538402cadcbd8ca2a80380cb446b512fb6cf3a5d9e51fd22c22dcf3",
+    "src/mfobs/models/brusselator_pjc.py": "29a80772eec9bf8c4170a7199d3bedafd21dfa9cab960cabd9d6c0808a98cf0b",
+    "src/mfobs/models/brusselator_growth_projection.py": "fba1be86ec90d5ed9836523d49f900dc004b24c7cc92cc0c0c56750fb95ba245",
+    "src/mfobs/models/population_projection.py": "c688562d378f39603cbb86c8e90c11e1acffb947fb884fe6347c0a8361a7a116",
+    "src/mfobs/core/composition_jump_model.py": "309ede0c3c0a86d1054e22c466c1a450614a74fd0b50bf334a7e2143e0a12a5f",
+    "src/mfobs/core/molecules.py": "e46f7ba0884227ec7011410a976f3c75b5978e824e75855898f4f45d0a3a45ed",
+    "src/mfobs/core/gml.py": "099cb950a1923c8099a71f53203a9457fde323a5a713a0bf716d102e60c625e3"
+  },
+  "generated": {
+    "discovery-model.json": "d9244f0c1e5f47c87053cc1fc75dabba5769a12a57b399452e62212c0d248698",
+    "model.json": "341138755df7265aa89b87990660e0892bd1c365ad6f42c9a60a527c4efd00ea",
+    "molecules/A.gml": "c2f1c73cb986481590a4628f5421ae81b5e4600af56a136e3295d49b7abc7440",
+    "molecules/B.gml": "ddceb053acb59afa3de3321a0650b210d49efd09b2b39f4abfc9929b53b4d29d",
+    "molecules/D.gml": "480a0948ace86c8beba42cdc7659a5f92ca7841c751f7123e75d871924d10556",
+    "molecules/E.gml": "d8c88f9204eb6f327ebd5f9cf497476c1eaefce59473c275323475685594ac2e",
+    "molecules/X.gml": "598e6f54854290188292acf1a797052fda0e7cc31fb2a477f3b8169f971e30e8",
+    "molecules/Y.gml": "f26ca2e4d64d0b193428d6f9565f44107bbbd996d3bc64a21b42e1e875506e94",
+    "molecules/boundary_anchor.gml": "6da9541ad3ea5fc9f4f1801c95337428860f5d58e0dadd2331d0ebb82ca70af8",
+    "molecules/caprolactone.gml": "5d6b9271f00c1f70fdb61cbf0e6b60557669d457262c4907c5675ccb9ecdf111",
+    "molecules/chain_n0.gml": "209337c20698bd5e523e091c4951656fabc1df0e69dde5481d2c02190bba7753",
+    "molecules/chain_n1.gml": "0e1dc62a5179ac2d8007251c0e435b4ca438bf3359e3e599d35683e4500b51de",
+    "moment-parameters.json": "29536d30bbba7c8abc14cbdd5d65b089e03e8c51d01975a9a6dc8101fddbdb7e",
+    "moment-reduction.json": "46df28819d5214fea1710690da27af2999edfda31c1d512b8d47df2b40bbe336",
+    "moment-state-language.json": "943150c62a0175a1d4e23c984abf2f77cbefe923504c445208ebd8a83896cf49",
+    "observables/X.gml": "8180e9aec82c6e923edb63fc2896cb9580b3db7c4c07b5f9698ce457854ecf27",
+    "observables/Y.gml": "75f21af4b9281723490df90723a0decb0d644504969f5550e3e361af32b7463c",
+    "rules/autocatalysis.gml": "c4b7d254837c8a6d1e3292dd3e8de0058ad181d17ff96ffcd341313782073837",
+    "rules/conversion.gml": "f3630b76c8dbe9af3d74f2556459b38f8518fc27405149ae63d3d3e43459e8db",
+    "rules/growth.gml": "5c63ec28b8c4391cbe5710fa52c08479ab71c0eac4ba9ee4ff570813a5d0c15e",
+    "rules/monomer_inlet.gml": "3ec61bcb706415d243084ec8e51311bd6d55758053eb0a7b7cf6e5556090c9a0",
+    "rules/sink.gml": "41fdb83a36c8c934de683f9989359a60f9e1d125c48d3dd176531de0da4d564e",
+    "rules/source.gml": "d539334dea56e3dd76a98410d6932e4301083b5a888a099fb540da724779e8be"
+  }
+}

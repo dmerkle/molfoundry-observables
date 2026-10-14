@@ -1,0 +1,194 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z_][A-Za-z_0-9]*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "adapter": {
+      "type": "string",
+      "pattern": "^[A-Za-z_][A-Za-z_0-9.]*:[A-Za-z_][A-Za-z_0-9]*$"
+    },
+    "rules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z_][A-Za-z_0-9]*$"
+          },
+          "file": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rate": {
+            "type": "string",
+            "pattern": "^[A-Za-z_][A-Za-z_0-9]*$"
+          },
+          "per_match": {
+            "type": "string",
+            "pattern": "^[0-9]+(/[1-9][0-9]*)?$"
+          },
+          "kind": {
+            "enum": [
+              "chemical",
+              "boundary",
+              "abstract"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "file",
+          "rate",
+          "per_match",
+          "kind"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "observables": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z_][A-Za-z_0-9]*$"
+          },
+          "file": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "file"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "initial_observables": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z_][A-Za-z_0-9]*$"
+      }
+    },
+    "composition": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "enum": [
+            "public",
+            "restricted"
+          ]
+        },
+        "connected": {
+          "type": "boolean"
+        },
+        "include_empty": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "mode",
+        "connected",
+        "include_empty"
+      ],
+      "additionalProperties": false
+    },
+    "forbidden": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "state_language": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reduction": {
+      "type": "string",
+      "minLength": 1
+    },
+    "normalisation": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "scale": {
+            "type": "string",
+            "minLength": 1
+          },
+          "meaning": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "scale",
+          "meaning"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "initial_state": {
+      "type": "object"
+    },
+    "parameters": {
+      "type": ["string", "null"],
+      "minLength": 1
+    },
+    "reference": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "specifications": {
+      "type": "object",
+      "properties": {
+        "chemistry": {"type": "string", "minLength": 1},
+        "domain": {"type": "string", "minLength": 1}
+      },
+      "required": ["chemistry", "domain"],
+      "additionalProperties": false
+    },
+    "initial_mixture": {
+      "type": ["string", "null"]
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "title",
+    "adapter",
+    "rules",
+    "observables",
+    "initial_observables",
+    "composition",
+    "forbidden",
+    "state_language",
+    "reduction",
+    "normalisation",
+    "initial_state",
+    "parameters",
+    "reference"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MolFoundry observable model manifest"
+}

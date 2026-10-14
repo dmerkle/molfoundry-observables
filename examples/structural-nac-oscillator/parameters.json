@@ -1,0 +1,68 @@
+{
+  "r": {
+    "default": 1.0,
+    "min": 0.1,
+    "max": 2.0,
+    "step": 0.01,
+    "meaning": "ungarded clockwise ring-shift rate"
+  },
+  "g": {
+    "default": 0.12,
+    "min": 0.0,
+    "max": 0.6,
+    "step": 0.005,
+    "meaning": "NoEdge-guarded correction and damping strength"
+  },
+  "m": {
+    "default": 20.0,
+    "min": 0.0,
+    "max": 30.0,
+    "step": 0.25,
+    "meaning": "symmetric neighbour exchange rate; suppresses one-dimensional domains"
+  },
+  "beta": {
+    "default": 0.004,
+    "min": 0.0,
+    "max": 0.03,
+    "step": 0.0005,
+    "meaning": "per-site state-copy insertion rate with chemostatted precursor activity"
+  },
+  "initial_q0": {
+    "default": 0.72,
+    "min": 0.0,
+    "max": 1.0,
+    "meaning": "initial Q0 fraction; coupled to keep all three fractions normalized"
+  },
+  "initial_q1": {
+    "default": 0.14,
+    "min": 0.0,
+    "max": 1.0,
+    "meaning": "initial Q1 fraction; coupled to keep all three fractions normalized"
+  },
+  "initial_q2": {
+    "default": 0.14,
+    "min": 0.0,
+    "max": 1.0,
+    "meaning": "initial Q2 fraction; coupled to keep all three fractions normalized"
+  },
+  "horizon": {
+    "default": 80,
+    "min": 20,
+    "max": 180,
+    "step": 5
+  },
+  "system_size": {
+    "default": 7,
+    "min": 7,
+    "max": 140,
+    "step": 1
+  },
+  "hierarchy_radius": {
+    "default": 2,
+    "values": [
+      1,
+      2,
+      3
+    ]
+  }
+}

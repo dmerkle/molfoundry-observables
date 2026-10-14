@@ -1,0 +1,12 @@
+rule [ ruleID "ordered-distinct-path-10-tuples" context [
+  node [ id 0 label "A" ]
+  node [ id 1 label "A" ]
+  node [ id 2 label "A" ]
+  node [ id 3 label "A" ]
+  node [ id 4 label "A" ]
+  node [ id 5 label "A" ]
+  node [ id 6 label "A" ]
+  node [ id 7 label "A" ]
+  node [ id 8 label "A" ]
+  node [ id 9 label "A" ]
+] ]

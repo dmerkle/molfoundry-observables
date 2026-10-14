@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "observables": [
+    {
+      "name": "Q0",
+      "terms": [
+        {"file": "../structural-nac-oscillator/observables/Q0.gml"}
+      ]
+    },
+    {
+      "name": "Q1",
+      "terms": [
+        {"file": "../structural-nac-oscillator/observables/Q1.gml"}
+      ]
+    },
+    {
+      "name": "Q2",
+      "terms": [
+        {"file": "../structural-nac-oscillator/observables/Q2.gml"}
+      ]
+    }
+  ]
+}

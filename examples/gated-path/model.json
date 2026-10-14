@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "gated_path",
+  "title": "Gated path edge subdivision: active NoEdge and exact moment discovery",
+  "adapter": "mfobs.models.chain_mixture:Adapter",
+  "rules": [
+    {"id": "subdivide", "file": "rules/subdivide.gml", "rate": "lambda_g", "per_match": "1/2", "kind": "abstract"},
+    {"id": "close", "file": "rules/close.gml", "rate": "a", "per_match": "1", "kind": "abstract"},
+    {"id": "open", "file": "rules/open.gml", "rate": "b", "per_match": "1", "kind": "abstract"}
+  ],
+  "observables": [{"id": "V", "file": "observables/vertices.gml"}],
+  "initial_observables": ["V"],
+  "composition": {"mode": "restricted", "connected": false, "include_empty": true},
+  "forbidden": "forbidden.json",
+  "state_language": "state-language.json",
+  "reduction": "reduction.json",
+  "normalisation": {},
+  "initial_state": {"n": 1, "M": 0, "closed": false},
+  "parameters": "parameters.json",
+  "reference": null
+}

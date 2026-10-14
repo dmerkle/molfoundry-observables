@@ -1,0 +1,8 @@
+{
+  "name": "ring-eight-fixed-sites",
+  "sites": 8,
+  "scaffold": "Each of 8 sites has three graph vertices C/P/L: 24 vertices total; only 8 bound edges vary. Labels here are site types, not chemical elements.",
+  "reachable_states": 256,
+  "dihedral_orbits": 30,
+  "assumption": "Exact fixed scaffold; rotation/reflection-invariant rules and observables."
+}

@@ -1,0 +1,9 @@
+{
+  "name": "path-and-finite-controller-signature",
+  "atomLabels": ["A","U","V","W","T"],
+  "bondOrders": {"-": 1},
+  "allowedBondPairs": {"-": [["A","A"],["U","W"],["W","V"],["U","V"]]},
+  "maxValence": {"A": 2,"U": 2,"V": 2,"W": 2,"T": 0},
+  "incidentBounds": [],
+  "strictSignature": true
+}

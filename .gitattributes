@@ -1,0 +1,2 @@
+# Preserve recorded text-file hashes on every checkout platform.
+* text=auto eol=lf

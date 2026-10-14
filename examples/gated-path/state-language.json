@@ -1,0 +1,12 @@
+{
+  "chain": {
+    "kind": "one-port-decorated-path", "join_bond": "-", "parameter": "n",
+    "zero": {"nodes": [[0,"A"]], "edges": []},
+    "left": {"nodes": [[0,"A"]], "edges": [], "incoming": null, "outgoing": 0},
+    "repeat": {"nodes": [[0,"A"]], "edges": [], "incoming": 0, "outgoing": 0},
+    "right": {"nodes": [[0,"A"]], "edges": [], "incoming": 0, "outgoing": null}
+  },
+  "open": {"nodes": [[0,"U"],[1,"W"],[2,"V"]], "edges": [[0,1,"-"],[1,2,"-"]]},
+  "closed": {"nodes": [[0,"U"],[1,"W"],[2,"V"]], "edges": [[0,1,"-"],[1,2,"-"],[0,2,"-"]]},
+  "monomer": {"nodes": [[0,"T"]], "edges": []}
+}

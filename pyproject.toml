@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "molfoundry-observables"
+version = "0.9.4.dev0"
+description = "Observable closure analysis for graph transformation models with MolFoundry"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE.md"]
+dependencies = ["molfoundry==0.1.9", "sympy==1.14.0", "networkx>=3.4", "tabulate==0.9.0"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+solve = ["numpy", "scipy", "pandas"]
+chemistry-export = ["rdkit"]
+
+[project.urls]
+Source = "https://github.com/dmerkle/molfoundry-observables"
+Issues = "https://github.com/dmerkle/molfoundry-observables/issues"
+
+[project.scripts]
+mf-observables = "mfobs.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+mfobs = ["data/*.json"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

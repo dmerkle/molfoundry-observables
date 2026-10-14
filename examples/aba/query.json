@@ -1,0 +1,11 @@
+{
+  "alphabet": [
+    "A",
+    "B"
+  ],
+  "motif": "ABA",
+  "gate": false,
+  "linear_limit": 24,
+  "support_pattern_limit": 64,
+  "support_expansion_limit": 64
+}

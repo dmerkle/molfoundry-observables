@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "id": "structural_nac_oscillator",
+  "title": "Structural bond-topology oscillator with active NoEdge guards",
+  "adapter": "mfobs.models.structural_nac_words:Adapter",
+  "rules": [
+    {
+      "id": "base_10",
+      "file": "rules/base_10.gml",
+      "rate": "r",
+      "per_match": "1/4",
+      "kind": "chemical"
+    },
+    {
+      "id": "base_21",
+      "file": "rules/base_21.gml",
+      "rate": "r",
+      "per_match": "1/2",
+      "kind": "chemical"
+    },
+    {
+      "id": "base_02",
+      "file": "rules/base_02.gml",
+      "rate": "r",
+      "per_match": "1/2",
+      "kind": "chemical"
+    },
+    {
+      "id": "guard_10_not1",
+      "file": "rules/guard_10_not1.gml",
+      "rate": "g",
+      "per_match": "1/4",
+      "kind": "chemical"
+    },
+    {
+      "id": "guard_21_not2",
+      "file": "rules/guard_21_not2.gml",
+      "rate": "g",
+      "per_match": "1/2",
+      "kind": "chemical"
+    },
+    {
+      "id": "guard_02_not0",
+      "file": "rules/guard_02_not0.gml",
+      "rate": "g",
+      "per_match": "1/2",
+      "kind": "chemical"
+    },
+    {
+      "id": "swap_01_to_10",
+      "file": "rules/swap_01_to_10.gml",
+      "rate": "m",
+      "per_match": "1/16",
+      "kind": "chemical"
+    },
+    {
+      "id": "swap_10_to_01",
+      "file": "rules/swap_10_to_01.gml",
+      "rate": "m",
+      "per_match": "1/16",
+      "kind": "chemical"
+    },
+    {
+      "id": "swap_12_to_21",
+      "file": "rules/swap_12_to_21.gml",
+      "rate": "m",
+      "per_match": "1/8",
+      "kind": "chemical"
+    },
+    {
+      "id": "swap_21_to_12",
+      "file": "rules/swap_21_to_12.gml",
+      "rate": "m",
+      "per_match": "1/8",
+      "kind": "chemical"
+    },
+    {
+      "id": "swap_20_to_02",
+      "file": "rules/swap_20_to_02.gml",
+      "rate": "m",
+      "per_match": "1/2",
+      "kind": "chemical"
+    },
+    {
+      "id": "swap_02_to_20",
+      "file": "rules/swap_02_to_20.gml",
+      "rate": "m",
+      "per_match": "1/2",
+      "kind": "chemical"
+    },
+    {
+      "id": "grow_copy_0",
+      "file": "rules/grow_copy_0.gml",
+      "rate": "beta",
+      "per_match": "1",
+      "kind": "chemical"
+    },
+    {
+      "id": "grow_copy_1",
+      "file": "rules/grow_copy_1.gml",
+      "rate": "beta",
+      "per_match": "1",
+      "kind": "chemical"
+    },
+    {
+      "id": "grow_copy_2",
+      "file": "rules/grow_copy_2.gml",
+      "rate": "beta",
+      "per_match": "1",
+      "kind": "chemical"
+    }
+  ],
+  "observables": [
+    {
+      "id": "Q0",
+      "file": "observables/Q0.gml"
+    },
+    {
+      "id": "Q1",
+      "file": "observables/Q1.gml"
+    },
+    {
+      "id": "Q2",
+      "file": "observables/Q2.gml"
+    }
+  ],
+  "initial_observables": [
+    "Q0",
+    "Q1",
+    "Q2"
+  ],
+  "composition": {
+    "mode": "public",
+    "connected": false,
+    "include_empty": true
+  },
+  "forbidden": null,
+  "state_language": "state-language.json",
+  "reduction": "reduction.json",
+  "normalisation": {
+    "Q0": {
+      "scale": "1",
+      "meaning": "number of Q0 sites"
+    },
+    "Q1": {
+      "scale": "1",
+      "meaning": "number of Q1 sites"
+    },
+    "Q2": {
+      "scale": "1",
+      "meaning": "number of Q2 sites"
+    }
+  },
+  "initial_state": {
+    "word": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      0
+    ]
+  },
+  "parameters": "parameters.json",
+  "reference": null
+}

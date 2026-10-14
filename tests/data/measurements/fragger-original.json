@@ -1,0 +1,5262 @@
+{
+  "schema_version": 1,
+  "kind": "ab-composition-scaling-benchmark",
+  "status": "PASS",
+  "protocol": {
+    "families": [
+      "alt"
+    ],
+    "requested_molfoundry_version": "0.1.7",
+    "lengths": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28
+    ],
+    "warmups": 2,
+    "repetitions": 5,
+    "timeout_seconds_per_process": 14400,
+    "serial": true,
+    "alternating_tool_order": true,
+    "primary_timing_scope": "in-process composition enumeration after warm-up; excludes process startup/import/compilation",
+    "raw_count_scope": "returned composites from 12 ordered rule/observable compositions, before canonical deduplication/cancellation"
+  },
+  "environment": {
+    "platform": "Linux-6.17.0-1032-oem-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "processor": "x86_64",
+    "python": "Python 3.12.3",
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment Temurin-11.0.32.1+1 (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM Temurin-11.0.32.1+1 (build 11.0.32.1+1, mixed mode)",
+    "lscpu": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           52 bits physical, 57 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  52\nOn-line CPU(s) list:                     0-51\nVendor ID:                               GenuineIntel\nModel name:                              Intel(R) Xeon(R) w7-2595X\nCPU family:                              6\nModel:                                   143\nThread(s) per core:                      2\nCore(s) per socket:                      26\nSocket(s):                               1\nStepping:                                8\nCPU(s) scaling MHz:                      22%\nCPU max MHz:                             4800.0000\nCPU min MHz:                             800.0000\nBogoMIPS:                                5616.00\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cat_l2 cdp_l3 intel_ppin cdp_l2 ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local split_lock_detect user_shstk avx_vnni avx512_bf16 wbnoinvd dtherm ida arat pln pts hwp hwp_act_window hwp_epp hwp_pkg_req vnmi avx512vbmi umip pku ospke waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq la57 rdpid bus_lock_detect cldemote movdiri movdir64b enqcmd fsrm md_clear serialize tsxldtrk pconfig arch_lbr ibt amx_bf16 avx512_fp16 amx_tile amx_int8 flush_l1d arch_capabilities\nVirtualization:                          VT-x\nL1d cache:                               1.2 MiB (26 instances)\nL1i cache:                               832 KiB (26 instances)\nL2 cache:                                52 MiB (26 instances)\nL3 cache:                                48.8 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-51\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Not affected\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Vulnerable\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Not affected\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Mitigation; IBPB before exit to userspace\n",
+    "fragger_commit": "0d9595c5d6e8918fc605f7d65778568a74f5e2d4",
+    "fragger_checkout": "/home/daniel/tmp/mf-ab-20261009-TOIVEX/fragger",
+    "fragger_source_identity": {
+      "mode": "git-checkout",
+      "commit": "0d9595c5d6e8918fc605f7d65778568a74f5e2d4",
+      "dirty": false,
+      "status_porcelain": [],
+      "verified": true,
+      "scope": [
+        "src/main"
+      ]
+    },
+    "scala_jar_sha256": {
+      "scala-compiler-2.13.2.jar": "b04da83111decff5b36e87c74d73f5e2231b63ce605f2602e862bae917d7761a",
+      "scala-library-2.13.2.jar": "6a1c9846feb8f5d7d33b91e61e056d272215a79747a2b7b5e5ece690bf151d5d",
+      "scala-reflect-2.13.2.jar": "21a7288874f186d6049e8b14a986011ffd96cb587f206eccf946624f2d476815"
+    },
+    "molfoundry_wheel": null,
+    "molfoundry_wheel_sha256": null,
+    "molfoundry_runtime": {
+      "composition_sha256": "1675c35713217fad88110ef8533a117c5f9cba8573cb0322cdc38c358ed78ac4",
+      "engine_sha256": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+      "molfoundry_version": "0.1.7",
+      "package_root": "/home/daniel/tmp/mf-ab-20261009-TOIVEX/venv/lib/python3.12/site-packages/molfoundry",
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "selected_file_sha256": {
+        "_engine.py": "2fa148b07667be81f5a734cdb492d2774727b5e63174fb2ec923e732480e3835",
+        "bin/molfoundry.js": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+        "rule.py": "b9941a3e50a70d2c26aa9fd6e586c133c31256f7a88c9172856d39c2c901b844",
+        "rulecomposition.py": "f7e04e5eca06ea34f234926038ef1fbc94bd847d15323086760db2088048912f"
+      },
+      "typed_incidence_sha256": "6a1376b92261a33b0ec5f6fc244496bf4b0c577509afa2317591a0a9a6cbcf34",
+      "wheel_sha256": null
+    },
+    "benchmark_source_sha256": {
+      "ABScalingHarness.scala": "1ea06aabb25df17833639db8deb7d80261222071e7298e770f166cd938ad1a03",
+      "molfoundry_benchmark.py": "69ff44960c7cac96e50a6a7603a01b5cc60d60c6a6eb57b67a01d6db14b499ef",
+      "run_benchmark.py": "487b69e56d6879e84ab18e5bb537128d9af3d3d9bcf340d1018827091960d9d9"
+    },
+    "fragger_compile_command": [
+      "/home/daniel/tmp/mf-ab-20261009-TOIVEX/java11/bin/java",
+      "-Xmx2g",
+      "-cp",
+      "/home/daniel/tmp/mf-ab-20261009-TOIVEX/fragger/compiler/*",
+      "scala.tools.nsc.Main",
+      "-usejavacp",
+      "-d",
+      "/home/daniel/tmp/mf-ab-20261009-TOIVEX/rerun-through-28/fragger-classes",
+      "/home/daniel/tmp/mf-ab-20261009-TOIVEX/fragger/src/main/scala/graph-rewriting/Arrow.scala",
+      "/home/daniel/tmp/mf-ab-20261009-TOIVEX/fragger/src/main/scala/graph-rewriting/DiGraph.scala",
+      "/home/daniel/tmp/mf-ab-20261009-TOIVEX/fragger/src/main/scala/graph-rewriting/DistTree.scala",
+      "/home/daniel/tmp/mf-ab-20261009-TOIVEX/fragger/src/main/scala/graph-rewriting/Edges.scala",
+      "/home/daniel/tmp/mf-ab-20261009-TOIVEX/fragger/src/main/scala/graph-rewriting/Equation.scala",
+      "/home/daniel/tmp/mf-ab-20261009-TOIVEX/fragger/src/main/scala/graph-rewriting/Graph.scala",
+      "/home/daniel/tmp/mf-ab-20261009-TOIVEX/fragger/src/main/scala/graph-rewriting/MarkedGraph.scala",
+      "/home/daniel/tmp/mf-ab-20261009-TOIVEX/fragger/src/main/scala/graph-rewriting/Moments.scala",
+      "/home/daniel/tmp/mf-ab-20261009-TOIVEX/fragger/src/main/scala/graph-rewriting/Rule.scala",
+      "/home/daniel/tmp/mf-ab-20261009-TOIVEX/fragger/src/main/scala/graph-rewriting/Simulator.scala",
+      "/home/daniel/tmp/mf-ab-20261009-TOIVEX/fragger/src/main/scala/graph-rewriting/Utils.scala",
+      "/home/daniel/tmp/mf-ab-20261009-TOIVEX/fragger/src/main/scala/graph-rewriting/package.scala",
+      "/home/daniel/tmp/mf-ab-20261009-TOIVEX/source/implementation/molfoundry-observables/experiments/comparison/ab_scaling/ABScalingHarness.scala"
+    ],
+    "fragger_compile_seconds": 4.283960257656872
+  },
+  "failure": null,
+  "observations": [
+    {
+      "family": "alt",
+      "max_seconds": 0.006724734,
+      "median_seconds": 0.006663101,
+      "min_seconds": 0.006327278,
+      "n": 2,
+      "per_order": [
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 2,
+          "diagnostics": {
+            "accepted_raw": 2,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 2,
+          "diagnostics": {
+            "accepted_raw": 2,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 2,
+          "diagnostics": {
+            "accepted_raw": 2,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 2,
+          "diagnostics": {
+            "accepted_raw": 2,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 2,
+          "diagnostics": {
+            "accepted_raw": 2,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 3,
+          "diagnostics": {
+            "accepted_raw": 3,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 2,
+          "diagnostics": {
+            "accepted_raw": 2,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_B"
+        },
+        {
+          "count": 2,
+          "diagnostics": {
+            "accepted_raw": 2,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_B"
+        }
+      ],
+      "raw_composites": 21,
+      "representation": "directed-multigraph-via-typed-incidence",
+      "times_seconds": [
+        0.006724734,
+        0.006712434,
+        0.006663101,
+        0.006428876,
+        0.006327278
+      ],
+      "tool": "molfoundry",
+      "word": "AB",
+      "runtime_meta": {
+        "composition_sha256": "1675c35713217fad88110ef8533a117c5f9cba8573cb0322cdc38c358ed78ac4",
+        "engine_sha256": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+        "molfoundry_version": "0.1.7",
+        "package_root": "/home/daniel/tmp/mf-ab-20261009-TOIVEX/venv/lib/python3.12/site-packages/molfoundry",
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "selected_file_sha256": {
+          "_engine.py": "2fa148b07667be81f5a734cdb492d2774727b5e63174fb2ec923e732480e3835",
+          "bin/molfoundry.js": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+          "rule.py": "b9941a3e50a70d2c26aa9fd6e586c133c31256f7a88c9172856d39c2c901b844",
+          "rulecomposition.py": "f7e04e5eca06ea34f234926038ef1fbc94bd847d15323086760db2088048912f"
+        },
+        "typed_incidence_sha256": "6a1376b92261a33b0ec5f6fc244496bf4b0c577509afa2317591a0a9a6cbcf34",
+        "wheel_sha256": null
+      },
+      "process_seconds": 0.764147438108921,
+      "log": "molfoundry-alt-2.log"
+    },
+    {
+      "tool": "fragger-core",
+      "family": "alt",
+      "word": "AB",
+      "n": 2,
+      "raw_composites": 21,
+      "per_order": [
+        {
+          "rule": "append_R_A",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_A",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-left",
+          "count": 2
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-right",
+          "count": 2
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-left",
+          "count": 2
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-right",
+          "count": 2
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-left",
+          "count": 2
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-right",
+          "count": 3
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-left",
+          "count": 2
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-right",
+          "count": 2
+        }
+      ],
+      "times_seconds": [
+        0.004594647,
+        0.005144158,
+        0.005633309,
+        0.004803806,
+        0.00470519
+      ],
+      "median_seconds": 0.004803806,
+      "min_seconds": 0.004594647,
+      "max_seconds": 0.005633309,
+      "process_seconds": 0.4151173629797995,
+      "log": "fragger-alt-2.log"
+    },
+    {
+      "tool": "fragger-core",
+      "family": "alt",
+      "word": "ABAB",
+      "n": 4,
+      "raw_composites": 29,
+      "per_order": [
+        {
+          "rule": "append_R_A",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_A",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-left",
+          "count": 3
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-right",
+          "count": 3
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-left",
+          "count": 3
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-right",
+          "count": 3
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-left",
+          "count": 3
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-right",
+          "count": 4
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-left",
+          "count": 3
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-right",
+          "count": 3
+        }
+      ],
+      "times_seconds": [
+        0.009249179,
+        0.008706918,
+        0.008037034,
+        0.007349738,
+        0.007584968
+      ],
+      "median_seconds": 0.008037034,
+      "min_seconds": 0.007349738,
+      "max_seconds": 0.009249179,
+      "process_seconds": 0.4616491850465536,
+      "log": "fragger-alt-4.log"
+    },
+    {
+      "family": "alt",
+      "max_seconds": 0.010188817,
+      "median_seconds": 0.00990454,
+      "min_seconds": 0.009668836,
+      "n": 4,
+      "per_order": [
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 3,
+          "diagnostics": {
+            "accepted_raw": 3,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 3,
+          "diagnostics": {
+            "accepted_raw": 3,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 3,
+          "diagnostics": {
+            "accepted_raw": 3,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 3,
+          "diagnostics": {
+            "accepted_raw": 3,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 3,
+          "diagnostics": {
+            "accepted_raw": 3,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 4,
+          "diagnostics": {
+            "accepted_raw": 4,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 3,
+          "diagnostics": {
+            "accepted_raw": 3,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_B"
+        },
+        {
+          "count": 3,
+          "diagnostics": {
+            "accepted_raw": 3,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_B"
+        }
+      ],
+      "raw_composites": 29,
+      "representation": "directed-multigraph-via-typed-incidence",
+      "times_seconds": [
+        0.009931505,
+        0.00990454,
+        0.009898563,
+        0.010188817,
+        0.009668836
+      ],
+      "tool": "molfoundry",
+      "word": "ABAB",
+      "runtime_meta": {
+        "composition_sha256": "1675c35713217fad88110ef8533a117c5f9cba8573cb0322cdc38c358ed78ac4",
+        "engine_sha256": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+        "molfoundry_version": "0.1.7",
+        "package_root": "/home/daniel/tmp/mf-ab-20261009-TOIVEX/venv/lib/python3.12/site-packages/molfoundry",
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "selected_file_sha256": {
+          "_engine.py": "2fa148b07667be81f5a734cdb492d2774727b5e63174fb2ec923e732480e3835",
+          "bin/molfoundry.js": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+          "rule.py": "b9941a3e50a70d2c26aa9fd6e586c133c31256f7a88c9172856d39c2c901b844",
+          "rulecomposition.py": "f7e04e5eca06ea34f234926038ef1fbc94bd847d15323086760db2088048912f"
+        },
+        "typed_incidence_sha256": "6a1376b92261a33b0ec5f6fc244496bf4b0c577509afa2317591a0a9a6cbcf34",
+        "wheel_sha256": null
+      },
+      "process_seconds": 0.8015820109285414,
+      "log": "molfoundry-alt-4.log"
+    },
+    {
+      "family": "alt",
+      "max_seconds": 0.014424326,
+      "median_seconds": 0.014200764,
+      "min_seconds": 0.013647425,
+      "n": 6,
+      "per_order": [
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 4,
+          "diagnostics": {
+            "accepted_raw": 4,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 4,
+          "diagnostics": {
+            "accepted_raw": 4,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 4,
+          "diagnostics": {
+            "accepted_raw": 4,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 4,
+          "diagnostics": {
+            "accepted_raw": 4,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 4,
+          "diagnostics": {
+            "accepted_raw": 4,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 5,
+          "diagnostics": {
+            "accepted_raw": 5,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 4,
+          "diagnostics": {
+            "accepted_raw": 4,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_B"
+        },
+        {
+          "count": 4,
+          "diagnostics": {
+            "accepted_raw": 4,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_B"
+        }
+      ],
+      "raw_composites": 37,
+      "representation": "directed-multigraph-via-typed-incidence",
+      "times_seconds": [
+        0.014164208,
+        0.014200764,
+        0.014424326,
+        0.014272319,
+        0.013647425
+      ],
+      "tool": "molfoundry",
+      "word": "ABABAB",
+      "runtime_meta": {
+        "composition_sha256": "1675c35713217fad88110ef8533a117c5f9cba8573cb0322cdc38c358ed78ac4",
+        "engine_sha256": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+        "molfoundry_version": "0.1.7",
+        "package_root": "/home/daniel/tmp/mf-ab-20261009-TOIVEX/venv/lib/python3.12/site-packages/molfoundry",
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "selected_file_sha256": {
+          "_engine.py": "2fa148b07667be81f5a734cdb492d2774727b5e63174fb2ec923e732480e3835",
+          "bin/molfoundry.js": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+          "rule.py": "b9941a3e50a70d2c26aa9fd6e586c133c31256f7a88c9172856d39c2c901b844",
+          "rulecomposition.py": "f7e04e5eca06ea34f234926038ef1fbc94bd847d15323086760db2088048912f"
+        },
+        "typed_incidence_sha256": "6a1376b92261a33b0ec5f6fc244496bf4b0c577509afa2317591a0a9a6cbcf34",
+        "wheel_sha256": null
+      },
+      "process_seconds": 0.8195309950970113,
+      "log": "molfoundry-alt-6.log"
+    },
+    {
+      "tool": "fragger-core",
+      "family": "alt",
+      "word": "ABABAB",
+      "n": 6,
+      "raw_composites": 37,
+      "per_order": [
+        {
+          "rule": "append_R_A",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_A",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-left",
+          "count": 4
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-right",
+          "count": 4
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-left",
+          "count": 4
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-right",
+          "count": 4
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-left",
+          "count": 4
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-right",
+          "count": 5
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-left",
+          "count": 4
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-right",
+          "count": 4
+        }
+      ],
+      "times_seconds": [
+        0.014888772,
+        0.014262721,
+        0.013239181,
+        0.013142392,
+        0.01189548
+      ],
+      "median_seconds": 0.013239181,
+      "min_seconds": 0.01189548,
+      "max_seconds": 0.014888772,
+      "process_seconds": 0.5058552380651236,
+      "log": "fragger-alt-6.log"
+    },
+    {
+      "tool": "fragger-core",
+      "family": "alt",
+      "word": "ABABABAB",
+      "n": 8,
+      "raw_composites": 45,
+      "per_order": [
+        {
+          "rule": "append_R_A",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_A",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-left",
+          "count": 5
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-right",
+          "count": 5
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-left",
+          "count": 5
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-right",
+          "count": 5
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-left",
+          "count": 5
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-right",
+          "count": 6
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-left",
+          "count": 5
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-right",
+          "count": 5
+        }
+      ],
+      "times_seconds": [
+        0.021775861,
+        0.019649772,
+        0.025091451,
+        0.015905526,
+        0.014397804
+      ],
+      "median_seconds": 0.019649772,
+      "min_seconds": 0.014397804,
+      "max_seconds": 0.025091451,
+      "process_seconds": 0.56520528299734,
+      "log": "fragger-alt-8.log"
+    },
+    {
+      "family": "alt",
+      "max_seconds": 0.020412346,
+      "median_seconds": 0.019653199,
+      "min_seconds": 0.018976681,
+      "n": 8,
+      "per_order": [
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 5,
+          "diagnostics": {
+            "accepted_raw": 5,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 5,
+          "diagnostics": {
+            "accepted_raw": 5,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 5,
+          "diagnostics": {
+            "accepted_raw": 5,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 5,
+          "diagnostics": {
+            "accepted_raw": 5,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 5,
+          "diagnostics": {
+            "accepted_raw": 5,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 6,
+          "diagnostics": {
+            "accepted_raw": 6,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 5,
+          "diagnostics": {
+            "accepted_raw": 5,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_B"
+        },
+        {
+          "count": 5,
+          "diagnostics": {
+            "accepted_raw": 5,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_B"
+        }
+      ],
+      "raw_composites": 45,
+      "representation": "directed-multigraph-via-typed-incidence",
+      "times_seconds": [
+        0.019653199,
+        0.020412346,
+        0.019748281,
+        0.019325476,
+        0.018976681
+      ],
+      "tool": "molfoundry",
+      "word": "ABABABAB",
+      "runtime_meta": {
+        "composition_sha256": "1675c35713217fad88110ef8533a117c5f9cba8573cb0322cdc38c358ed78ac4",
+        "engine_sha256": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+        "molfoundry_version": "0.1.7",
+        "package_root": "/home/daniel/tmp/mf-ab-20261009-TOIVEX/venv/lib/python3.12/site-packages/molfoundry",
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "selected_file_sha256": {
+          "_engine.py": "2fa148b07667be81f5a734cdb492d2774727b5e63174fb2ec923e732480e3835",
+          "bin/molfoundry.js": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+          "rule.py": "b9941a3e50a70d2c26aa9fd6e586c133c31256f7a88c9172856d39c2c901b844",
+          "rulecomposition.py": "f7e04e5eca06ea34f234926038ef1fbc94bd847d15323086760db2088048912f"
+        },
+        "typed_incidence_sha256": "6a1376b92261a33b0ec5f6fc244496bf4b0c577509afa2317591a0a9a6cbcf34",
+        "wheel_sha256": null
+      },
+      "process_seconds": 0.8584332833997905,
+      "log": "molfoundry-alt-8.log"
+    },
+    {
+      "family": "alt",
+      "max_seconds": 0.028297516,
+      "median_seconds": 0.027272362,
+      "min_seconds": 0.026586506,
+      "n": 10,
+      "per_order": [
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 6,
+          "diagnostics": {
+            "accepted_raw": 6,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 6,
+          "diagnostics": {
+            "accepted_raw": 6,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 6,
+          "diagnostics": {
+            "accepted_raw": 6,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 6,
+          "diagnostics": {
+            "accepted_raw": 6,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 6,
+          "diagnostics": {
+            "accepted_raw": 6,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 7,
+          "diagnostics": {
+            "accepted_raw": 7,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 6,
+          "diagnostics": {
+            "accepted_raw": 6,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_B"
+        },
+        {
+          "count": 6,
+          "diagnostics": {
+            "accepted_raw": 6,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_B"
+        }
+      ],
+      "raw_composites": 53,
+      "representation": "directed-multigraph-via-typed-incidence",
+      "times_seconds": [
+        0.028297516,
+        0.02759459,
+        0.026789698,
+        0.026586506,
+        0.027272362
+      ],
+      "tool": "molfoundry",
+      "word": "ABABABABAB",
+      "runtime_meta": {
+        "composition_sha256": "1675c35713217fad88110ef8533a117c5f9cba8573cb0322cdc38c358ed78ac4",
+        "engine_sha256": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+        "molfoundry_version": "0.1.7",
+        "package_root": "/home/daniel/tmp/mf-ab-20261009-TOIVEX/venv/lib/python3.12/site-packages/molfoundry",
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "selected_file_sha256": {
+          "_engine.py": "2fa148b07667be81f5a734cdb492d2774727b5e63174fb2ec923e732480e3835",
+          "bin/molfoundry.js": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+          "rule.py": "b9941a3e50a70d2c26aa9fd6e586c133c31256f7a88c9172856d39c2c901b844",
+          "rulecomposition.py": "f7e04e5eca06ea34f234926038ef1fbc94bd847d15323086760db2088048912f"
+        },
+        "typed_incidence_sha256": "6a1376b92261a33b0ec5f6fc244496bf4b0c577509afa2317591a0a9a6cbcf34",
+        "wheel_sha256": null
+      },
+      "process_seconds": 0.9158613639883697,
+      "log": "molfoundry-alt-10.log"
+    },
+    {
+      "tool": "fragger-core",
+      "family": "alt",
+      "word": "ABABABABAB",
+      "n": 10,
+      "raw_composites": 53,
+      "per_order": [
+        {
+          "rule": "append_R_A",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_A",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-left",
+          "count": 6
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-right",
+          "count": 6
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-left",
+          "count": 6
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-right",
+          "count": 6
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-left",
+          "count": 6
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-right",
+          "count": 7
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-left",
+          "count": 6
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-right",
+          "count": 6
+        }
+      ],
+      "times_seconds": [
+        0.036526502,
+        0.024156681,
+        0.023019331,
+        0.023096221,
+        0.02843766
+      ],
+      "median_seconds": 0.024156681,
+      "min_seconds": 0.023019331,
+      "max_seconds": 0.036526502,
+      "process_seconds": 0.6190892038866878,
+      "log": "fragger-alt-10.log"
+    },
+    {
+      "tool": "fragger-core",
+      "family": "alt",
+      "word": "ABABABABABAB",
+      "n": 12,
+      "raw_composites": 61,
+      "per_order": [
+        {
+          "rule": "append_R_A",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_A",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-left",
+          "count": 7
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-right",
+          "count": 7
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-left",
+          "count": 7
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-right",
+          "count": 7
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-left",
+          "count": 7
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-right",
+          "count": 8
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-left",
+          "count": 7
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-right",
+          "count": 7
+        }
+      ],
+      "times_seconds": [
+        0.047344596,
+        0.057204099,
+        0.056753221,
+        0.056107375,
+        0.055385378
+      ],
+      "median_seconds": 0.056107375,
+      "min_seconds": 0.047344596,
+      "max_seconds": 0.057204099,
+      "process_seconds": 0.8356187688186765,
+      "log": "fragger-alt-12.log"
+    },
+    {
+      "family": "alt",
+      "max_seconds": 0.036491331,
+      "median_seconds": 0.035828254,
+      "min_seconds": 0.035607335,
+      "n": 12,
+      "per_order": [
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 7,
+          "diagnostics": {
+            "accepted_raw": 7,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 7,
+          "diagnostics": {
+            "accepted_raw": 7,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 7,
+          "diagnostics": {
+            "accepted_raw": 7,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 7,
+          "diagnostics": {
+            "accepted_raw": 7,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 7,
+          "diagnostics": {
+            "accepted_raw": 7,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 8,
+          "diagnostics": {
+            "accepted_raw": 8,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 7,
+          "diagnostics": {
+            "accepted_raw": 7,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_B"
+        },
+        {
+          "count": 7,
+          "diagnostics": {
+            "accepted_raw": 7,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_B"
+        }
+      ],
+      "raw_composites": 61,
+      "representation": "directed-multigraph-via-typed-incidence",
+      "times_seconds": [
+        0.036491331,
+        0.03585517,
+        0.035828254,
+        0.035640251,
+        0.035607335
+      ],
+      "tool": "molfoundry",
+      "word": "ABABABABABAB",
+      "runtime_meta": {
+        "composition_sha256": "1675c35713217fad88110ef8533a117c5f9cba8573cb0322cdc38c358ed78ac4",
+        "engine_sha256": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+        "molfoundry_version": "0.1.7",
+        "package_root": "/home/daniel/tmp/mf-ab-20261009-TOIVEX/venv/lib/python3.12/site-packages/molfoundry",
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "selected_file_sha256": {
+          "_engine.py": "2fa148b07667be81f5a734cdb492d2774727b5e63174fb2ec923e732480e3835",
+          "bin/molfoundry.js": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+          "rule.py": "b9941a3e50a70d2c26aa9fd6e586c133c31256f7a88c9172856d39c2c901b844",
+          "rulecomposition.py": "f7e04e5eca06ea34f234926038ef1fbc94bd847d15323086760db2088048912f"
+        },
+        "typed_incidence_sha256": "6a1376b92261a33b0ec5f6fc244496bf4b0c577509afa2317591a0a9a6cbcf34",
+        "wheel_sha256": null
+      },
+      "process_seconds": 0.971732335165143,
+      "log": "molfoundry-alt-12.log"
+    },
+    {
+      "family": "alt",
+      "max_seconds": 0.047166024,
+      "median_seconds": 0.04683527,
+      "min_seconds": 0.045173812,
+      "n": 14,
+      "per_order": [
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 8,
+          "diagnostics": {
+            "accepted_raw": 8,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 8,
+          "diagnostics": {
+            "accepted_raw": 8,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 8,
+          "diagnostics": {
+            "accepted_raw": 8,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 8,
+          "diagnostics": {
+            "accepted_raw": 8,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 8,
+          "diagnostics": {
+            "accepted_raw": 8,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 9,
+          "diagnostics": {
+            "accepted_raw": 9,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 8,
+          "diagnostics": {
+            "accepted_raw": 8,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_B"
+        },
+        {
+          "count": 8,
+          "diagnostics": {
+            "accepted_raw": 8,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_B"
+        }
+      ],
+      "raw_composites": 69,
+      "representation": "directed-multigraph-via-typed-incidence",
+      "times_seconds": [
+        0.047166024,
+        0.04700662,
+        0.045173812,
+        0.04683527,
+        0.046189976
+      ],
+      "tool": "molfoundry",
+      "word": "ABABABABABABAB",
+      "runtime_meta": {
+        "composition_sha256": "1675c35713217fad88110ef8533a117c5f9cba8573cb0322cdc38c358ed78ac4",
+        "engine_sha256": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+        "molfoundry_version": "0.1.7",
+        "package_root": "/home/daniel/tmp/mf-ab-20261009-TOIVEX/venv/lib/python3.12/site-packages/molfoundry",
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "selected_file_sha256": {
+          "_engine.py": "2fa148b07667be81f5a734cdb492d2774727b5e63174fb2ec923e732480e3835",
+          "bin/molfoundry.js": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+          "rule.py": "b9941a3e50a70d2c26aa9fd6e586c133c31256f7a88c9172856d39c2c901b844",
+          "rulecomposition.py": "f7e04e5eca06ea34f234926038ef1fbc94bd847d15323086760db2088048912f"
+        },
+        "typed_incidence_sha256": "6a1376b92261a33b0ec5f6fc244496bf4b0c577509afa2317591a0a9a6cbcf34",
+        "wheel_sha256": null
+      },
+      "process_seconds": 1.0501745478250086,
+      "log": "molfoundry-alt-14.log"
+    },
+    {
+      "tool": "fragger-core",
+      "family": "alt",
+      "word": "ABABABABABABAB",
+      "n": 14,
+      "raw_composites": 69,
+      "per_order": [
+        {
+          "rule": "append_R_A",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_A",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-left",
+          "count": 8
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-right",
+          "count": 8
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-left",
+          "count": 8
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-right",
+          "count": 8
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-left",
+          "count": 8
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-right",
+          "count": 9
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-left",
+          "count": 8
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-right",
+          "count": 8
+        }
+      ],
+      "times_seconds": [
+        0.152057984,
+        0.147708579,
+        0.145464419,
+        0.119199795,
+        0.096183496
+      ],
+      "median_seconds": 0.145464419,
+      "min_seconds": 0.096183496,
+      "max_seconds": 0.152057984,
+      "process_seconds": 1.4536020150408149,
+      "log": "fragger-alt-14.log"
+    },
+    {
+      "tool": "fragger-core",
+      "family": "alt",
+      "word": "ABABABABABABABAB",
+      "n": 16,
+      "raw_composites": 77,
+      "per_order": [
+        {
+          "rule": "append_R_A",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_A",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-left",
+          "count": 9
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-right",
+          "count": 9
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-left",
+          "count": 9
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-right",
+          "count": 9
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-left",
+          "count": 9
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-right",
+          "count": 10
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-left",
+          "count": 9
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-right",
+          "count": 9
+        }
+      ],
+      "times_seconds": [
+        0.297636446,
+        0.282620008,
+        0.397290372,
+        0.2898009,
+        0.291763028
+      ],
+      "median_seconds": 0.291763028,
+      "min_seconds": 0.282620008,
+      "max_seconds": 0.397290372,
+      "process_seconds": 2.9097973848693073,
+      "log": "fragger-alt-16.log"
+    },
+    {
+      "family": "alt",
+      "max_seconds": 0.061337129,
+      "median_seconds": 0.059866653,
+      "min_seconds": 0.059212242,
+      "n": 16,
+      "per_order": [
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 9,
+          "diagnostics": {
+            "accepted_raw": 9,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 9,
+          "diagnostics": {
+            "accepted_raw": 9,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 9,
+          "diagnostics": {
+            "accepted_raw": 9,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 9,
+          "diagnostics": {
+            "accepted_raw": 9,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 9,
+          "diagnostics": {
+            "accepted_raw": 9,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 10,
+          "diagnostics": {
+            "accepted_raw": 10,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 9,
+          "diagnostics": {
+            "accepted_raw": 9,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_B"
+        },
+        {
+          "count": 9,
+          "diagnostics": {
+            "accepted_raw": 9,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_B"
+        }
+      ],
+      "raw_composites": 77,
+      "representation": "directed-multigraph-via-typed-incidence",
+      "times_seconds": [
+        0.061337129,
+        0.060548493,
+        0.059866653,
+        0.059601668,
+        0.059212242
+      ],
+      "tool": "molfoundry",
+      "word": "ABABABABABABABAB",
+      "runtime_meta": {
+        "composition_sha256": "1675c35713217fad88110ef8533a117c5f9cba8573cb0322cdc38c358ed78ac4",
+        "engine_sha256": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+        "molfoundry_version": "0.1.7",
+        "package_root": "/home/daniel/tmp/mf-ab-20261009-TOIVEX/venv/lib/python3.12/site-packages/molfoundry",
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "selected_file_sha256": {
+          "_engine.py": "2fa148b07667be81f5a734cdb492d2774727b5e63174fb2ec923e732480e3835",
+          "bin/molfoundry.js": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+          "rule.py": "b9941a3e50a70d2c26aa9fd6e586c133c31256f7a88c9172856d39c2c901b844",
+          "rulecomposition.py": "f7e04e5eca06ea34f234926038ef1fbc94bd847d15323086760db2088048912f"
+        },
+        "typed_incidence_sha256": "6a1376b92261a33b0ec5f6fc244496bf4b0c577509afa2317591a0a9a6cbcf34",
+        "wheel_sha256": null
+      },
+      "process_seconds": 1.1462447317317128,
+      "log": "molfoundry-alt-16.log"
+    },
+    {
+      "family": "alt",
+      "max_seconds": 0.076872351,
+      "median_seconds": 0.075608494,
+      "min_seconds": 0.073664855,
+      "n": 18,
+      "per_order": [
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 10,
+          "diagnostics": {
+            "accepted_raw": 10,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 10,
+          "diagnostics": {
+            "accepted_raw": 10,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 10,
+          "diagnostics": {
+            "accepted_raw": 10,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 10,
+          "diagnostics": {
+            "accepted_raw": 10,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 10,
+          "diagnostics": {
+            "accepted_raw": 10,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 11,
+          "diagnostics": {
+            "accepted_raw": 11,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 10,
+          "diagnostics": {
+            "accepted_raw": 10,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_B"
+        },
+        {
+          "count": 10,
+          "diagnostics": {
+            "accepted_raw": 10,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_B"
+        }
+      ],
+      "raw_composites": 85,
+      "representation": "directed-multigraph-via-typed-incidence",
+      "times_seconds": [
+        0.075608494,
+        0.075920316,
+        0.076872351,
+        0.073664855,
+        0.074328227
+      ],
+      "tool": "molfoundry",
+      "word": "ABABABABABABABABAB",
+      "runtime_meta": {
+        "composition_sha256": "1675c35713217fad88110ef8533a117c5f9cba8573cb0322cdc38c358ed78ac4",
+        "engine_sha256": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+        "molfoundry_version": "0.1.7",
+        "package_root": "/home/daniel/tmp/mf-ab-20261009-TOIVEX/venv/lib/python3.12/site-packages/molfoundry",
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "selected_file_sha256": {
+          "_engine.py": "2fa148b07667be81f5a734cdb492d2774727b5e63174fb2ec923e732480e3835",
+          "bin/molfoundry.js": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+          "rule.py": "b9941a3e50a70d2c26aa9fd6e586c133c31256f7a88c9172856d39c2c901b844",
+          "rulecomposition.py": "f7e04e5eca06ea34f234926038ef1fbc94bd847d15323086760db2088048912f"
+        },
+        "typed_incidence_sha256": "6a1376b92261a33b0ec5f6fc244496bf4b0c577509afa2317591a0a9a6cbcf34",
+        "wheel_sha256": null
+      },
+      "process_seconds": 1.2542839059606194,
+      "log": "molfoundry-alt-18.log"
+    },
+    {
+      "tool": "fragger-core",
+      "family": "alt",
+      "word": "ABABABABABABABABAB",
+      "n": 18,
+      "raw_composites": 85,
+      "per_order": [
+        {
+          "rule": "append_R_A",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_A",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-left",
+          "count": 10
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-right",
+          "count": 10
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-left",
+          "count": 10
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-right",
+          "count": 10
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-left",
+          "count": 10
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-right",
+          "count": 11
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-left",
+          "count": 10
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-right",
+          "count": 10
+        }
+      ],
+      "times_seconds": [
+        1.130533564,
+        1.09011044,
+        1.066642443,
+        1.066098577,
+        1.066569441
+      ],
+      "median_seconds": 1.066642443,
+      "min_seconds": 1.066098577,
+      "max_seconds": 1.130533564,
+      "process_seconds": 8.398956472985446,
+      "log": "fragger-alt-18.log"
+    },
+    {
+      "tool": "fragger-core",
+      "family": "alt",
+      "word": "ABABABABABABABABABAB",
+      "n": 20,
+      "raw_composites": 93,
+      "per_order": [
+        {
+          "rule": "append_R_A",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_A",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-left",
+          "count": 11
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-right",
+          "count": 11
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-left",
+          "count": 11
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-right",
+          "count": 11
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-left",
+          "count": 11
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-right",
+          "count": 12
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-left",
+          "count": 11
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-right",
+          "count": 11
+        }
+      ],
+      "times_seconds": [
+        4.293560913,
+        4.310188723,
+        4.357209124,
+        4.319241959,
+        4.334413039
+      ],
+      "median_seconds": 4.319241959,
+      "min_seconds": 4.293560913,
+      "max_seconds": 4.357209124,
+      "process_seconds": 31.24323186231777,
+      "log": "fragger-alt-20.log"
+    },
+    {
+      "family": "alt",
+      "max_seconds": 0.096831443,
+      "median_seconds": 0.095719545,
+      "min_seconds": 0.094708298,
+      "n": 20,
+      "per_order": [
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 11,
+          "diagnostics": {
+            "accepted_raw": 11,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 11,
+          "diagnostics": {
+            "accepted_raw": 11,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 11,
+          "diagnostics": {
+            "accepted_raw": 11,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 11,
+          "diagnostics": {
+            "accepted_raw": 11,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 11,
+          "diagnostics": {
+            "accepted_raw": 11,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 12,
+          "diagnostics": {
+            "accepted_raw": 12,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 11,
+          "diagnostics": {
+            "accepted_raw": 11,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_B"
+        },
+        {
+          "count": 11,
+          "diagnostics": {
+            "accepted_raw": 11,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_B"
+        }
+      ],
+      "raw_composites": 93,
+      "representation": "directed-multigraph-via-typed-incidence",
+      "times_seconds": [
+        0.096831443,
+        0.094708298,
+        0.095719545,
+        0.096524868,
+        0.09546851
+      ],
+      "tool": "molfoundry",
+      "word": "ABABABABABABABABABAB",
+      "runtime_meta": {
+        "composition_sha256": "1675c35713217fad88110ef8533a117c5f9cba8573cb0322cdc38c358ed78ac4",
+        "engine_sha256": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+        "molfoundry_version": "0.1.7",
+        "package_root": "/home/daniel/tmp/mf-ab-20261009-TOIVEX/venv/lib/python3.12/site-packages/molfoundry",
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "selected_file_sha256": {
+          "_engine.py": "2fa148b07667be81f5a734cdb492d2774727b5e63174fb2ec923e732480e3835",
+          "bin/molfoundry.js": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+          "rule.py": "b9941a3e50a70d2c26aa9fd6e586c133c31256f7a88c9172856d39c2c901b844",
+          "rulecomposition.py": "f7e04e5eca06ea34f234926038ef1fbc94bd847d15323086760db2088048912f"
+        },
+        "typed_incidence_sha256": "6a1376b92261a33b0ec5f6fc244496bf4b0c577509afa2317591a0a9a6cbcf34",
+        "wheel_sha256": null
+      },
+      "process_seconds": 1.3995971507392824,
+      "log": "molfoundry-alt-20.log"
+    },
+    {
+      "family": "alt",
+      "max_seconds": 0.119914544,
+      "median_seconds": 0.119478429,
+      "min_seconds": 0.117943062,
+      "n": 22,
+      "per_order": [
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 12,
+          "diagnostics": {
+            "accepted_raw": 12,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 12,
+          "diagnostics": {
+            "accepted_raw": 12,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 12,
+          "diagnostics": {
+            "accepted_raw": 12,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 12,
+          "diagnostics": {
+            "accepted_raw": 12,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 12,
+          "diagnostics": {
+            "accepted_raw": 12,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 13,
+          "diagnostics": {
+            "accepted_raw": 13,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 12,
+          "diagnostics": {
+            "accepted_raw": 12,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_B"
+        },
+        {
+          "count": 12,
+          "diagnostics": {
+            "accepted_raw": 12,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_B"
+        }
+      ],
+      "raw_composites": 101,
+      "representation": "directed-multigraph-via-typed-incidence",
+      "times_seconds": [
+        0.1195034,
+        0.117943062,
+        0.119478429,
+        0.119914544,
+        0.119138731
+      ],
+      "tool": "molfoundry",
+      "word": "ABABABABABABABABABABAB",
+      "runtime_meta": {
+        "composition_sha256": "1675c35713217fad88110ef8533a117c5f9cba8573cb0322cdc38c358ed78ac4",
+        "engine_sha256": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+        "molfoundry_version": "0.1.7",
+        "package_root": "/home/daniel/tmp/mf-ab-20261009-TOIVEX/venv/lib/python3.12/site-packages/molfoundry",
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "selected_file_sha256": {
+          "_engine.py": "2fa148b07667be81f5a734cdb492d2774727b5e63174fb2ec923e732480e3835",
+          "bin/molfoundry.js": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+          "rule.py": "b9941a3e50a70d2c26aa9fd6e586c133c31256f7a88c9172856d39c2c901b844",
+          "rulecomposition.py": "f7e04e5eca06ea34f234926038ef1fbc94bd847d15323086760db2088048912f"
+        },
+        "typed_incidence_sha256": "6a1376b92261a33b0ec5f6fc244496bf4b0c577509afa2317591a0a9a6cbcf34",
+        "wheel_sha256": null
+      },
+      "process_seconds": 1.566030670888722,
+      "log": "molfoundry-alt-22.log"
+    },
+    {
+      "tool": "fragger-core",
+      "family": "alt",
+      "word": "ABABABABABABABABABABAB",
+      "n": 22,
+      "raw_composites": 101,
+      "per_order": [
+        {
+          "rule": "append_R_A",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_A",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-left",
+          "count": 12
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-right",
+          "count": 12
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-left",
+          "count": 12
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-right",
+          "count": 12
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-left",
+          "count": 12
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-right",
+          "count": 13
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-left",
+          "count": 12
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-right",
+          "count": 12
+        }
+      ],
+      "times_seconds": [
+        17.578509583,
+        17.555805235,
+        17.592162319,
+        17.562930184,
+        17.551278191
+      ],
+      "median_seconds": 17.562930184,
+      "min_seconds": 17.551278191,
+      "max_seconds": 17.592162319,
+      "process_seconds": 123.76096815709025,
+      "log": "fragger-alt-22.log"
+    },
+    {
+      "tool": "fragger-core",
+      "family": "alt",
+      "word": "ABABABABABABABABABABABAB",
+      "n": 24,
+      "raw_composites": 109,
+      "per_order": [
+        {
+          "rule": "append_R_A",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_A",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-left",
+          "count": 13
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-right",
+          "count": 13
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-left",
+          "count": 13
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-right",
+          "count": 13
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-left",
+          "count": 13
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-right",
+          "count": 14
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-left",
+          "count": 13
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-right",
+          "count": 13
+        }
+      ],
+      "times_seconds": [
+        74.543464082,
+        74.232746863,
+        74.404777838,
+        74.314264223,
+        74.026398016
+      ],
+      "median_seconds": 74.314264223,
+      "min_seconds": 74.026398016,
+      "max_seconds": 74.543464082,
+      "process_seconds": 521.1252989992499,
+      "log": "fragger-alt-24.log"
+    },
+    {
+      "family": "alt",
+      "max_seconds": 0.145901849,
+      "median_seconds": 0.144303217,
+      "min_seconds": 0.14093822,
+      "n": 24,
+      "per_order": [
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 13,
+          "diagnostics": {
+            "accepted_raw": 13,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 13,
+          "diagnostics": {
+            "accepted_raw": 13,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 13,
+          "diagnostics": {
+            "accepted_raw": 13,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 13,
+          "diagnostics": {
+            "accepted_raw": 13,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 13,
+          "diagnostics": {
+            "accepted_raw": 13,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 14,
+          "diagnostics": {
+            "accepted_raw": 14,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 13,
+          "diagnostics": {
+            "accepted_raw": 13,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_B"
+        },
+        {
+          "count": 13,
+          "diagnostics": {
+            "accepted_raw": 13,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_B"
+        }
+      ],
+      "raw_composites": 109,
+      "representation": "directed-multigraph-via-typed-incidence",
+      "times_seconds": [
+        0.145901849,
+        0.143225958,
+        0.14462452,
+        0.14093822,
+        0.144303217
+      ],
+      "tool": "molfoundry",
+      "word": "ABABABABABABABABABABABAB",
+      "runtime_meta": {
+        "composition_sha256": "1675c35713217fad88110ef8533a117c5f9cba8573cb0322cdc38c358ed78ac4",
+        "engine_sha256": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+        "molfoundry_version": "0.1.7",
+        "package_root": "/home/daniel/tmp/mf-ab-20261009-TOIVEX/venv/lib/python3.12/site-packages/molfoundry",
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "selected_file_sha256": {
+          "_engine.py": "2fa148b07667be81f5a734cdb492d2774727b5e63174fb2ec923e732480e3835",
+          "bin/molfoundry.js": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+          "rule.py": "b9941a3e50a70d2c26aa9fd6e586c133c31256f7a88c9172856d39c2c901b844",
+          "rulecomposition.py": "f7e04e5eca06ea34f234926038ef1fbc94bd847d15323086760db2088048912f"
+        },
+        "typed_incidence_sha256": "6a1376b92261a33b0ec5f6fc244496bf4b0c577509afa2317591a0a9a6cbcf34",
+        "wheel_sha256": null
+      },
+      "process_seconds": 1.7420093649998307,
+      "log": "molfoundry-alt-24.log"
+    },
+    {
+      "family": "alt",
+      "max_seconds": 0.175342654,
+      "median_seconds": 0.174097261,
+      "min_seconds": 0.171734193,
+      "n": 26,
+      "per_order": [
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 14,
+          "diagnostics": {
+            "accepted_raw": 14,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 14,
+          "diagnostics": {
+            "accepted_raw": 14,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 14,
+          "diagnostics": {
+            "accepted_raw": 14,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 14,
+          "diagnostics": {
+            "accepted_raw": 14,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 14,
+          "diagnostics": {
+            "accepted_raw": 14,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 15,
+          "diagnostics": {
+            "accepted_raw": 15,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 14,
+          "diagnostics": {
+            "accepted_raw": 14,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_B"
+        },
+        {
+          "count": 14,
+          "diagnostics": {
+            "accepted_raw": 14,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_B"
+        }
+      ],
+      "raw_composites": 117,
+      "representation": "directed-multigraph-via-typed-incidence",
+      "times_seconds": [
+        0.175342654,
+        0.171734193,
+        0.172645322,
+        0.174705927,
+        0.174097261
+      ],
+      "tool": "molfoundry",
+      "word": "ABABABABABABABABABABABABAB",
+      "runtime_meta": {
+        "composition_sha256": "1675c35713217fad88110ef8533a117c5f9cba8573cb0322cdc38c358ed78ac4",
+        "engine_sha256": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+        "molfoundry_version": "0.1.7",
+        "package_root": "/home/daniel/tmp/mf-ab-20261009-TOIVEX/venv/lib/python3.12/site-packages/molfoundry",
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "selected_file_sha256": {
+          "_engine.py": "2fa148b07667be81f5a734cdb492d2774727b5e63174fb2ec923e732480e3835",
+          "bin/molfoundry.js": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+          "rule.py": "b9941a3e50a70d2c26aa9fd6e586c133c31256f7a88c9172856d39c2c901b844",
+          "rulecomposition.py": "f7e04e5eca06ea34f234926038ef1fbc94bd847d15323086760db2088048912f"
+        },
+        "typed_incidence_sha256": "6a1376b92261a33b0ec5f6fc244496bf4b0c577509afa2317591a0a9a6cbcf34",
+        "wheel_sha256": null
+      },
+      "process_seconds": 1.9500049748457968,
+      "log": "molfoundry-alt-26.log"
+    },
+    {
+      "tool": "fragger-core",
+      "family": "alt",
+      "word": "ABABABABABABABABABABABABAB",
+      "n": 26,
+      "raw_composites": 117,
+      "per_order": [
+        {
+          "rule": "append_R_A",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_A",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-left",
+          "count": 14
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-right",
+          "count": 14
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-left",
+          "count": 14
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-right",
+          "count": 14
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-left",
+          "count": 14
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-right",
+          "count": 15
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-left",
+          "count": 14
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-right",
+          "count": 14
+        }
+      ],
+      "times_seconds": [
+        312.858294464,
+        313.806111854,
+        314.013324589,
+        314.607518577,
+        312.111659145
+      ],
+      "median_seconds": 313.806111854,
+      "min_seconds": 312.111659145,
+      "max_seconds": 314.607518577,
+      "process_seconds": 2193.24760714313,
+      "log": "fragger-alt-26.log"
+    },
+    {
+      "tool": "fragger-core",
+      "family": "alt",
+      "word": "ABABABABABABABABABABABABABAB",
+      "n": 28,
+      "raw_composites": 125,
+      "per_order": [
+        {
+          "rule": "append_R_A",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_A",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-left",
+          "count": 15
+        },
+        {
+          "rule": "append_A_A",
+          "order": "observable-right",
+          "count": 15
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-left",
+          "count": 15
+        },
+        {
+          "rule": "append_B_A",
+          "order": "observable-right",
+          "count": 15
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-left",
+          "count": 1
+        },
+        {
+          "rule": "append_R_B",
+          "order": "observable-right",
+          "count": 1
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-left",
+          "count": 15
+        },
+        {
+          "rule": "append_A_B",
+          "order": "observable-right",
+          "count": 16
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-left",
+          "count": 15
+        },
+        {
+          "rule": "append_B_B",
+          "order": "observable-right",
+          "count": 15
+        }
+      ],
+      "times_seconds": [
+        1299.415740418,
+        1300.667595907,
+        1319.192474105,
+        1289.492126747,
+        1277.058068557
+      ],
+      "median_seconds": 1299.415740418,
+      "min_seconds": 1277.058068557,
+      "max_seconds": 1319.192474105,
+      "process_seconds": 9076.460224815644,
+      "log": "fragger-alt-28.log"
+    },
+    {
+      "family": "alt",
+      "max_seconds": 0.210811106,
+      "median_seconds": 0.207260408,
+      "min_seconds": 0.204983938,
+      "n": 28,
+      "per_order": [
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_A"
+        },
+        {
+          "count": 15,
+          "diagnostics": {
+            "accepted_raw": 15,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 15,
+          "diagnostics": {
+            "accepted_raw": 15,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_A"
+        },
+        {
+          "count": 15,
+          "diagnostics": {
+            "accepted_raw": 15,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 15,
+          "diagnostics": {
+            "accepted_raw": 15,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_A"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 1,
+          "diagnostics": {
+            "accepted_raw": 1,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_R_B"
+        },
+        {
+          "count": 15,
+          "diagnostics": {
+            "accepted_raw": 15,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 16,
+          "diagnostics": {
+            "accepted_raw": 16,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_A_B"
+        },
+        {
+          "count": 15,
+          "diagnostics": {
+            "accepted_raw": 15,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-left",
+          "rule": "append_B_B"
+        },
+        {
+          "count": 15,
+          "diagnostics": {
+            "accepted_raw": 15,
+            "candidate_overlaps": null,
+            "condition_rejected": null,
+            "forbidden_input_rejected": 0,
+            "forbidden_output_rejected": 0,
+            "forbidden_overlap_rejected": 0,
+            "forbidden_reasons": {},
+            "null_compositions": null,
+            "predicate_checks": {
+              "input": 0,
+              "output": 0,
+              "overlap": 0
+            }
+          },
+          "order": "observable-right",
+          "rule": "append_B_B"
+        }
+      ],
+      "raw_composites": 125,
+      "representation": "directed-multigraph-via-typed-incidence",
+      "times_seconds": [
+        0.20877518,
+        0.207148889,
+        0.207260408,
+        0.204983938,
+        0.210811106
+      ],
+      "tool": "molfoundry",
+      "word": "ABABABABABABABABABABABABABAB",
+      "runtime_meta": {
+        "composition_sha256": "1675c35713217fad88110ef8533a117c5f9cba8573cb0322cdc38c358ed78ac4",
+        "engine_sha256": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+        "molfoundry_version": "0.1.7",
+        "package_root": "/home/daniel/tmp/mf-ab-20261009-TOIVEX/venv/lib/python3.12/site-packages/molfoundry",
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "selected_file_sha256": {
+          "_engine.py": "2fa148b07667be81f5a734cdb492d2774727b5e63174fb2ec923e732480e3835",
+          "bin/molfoundry.js": "bc900d7917fcebc7db8e5baf5abba92c6b0b5ed593c6acfbe3b726edabf5f919",
+          "rule.py": "b9941a3e50a70d2c26aa9fd6e586c133c31256f7a88c9172856d39c2c901b844",
+          "rulecomposition.py": "f7e04e5eca06ea34f234926038ef1fbc94bd847d15323086760db2088048912f"
+        },
+        "typed_incidence_sha256": "6a1376b92261a33b0ec5f6fc244496bf4b0c577509afa2317591a0a9a6cbcf34",
+        "wheel_sha256": null
+      },
+      "process_seconds": 2.1950933821499348,
+      "log": "molfoundry-alt-28.log"
+    }
+  ],
+  "comparison": [
+    {
+      "family": "alt",
+      "n": 2,
+      "word": "AB",
+      "molfoundry_median_seconds": 0.006663101,
+      "fragger_median_seconds": 0.004803806,
+      "fragger_over_molfoundry": 0.7209565035859429,
+      "molfoundry_raw_composites": 21,
+      "fragger_raw_composites": 21
+    },
+    {
+      "family": "alt",
+      "n": 4,
+      "word": "ABAB",
+      "molfoundry_median_seconds": 0.00990454,
+      "fragger_median_seconds": 0.008037034,
+      "fragger_over_molfoundry": 0.8114494968973824,
+      "molfoundry_raw_composites": 29,
+      "fragger_raw_composites": 29
+    },
+    {
+      "family": "alt",
+      "n": 6,
+      "word": "ABABAB",
+      "molfoundry_median_seconds": 0.014200764,
+      "fragger_median_seconds": 0.013239181,
+      "fragger_over_molfoundry": 0.932286530499345,
+      "molfoundry_raw_composites": 37,
+      "fragger_raw_composites": 37
+    },
+    {
+      "family": "alt",
+      "n": 8,
+      "word": "ABABABAB",
+      "molfoundry_median_seconds": 0.019653199,
+      "fragger_median_seconds": 0.019649772,
+      "fragger_over_molfoundry": 0.9998256263522289,
+      "molfoundry_raw_composites": 45,
+      "fragger_raw_composites": 45
+    },
+    {
+      "family": "alt",
+      "n": 10,
+      "word": "ABABABABAB",
+      "molfoundry_median_seconds": 0.027272362,
+      "fragger_median_seconds": 0.024156681,
+      "fragger_over_molfoundry": 0.8857568332365198,
+      "molfoundry_raw_composites": 53,
+      "fragger_raw_composites": 53
+    },
+    {
+      "family": "alt",
+      "n": 12,
+      "word": "ABABABABABAB",
+      "molfoundry_median_seconds": 0.035828254,
+      "fragger_median_seconds": 0.056107375,
+      "fragger_over_molfoundry": 1.5660091892839658,
+      "molfoundry_raw_composites": 61,
+      "fragger_raw_composites": 61
+    },
+    {
+      "family": "alt",
+      "n": 14,
+      "word": "ABABABABABABAB",
+      "molfoundry_median_seconds": 0.04683527,
+      "fragger_median_seconds": 0.145464419,
+      "fragger_over_molfoundry": 3.105873394132243,
+      "molfoundry_raw_composites": 69,
+      "fragger_raw_composites": 69
+    },
+    {
+      "family": "alt",
+      "n": 16,
+      "word": "ABABABABABABABAB",
+      "molfoundry_median_seconds": 0.059866653,
+      "fragger_median_seconds": 0.291763028,
+      "fragger_over_molfoundry": 4.873548350865715,
+      "molfoundry_raw_composites": 77,
+      "fragger_raw_composites": 77
+    },
+    {
+      "family": "alt",
+      "n": 18,
+      "word": "ABABABABABABABABAB",
+      "molfoundry_median_seconds": 0.075608494,
+      "fragger_median_seconds": 1.066642443,
+      "fragger_over_molfoundry": 14.107441989255864,
+      "molfoundry_raw_composites": 85,
+      "fragger_raw_composites": 85
+    },
+    {
+      "family": "alt",
+      "n": 20,
+      "word": "ABABABABABABABABABAB",
+      "molfoundry_median_seconds": 0.095719545,
+      "fragger_median_seconds": 4.319241959,
+      "fragger_over_molfoundry": 45.123929067987106,
+      "molfoundry_raw_composites": 93,
+      "fragger_raw_composites": 93
+    },
+    {
+      "family": "alt",
+      "n": 22,
+      "word": "ABABABABABABABABABABAB",
+      "molfoundry_median_seconds": 0.119478429,
+      "fragger_median_seconds": 17.562930184,
+      "fragger_over_molfoundry": 146.99666149778383,
+      "molfoundry_raw_composites": 101,
+      "fragger_raw_composites": 101
+    },
+    {
+      "family": "alt",
+      "n": 24,
+      "word": "ABABABABABABABABABABABAB",
+      "molfoundry_median_seconds": 0.144303217,
+      "fragger_median_seconds": 74.314264223,
+      "fragger_over_molfoundry": 514.9868850325075,
+      "molfoundry_raw_composites": 109,
+      "fragger_raw_composites": 109
+    },
+    {
+      "family": "alt",
+      "n": 26,
+      "word": "ABABABABABABABABABABABABAB",
+      "molfoundry_median_seconds": 0.174097261,
+      "fragger_median_seconds": 313.806111854,
+      "fragger_over_molfoundry": 1802.4758692441462,
+      "molfoundry_raw_composites": 117,
+      "fragger_raw_composites": 117
+    },
+    {
+      "family": "alt",
+      "n": 28,
+      "word": "ABABABABABABABABABABABABABAB",
+      "molfoundry_median_seconds": 0.207260408,
+      "fragger_median_seconds": 1299.415740418,
+      "fragger_over_molfoundry": 6269.483655643484,
+      "molfoundry_raw_composites": 125,
+      "fragger_raw_composites": 125
+    }
+  ]
+}

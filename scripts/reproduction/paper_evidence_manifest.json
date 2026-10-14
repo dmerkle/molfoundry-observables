@@ -1,0 +1,725 @@
+{
+  "schema_version": 1,
+  "kind": "mfobs-evidence-profile",
+  "freshness_policy": "Every analysis row is produced in a fresh child process; saved website reports are not inputs.",
+  "profiles": {
+    "smoke": [
+      "doctor",
+      "aldol-conditions",
+      "aba",
+      "molecular-baseline",
+      "molecular-limited-aba",
+      "smoke-tests"
+    ],
+    "paper": [
+      "doctor",
+      "aldol-conditions",
+      "tcs-aldol",
+      "query-AB",
+      "query-ABA",
+      "query-ABBA",
+      "query-AAAA",
+      "query-ABABA",
+      "query-ABA-gated",
+      "remy",
+      "dna-walker",
+      "eight-slots",
+      "molecular-baseline",
+      "molecular-noedge",
+      "molecular-aba",
+      "molecular-aba-gated",
+      "molecular-limited-aba",
+      "context-nac-guarded",
+      "context-nac-ablated",
+      "growing-ring",
+      "regression-tests"
+    ],
+    "supplementary": [
+      "doctor",
+      "tcs-aldol",
+      "aba",
+      "rop-baseline",
+      "rop-noedge",
+      "rop-copolymer",
+      "rop-combined",
+      "context-nac-guarded",
+      "context-nac-ablated",
+      "ring8",
+      "remy",
+      "growing-ring",
+      "m3a",
+      "m3b",
+      "m4",
+      "regression-tests"
+    ]
+  },
+  "stages": {
+    "doctor": {
+      "kind": "worker",
+      "worker": "doctor",
+      "timeout_seconds": 60,
+      "expected": {
+        "semantic_status": "PASS"
+      }
+    },
+    "tcs-aldol": {
+      "kind": "worker",
+      "worker": "tcs-aldol",
+      "timeout_seconds": 120,
+      "expected": {
+        "status": "PASS",
+        "conditioned_coefficients": [
+          -1,
+          1
+        ],
+        "conditioned_host_counts": [
+          0,
+          1
+        ],
+        "unconditioned_host_counts": [
+          1,
+          1
+        ]
+      }
+    },
+    "aba": {
+      "kind": "worker",
+      "worker": "aba",
+      "motif": "ABA",
+      "alphabet": [
+        "A",
+        "B"
+      ],
+      "gated": false,
+      "linear_limit": 24,
+      "support_pattern_limit": 64,
+      "support_expansion_limit": 64,
+      "timeout_seconds": 300,
+      "expected": {
+        "linear_status": "UNKNOWN_DIMENSION_LIMIT",
+        "linear_dimension": 24,
+        "pjc_status": "CLOSED",
+        "event_count": 8,
+        "operator_order": 2,
+        "composition_status": "PASS",
+        "support_status": "POLYNOMIAL_SUPPORT_CLOSED",
+        "finite_status": "PASS"
+      }
+    },
+    "rop-baseline": {
+      "kind": "worker",
+      "worker": "rop",
+      "selection": "baseline",
+      "linear_limit": 24,
+      "graph_bound": 3,
+      "projection_bound": 2,
+      "operator_bound": 4,
+      "timeout_seconds": 600,
+      "expected": {
+        "linear_status": "CLOSED",
+        "linear_dimension": 3,
+        "pjc_status": "CLOSED",
+        "event_count": 2,
+        "operator_order": 1,
+        "finite_status": "PASS"
+      }
+    },
+    "rop-noedge": {
+      "kind": "worker",
+      "worker": "rop",
+      "selection": "noedge",
+      "linear_limit": 24,
+      "graph_bound": 3,
+      "projection_bound": 2,
+      "operator_bound": 4,
+      "timeout_seconds": 600,
+      "expected": {
+        "linear_status": "CLOSED",
+        "linear_dimension": 5,
+        "pjc_status": "CLOSED",
+        "event_count": 4,
+        "operator_order": 2,
+        "finite_status": "PASS"
+      }
+    },
+    "rop-copolymer": {
+      "kind": "worker",
+      "worker": "rop",
+      "selection": "copolymer",
+      "linear_limit": 24,
+      "graph_bound": 3,
+      "projection_bound": 2,
+      "operator_bound": 4,
+      "timeout_seconds": 900,
+      "expected": {
+        "linear_status": "UNKNOWN_DIMENSION_LIMIT",
+        "linear_dimension": 24,
+        "pjc_status": "CLOSED",
+        "event_count": 10,
+        "operator_order": 2,
+        "finite_status": "PASS"
+      }
+    },
+    "rop-combined": {
+      "kind": "worker",
+      "worker": "rop",
+      "selection": "combined",
+      "linear_limit": 24,
+      "graph_bound": 3,
+      "projection_bound": 2,
+      "operator_bound": 4,
+      "timeout_seconds": 900,
+      "expected": {
+        "linear_status": "UNKNOWN_DIMENSION_LIMIT",
+        "linear_dimension": 24,
+        "pjc_status": "CLOSED",
+        "event_count": 12,
+        "operator_order": 3,
+        "finite_status": "PASS"
+      }
+    },
+    "ring8": {
+      "kind": "worker",
+      "worker": "ring8",
+      "worklist_limit": 1000,
+      "timeout_seconds": 900,
+      "expected": {
+        "linear_status": "CLOSED",
+        "linear_dimension": 30,
+        "pjc_status": "CLOSED",
+        "event_count": 196,
+        "operator_order": 1,
+        "finite_status": "PASS"
+      }
+    },
+    "remy": {
+      "kind": "worker",
+      "worker": "remy",
+      "linear_limit": 16,
+      "finite_tree_bound": 8,
+      "direct_molfoundry_bound": 3,
+      "timeout_seconds": 600,
+      "expected": {
+        "linear_status": "CLOSED",
+        "linear_dimension": 4,
+        "pjc_status": "CLOSED",
+        "event_count": 4,
+        "finite_status": "PASS"
+      }
+    },
+    "growing-ring": {
+      "kind": "worker",
+      "worker": "growing-ring",
+      "worklist_limit": 12,
+      "timeout_seconds": 300,
+      "expected": {
+        "linear_status": "UNKNOWN_EXPANSION_LIMIT",
+        "pjc_status": "UNKNOWN_UNBOUNDED_COORDINATE_LIFT",
+        "witness_status": "WITNESS"
+      }
+    },
+    "m3a": {
+      "kind": "m3a",
+      "timeout_seconds": 300,
+      "required_arguments": [
+        "fragger_checkout",
+        "java"
+      ],
+      "required_output": "comparison.json",
+      "expected": {
+        "status": "PASS",
+        "closure_dimensions": {
+          "baseline": 3,
+          "noedge": 5
+        },
+        "closure_statuses": {
+          "baseline": "CLOSED",
+          "noedge": "CLOSED"
+        }
+      }
+    },
+    "m3b": {
+      "kind": "m3b",
+      "timeout_seconds": 300,
+      "required_arguments": [
+        "fragger_checkout",
+        "java"
+      ],
+      "required_output": "comparison.json",
+      "expected": {
+        "status": "COMPARISON_INCOMPLETE",
+        "minimum_seed_equalities": 7,
+        "mapped_mismatches": 0,
+        "finite_status": "PASS",
+        "budgets": [
+          12,
+          24
+        ],
+        "external_statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "evidence_status": "PASS",
+        "required_seeds": [
+          "N_A",
+          "N_B",
+          "C_AA",
+          "C_AB",
+          "C_BA",
+          "C_BB",
+          "C_ABA"
+        ]
+      }
+    },
+    "m4": {
+      "kind": "m4",
+      "inner_timeout_seconds": 600,
+      "required_output": "summary.json",
+      "expected": {
+        "status": "COMPLETE",
+        "cases_per_repetition": 8,
+        "row_signatures": {
+          "letters:false": [
+            4,
+            1,
+            "CLOSED",
+            5,
+            "CLOSED",
+            "COMPLETE",
+            "PASS"
+          ],
+          "letters:true": [
+            6,
+            2,
+            "CLOSED",
+            8,
+            "CLOSED",
+            "COMPLETE",
+            "PASS"
+          ],
+          "dyads:false": [
+            8,
+            2,
+            "UNKNOWN_DIMENSION_LIMIT",
+            24,
+            "CLOSED",
+            "COMPLETE",
+            "PASS"
+          ],
+          "dyads:true": [
+            10,
+            3,
+            "UNKNOWN_DIMENSION_LIMIT",
+            24,
+            "CLOSED",
+            "COMPLETE",
+            "PASS"
+          ],
+          "aba:false": [
+            16,
+            2,
+            "UNKNOWN_DIMENSION_LIMIT",
+            24,
+            "CLOSED",
+            "COMPLETE",
+            "PASS"
+          ],
+          "aba:true": [
+            18,
+            3,
+            "UNKNOWN_DIMENSION_LIMIT",
+            24,
+            "CLOSED",
+            "COMPLETE",
+            "PASS"
+          ],
+          "abba:false": [
+            32,
+            2,
+            "UNKNOWN_DIMENSION_LIMIT",
+            24,
+            "CLOSED",
+            "COMPLETE",
+            "PASS"
+          ],
+          "abba:true": [
+            34,
+            3,
+            "UNKNOWN_DIMENSION_LIMIT",
+            24,
+            "CLOSED",
+            "COMPLETE",
+            "PASS"
+          ]
+        }
+      }
+    },
+    "smoke-tests": {
+      "kind": "pytest",
+      "timeout_seconds": 300,
+      "tests": [
+        "tests/test_reproduction.py",
+        "tests/test_example_cli.py",
+        "tests/test_result_formatting.py",
+        "tests/test_pattern_support_discovery.py",
+        "tests/test_rop_support_workflow.py",
+        "tests/test_copolymer_rop.py::test_noedge_gate_is_active_and_not_an_inert_annotation",
+        "tests/test_architecture.py"
+      ],
+      "expected": {
+        "status": "PASS"
+      }
+    },
+    "regression-tests": {
+      "kind": "pytest",
+      "timeout_seconds": 1800,
+      "tests": [
+        "tests/test_reproduction.py",
+        "tests/test_example_cli.py",
+        "tests/test_result_formatting.py",
+        "tests/test_rop_scaling.py",
+        "tests/test_rop_population_comparison.py",
+        "tests/test_rop_sequence_comparison.py",
+        "tests/test_architecture.py",
+        "tests/test_common_analysis.py",
+        "tests/test_composition_jump_model.py",
+        "tests/test_copolymer_rop.py",
+        "tests/test_pattern_support_discovery.py",
+        "tests/test_rop_support_workflow.py",
+        "tests/test_remy_trees.py",
+        "tests/test_chlorination_chemistry.py",
+        "tests/test_source_identity.py",
+        "tests/test_molecular_rop_discovery.py",
+        "tests/test_eight_slots.py",
+        "tests/test_linear_residual_closure.py",
+        "tests/test_independent_linear_closure.py",
+        "tests/test_dna_walker.py",
+        "tests/test_linear_numerics.py",
+        "tests/test_uniform_events.py",
+        "tests/test_public_api.py",
+        "tests/test_composition_predicates.py",
+        "tests/test_molfoundry_execution.py",
+        "tests/test_molfoundry_match_counts.py",
+        "tests/test_context_nac_direct.py"
+      ],
+      "expected": {
+        "status": "PASS"
+      }
+    },
+    "aldol-conditions": {
+      "kind": "worker",
+      "worker": "aldol-conditions",
+      "timeout_seconds": 300,
+      "expected": {
+        "plain": {
+          "after": 13,
+          "before": 18,
+          "signed_terms": 13
+        },
+        "reaction_noedge": {
+          "after": 13,
+          "before": 18,
+          "signed_terms": 13
+        },
+        "reaction_and_query_noedge": {
+          "after": 10,
+          "before": 18,
+          "signed_terms": 18
+        },
+        "removed_after": [
+          "r120",
+          "r68",
+          "r73"
+        ],
+        "removed_before": 0,
+        "r180_coefficients": {
+          "plain": [
+            0
+          ],
+          "reaction_noedge": [
+            0
+          ],
+          "reaction_and_query_noedge": [
+            -1,
+            1
+          ]
+        }
+      }
+    },
+    "query-AB": {
+      "kind": "worker",
+      "worker": "path-query",
+      "motif": "AB",
+      "timeout_seconds": 300,
+      "expected": {
+        "linear_status": "UNKNOWN_DIMENSION_LIMIT",
+        "linear_dimension": 24,
+        "pjc_status": "CLOSED",
+        "event_count": 6,
+        "coordinate_count": 4,
+        "support_status": "POLYNOMIAL_SUPPORT_CLOSED",
+        "finite_status": "PASS",
+        "suffixes": [
+          "S_A"
+        ]
+      }
+    },
+    "query-ABA": {
+      "kind": "worker",
+      "worker": "path-query",
+      "motif": "ABA",
+      "timeout_seconds": 300,
+      "expected": {
+        "linear_status": "UNKNOWN_DIMENSION_LIMIT",
+        "linear_dimension": 24,
+        "pjc_status": "CLOSED",
+        "event_count": 8,
+        "coordinate_count": 5,
+        "support_status": "POLYNOMIAL_SUPPORT_CLOSED",
+        "finite_status": "PASS",
+        "suffixes": [
+          "S_A",
+          "S_AB"
+        ]
+      }
+    },
+    "query-ABBA": {
+      "kind": "worker",
+      "worker": "path-query",
+      "motif": "ABBA",
+      "timeout_seconds": 300,
+      "expected": {
+        "linear_status": "UNKNOWN_DIMENSION_LIMIT",
+        "linear_dimension": 24,
+        "pjc_status": "CLOSED",
+        "event_count": 10,
+        "coordinate_count": 6,
+        "support_status": "POLYNOMIAL_SUPPORT_CLOSED",
+        "finite_status": "PASS",
+        "suffixes": [
+          "S_A",
+          "S_AB",
+          "S_ABB"
+        ]
+      }
+    },
+    "query-AAAA": {
+      "kind": "worker",
+      "worker": "path-query",
+      "motif": "AAAA",
+      "timeout_seconds": 300,
+      "expected": {
+        "linear_status": "UNKNOWN_DIMENSION_LIMIT",
+        "linear_dimension": 24,
+        "pjc_status": "CLOSED",
+        "event_count": 10,
+        "coordinate_count": 6,
+        "support_status": "POLYNOMIAL_SUPPORT_CLOSED",
+        "finite_status": "PASS",
+        "suffixes": [
+          "S_A",
+          "S_AA",
+          "S_AAA"
+        ]
+      }
+    },
+    "query-ABABA": {
+      "kind": "worker",
+      "worker": "path-query",
+      "motif": "ABABA",
+      "timeout_seconds": 300,
+      "expected": {
+        "linear_status": "UNKNOWN_DIMENSION_LIMIT",
+        "linear_dimension": 24,
+        "pjc_status": "CLOSED",
+        "event_count": 12,
+        "coordinate_count": 7,
+        "support_status": "POLYNOMIAL_SUPPORT_CLOSED",
+        "finite_status": "PASS",
+        "suffixes": [
+          "S_A",
+          "S_AB",
+          "S_ABA",
+          "S_ABAB"
+        ]
+      }
+    },
+    "query-ABA-gated": {
+      "kind": "worker",
+      "worker": "path-query",
+      "motif": "ABA",
+      "timeout_seconds": 300,
+      "expected": {
+        "linear_status": "UNKNOWN_DIMENSION_LIMIT",
+        "linear_dimension": 24,
+        "pjc_status": "CLOSED",
+        "event_count": 10,
+        "coordinate_count": 6,
+        "support_status": "POLYNOMIAL_SUPPORT_CLOSED",
+        "finite_status": "PASS",
+        "suffixes": [
+          "S_A",
+          "S_AB"
+        ]
+      },
+      "gated": true
+    },
+    "molecular-baseline": {
+      "kind": "worker",
+      "worker": "molecular-rop",
+      "gated": false,
+      "timeout_seconds": 900,
+      "expected": {
+        "status": "ANALYZED",
+        "linear_status": "CLOSED",
+        "linear_dimension": 3,
+        "pjc_status": "CLOSED",
+        "event_count": 2,
+        "coordinate_count": 2,
+        "finite_status": "PASS",
+        "word_check": "PASS",
+        "typed_check": "PASS"
+      },
+      "preset": "baseline"
+    },
+    "molecular-noedge": {
+      "kind": "worker",
+      "worker": "molecular-rop",
+      "gated": true,
+      "timeout_seconds": 900,
+      "expected": {
+        "status": "ANALYZED",
+        "linear_status": "CLOSED",
+        "linear_dimension": 5,
+        "pjc_status": "CLOSED",
+        "event_count": 4,
+        "coordinate_count": 3,
+        "finite_status": "PASS",
+        "word_check": "PASS",
+        "typed_check": "PASS"
+      },
+      "preset": "noedge"
+    },
+    "molecular-aba": {
+      "kind": "worker",
+      "worker": "molecular-rop",
+      "gated": false,
+      "timeout_seconds": 900,
+      "expected": {
+        "status": "ANALYZED",
+        "linear_status": "UNKNOWN_DIMENSION_LIMIT",
+        "linear_dimension": 24,
+        "pjc_status": "CLOSED",
+        "event_count": 8,
+        "coordinate_count": 5,
+        "finite_status": "PASS",
+        "word_check": "PASS",
+        "typed_check": "PASS"
+      }
+    },
+    "molecular-aba-gated": {
+      "kind": "worker",
+      "worker": "molecular-rop",
+      "gated": true,
+      "timeout_seconds": 900,
+      "expected": {
+        "status": "ANALYZED",
+        "linear_status": "UNKNOWN_DIMENSION_LIMIT",
+        "linear_dimension": 24,
+        "pjc_status": "CLOSED",
+        "event_count": 10,
+        "coordinate_count": 6,
+        "finite_status": "PASS",
+        "word_check": "PASS",
+        "typed_check": "PASS"
+      }
+    },
+    "molecular-limited-aba": {
+      "kind": "worker",
+      "worker": "molecular-rop",
+      "overlap_limit": 0,
+      "timeout_seconds": 120,
+      "expected": {
+        "status": "UNKNOWN_COMPOSITION_LIMIT",
+        "linear_status": "UNKNOWN_REDUCTION",
+        "pjc_status": "UNKNOWN_PREREQUISITE",
+        "finite_status": "NOT_EXECUTED",
+        "pending_preserved": true,
+        "operands_preserved": true,
+        "operator_absent": true,
+        "linear_dimension": 1
+      }
+    },
+    "eight-slots": {
+      "kind": "worker",
+      "worker": "eight-slots",
+      "max_expansions": 100,
+      "timeout_seconds": 5400,
+      "expected": {
+        "closed": true,
+        "coordinate_count": 48,
+        "pending": [],
+        "unknown": [],
+        "synthesis_state_evaluations": 0,
+        "synthesis_orbit_evaluations": 0,
+        "verification_passed": true,
+        "rank": 47,
+        "states": 768,
+        "pattern_checks": 36864,
+        "generator_rows": 110592
+      }
+    },
+    "dna-walker": {
+      "worker": "dna-walker",
+      "timeout_seconds": 300,
+      "expected": {
+        "status": "CLOSED",
+        "dimension": 2,
+        "fragger_contributions_compared": 8,
+        "fragger_mismatches": 0,
+        "validation_status": "PASS",
+        "hosts": 136,
+        "generator_images_checked": 1088,
+        "synthesis_state_evaluations": 0
+      },
+      "kind": "worker"
+    },
+    "context-nac-guarded": {
+      "kind": "worker",
+      "worker": "context-nac",
+      "variant": "guarded",
+      "timeout_seconds": 300,
+      "expected": {
+        "status": "PASS",
+        "pjc_status": "CLOSED_FINITE_EVENT_MODEL",
+        "event_count": 4,
+        "coordinate_count": 4,
+        "finite_status": "PASS",
+        "joint_rate_checks": 48,
+        "growth_rate_checks": 48
+      }
+    },
+    "context-nac-ablated": {
+      "kind": "worker",
+      "worker": "context-nac",
+      "variant": "ablated",
+      "timeout_seconds": 300,
+      "expected": {
+        "status": "PASS",
+        "pjc_status": "CLOSED_FINITE_EVENT_MODEL",
+        "event_count": 1,
+        "coordinate_count": 1,
+        "finite_status": "PASS",
+        "joint_rate_checks": 48,
+        "growth_rate_checks": 48
+      }
+    }
+  },
+  "paper_baseline": {
+    "tag": "pre-review-2026-09-24",
+    "commit": "fe9d548af3721b479af025fb94d7f11fc4218514"
+  },
+  "coverage_gaps": {
+    "paper": []
+  }
+}

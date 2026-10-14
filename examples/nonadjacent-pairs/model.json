@@ -1,0 +1,41 @@
+{
+  "adapter": "mfobs.core.identity:Adapter",
+  "composition": {
+    "connected": false,
+    "include_empty": true,
+    "mode": "public"
+  },
+  "forbidden": null,
+  "id": "nonadjacent_cycloaddition",
+  "initial_observables": [
+    "B"
+  ],
+  "initial_state": {},
+  "normalisation": {
+    "B": {
+      "meaning": "raw oriented C=C matches divided by 2 count alkene bonds",
+      "scale": "2"
+    }
+  },
+  "observables": [
+    {
+      "file": "alkene.gml",
+      "id": "B"
+    }
+  ],
+  "parameters": null,
+  "reduction": "reduction.json",
+  "reference": null,
+  "rules": [
+    {
+      "file": "guarded.gml",
+      "id": "cycloaddition",
+      "kind": "chemical",
+      "per_match": "1/8",
+      "rate": "k"
+    }
+  ],
+  "schema_version": 1,
+  "state_language": "state-language.json",
+  "title": "Balanced covalent pair-consuming NAC diagnostic (not validated kinetics)"
+}

@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "id": "bond_isomer_brusselator_growth",
+  "title": "Bond-isomer Brusselator with X-catalyzed unbounded ROP",
+  "status": "exact-polynomial-jump-model-with-mean-field-projection",
+  "molecules": {
+    "A": {
+      "name": "cyclobutane",
+      "smiles": "C1CCC1",
+      "file": "molecules/A.gml",
+      "formula": {
+        "C": 4,
+        "H": 8
+      },
+      "atoms": 12,
+      "automorphisms": 128
+    },
+    "X": {
+      "name": "1-butene",
+      "smiles": "C=CCC",
+      "file": "molecules/X.gml",
+      "formula": {
+        "C": 4,
+        "H": 8
+      },
+      "atoms": 12,
+      "automorphisms": 24
+    },
+    "Y": {
+      "name": "methylcyclopropane",
+      "smiles": "CC1CC1",
+      "file": "molecules/Y.gml",
+      "formula": {
+        "C": 4,
+        "H": 8
+      },
+      "atoms": 12,
+      "automorphisms": 48
+    },
+    "E": {
+      "name": "isobutene",
+      "smiles": "C=C(C)C",
+      "file": "molecules/E.gml",
+      "formula": {
+        "C": 4,
+        "H": 8
+      },
+      "atoms": 12,
+      "automorphisms": 144
+    },
+    "B": {
+      "name": "cyclopropane",
+      "smiles": "C1CC1",
+      "file": "molecules/B.gml",
+      "formula": {
+        "C": 3,
+        "H": 6
+      },
+      "atoms": 9,
+      "automorphisms": 48
+    },
+    "D": {
+      "name": "propene",
+      "smiles": "C=CC",
+      "file": "molecules/D.gml",
+      "formula": {
+        "C": 3,
+        "H": 6
+      },
+      "atoms": 9,
+      "automorphisms": 12
+    }
+  },
+  "rules": [
+    {
+      "id": "source",
+      "rule_id": "brusselator-A-to-X",
+      "file": "rules/source.gml",
+      "rate": "k1",
+      "per_match": "1/128",
+      "atom_balanced": true,
+      "boundary_operation": false
+    },
+    {
+      "id": "autocatalysis",
+      "rule_id": "brusselator-2X-plus-Y-to-3X",
+      "file": "rules/autocatalysis.gml",
+      "rate": "k2",
+      "per_match": "1/27648",
+      "atom_balanced": true,
+      "boundary_operation": false
+    },
+    {
+      "id": "conversion",
+      "rule_id": "brusselator-B-plus-X-to-Y-plus-D",
+      "file": "rules/conversion.gml",
+      "rate": "k3",
+      "per_match": "1/1152",
+      "atom_balanced": true,
+      "boundary_operation": false
+    },
+    {
+      "id": "sink",
+      "rule_id": "brusselator-X-to-E",
+      "file": "rules/sink.gml",
+      "rate": "k4",
+      "per_match": "1/24",
+      "atom_balanced": true,
+      "boundary_operation": false
+    },
+    {
+      "id": "monomer_inlet",
+      "rule_id": "caprolactone-inlet-at-water-boundary",
+      "file": "rules/monomer_inlet.gml",
+      "rate": "beta",
+      "per_match": "1/2",
+      "atom_balanced": false,
+      "boundary_operation": true
+    },
+    {
+      "id": "growth",
+      "rule_id": "X-catalyzed-caprolactone-net-propagation",
+      "file": "rules/growth.gml",
+      "rate": "k_g",
+      "per_match": "1/24",
+      "atom_balanced": true,
+      "boundary_operation": false
+    }
+  ],
+  "omega": "mfobs.models.brusselator_growth_chemistry.state_family",
+  "observable_discovery": {
+    "manifest": "discovery-model.json",
+    "seeds": [
+      "X",
+      "Y"
+    ],
+    "method": "exact factorial-population generator with graph-pattern representatives",
+    "expected_terminal_status": "UNKNOWN at a user-selected exploration budget"
+  },
+  "core_reactions": [
+    "A -> X",
+    "2 X + Y -> 3 X",
+    "B + X -> Y + D",
+    "X -> E"
+  ],
+  "deterministic_projection": {
+    "assumptions": [
+      "A and B are chemostatted at concentrations a and b.",
+      "D and E are removed by the open reactor.",
+      "All four core rate constants are one in the walkthrough."
+    ],
+    "coordinates": [
+      "x",
+      "y",
+      "M",
+      "n"
+    ],
+    "equations": [
+      "x' = a - (b + 1) x + x^2 y",
+      "y' = b x - x^2 y",
+      "M' = beta - k_g x M",
+      "n' = k_g x M"
+    ],
+    "steady_core": "(x_bar, y_bar) = (a, b/a)",
+    "hopf_threshold": "b = 1 + a^2"
+  },
+  "exact_expectation_boundary": "The cubic channel introduces the factorial moment (X)_2 Y.  Its generator images introduce progressively higher moments, so the present finite exact linear observable worklist is expected to return UNKNOWN rather than this nonlinear mean-field ODE.",
+  "nonclosure_witness": {
+    "first_moment": "L X = a V + (X)_2 Y / V^2 - (b + 1) X",
+    "next_jump": "For f=(X)_2 Y, the 2X+Y->3X jump has delta f = X(2Y-X-1); multiplying by its cubic propensity produces nonzero degree-five factorial moments."
+  },
+  "chemical_scope": "All internal channels preserve explicit atoms and use only ordinary single/double bonds, but they are hypothetical net isomerization channels rather than proposed elementary chemistry."
+}

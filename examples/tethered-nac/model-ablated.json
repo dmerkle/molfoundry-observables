@@ -1,0 +1,43 @@
+{
+  "adapter": "mfobs.models.finite_components:Adapter",
+  "composition": {
+    "connected": false,
+    "include_empty": true,
+    "mode": "public"
+  },
+  "forbidden": null,
+  "id": "tethered_ablated",
+  "initial_observables": [
+    "B"
+  ],
+  "initial_state": {
+    "populations": {
+      "A": 2,
+      "B": 2,
+      "D": 0,
+      "P": 0
+    }
+  },
+  "normalisation": {},
+  "observables": [
+    {
+      "file": "alkene.gml",
+      "id": "B"
+    }
+  ],
+  "parameters": null,
+  "reduction": "reduction.json",
+  "reference": null,
+  "rules": [
+    {
+      "file": "ablated.gml",
+      "id": "cyclize",
+      "kind": "chemical",
+      "per_match": "1/2",
+      "rate": "k"
+    }
+  ],
+  "schema_version": 1,
+  "state_language": "state-language.json",
+  "title": "Atom-balanced tethered cycloaddition: ablated"
+}

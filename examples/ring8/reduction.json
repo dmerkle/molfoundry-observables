@@ -1,0 +1,8 @@
+{
+  "method": "exact evaluation on exhaustive dihedral-orbit representatives",
+  "motif_max_length": 8,
+  "initial_motif": "1",
+  "basis": "not preloaded; retain linearly independent jump count vectors and choose shortest equivalent binary word",
+  "discovery_order": "unit-rate aggregate coefficients first; any additional rate-separated direction is also retained",
+  "evidence": "Every rate channel is checked independently against the finite orbit generator."
+}

@@ -1,0 +1,16 @@
+# Additions to the existing project / supplied-MolFoundry environment.
+jupyterlab>=4
+ipywidgets>=8.1,<9
+ipykernel>=6
+nbformat>=5.10
+nbclient>=0.10
+matplotlib>=3.8
+numpy>=1.26
+scipy>=1.11
+pandas>=2.0
+networkx>=3.4
+sympy==1.14.0
+pytest>=8
+# Core analysis and ordinary molecule drawings work without RDKit, using MolFoundry.
+# RDKit is needed for bond/H highlights, charged aromatic views and chemical checks.
+rdkit==2025.9.5

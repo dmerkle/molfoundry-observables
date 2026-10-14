@@ -1,0 +1,243 @@
+{
+  "single_query_run": {
+    "ode_count": 2,
+    "equations": [
+      {
+        "coordinate": "E",
+        "terms": [
+          {
+            "coefficient": 1.0,
+            "rates": [
+              "kBE"
+            ],
+            "coordinate": "Craw"
+          },
+          {
+            "coefficient": 1.0,
+            "rates": [
+              "kFE"
+            ],
+            "coordinate": "Craw"
+          },
+          {
+            "coefficient": -1.0,
+            "rates": [
+              "kBC"
+            ],
+            "coordinate": "E"
+          },
+          {
+            "coefficient": -1.0,
+            "rates": [
+              "kFC"
+            ],
+            "coordinate": "E"
+          }
+        ]
+      },
+      {
+        "coordinate": "Craw",
+        "terms": [
+          {
+            "coefficient": -2.0,
+            "rates": [
+              "kBE"
+            ],
+            "coordinate": "Craw"
+          },
+          {
+            "coefficient": -2.0,
+            "rates": [
+              "kFE"
+            ],
+            "coordinate": "Craw"
+          },
+          {
+            "coefficient": 2.0,
+            "rates": [
+              "kBC"
+            ],
+            "coordinate": "E"
+          },
+          {
+            "coefficient": 2.0,
+            "rates": [
+              "kFC"
+            ],
+            "coordinate": "E"
+          }
+        ]
+      }
+    ]
+  },
+  "individual_channels": [
+    {
+      "rule": "kFE",
+      "coordinate": "E",
+      "output": {
+        "ode_count": 1,
+        "equations": [
+          {
+            "coordinate": "E",
+            "terms": [
+              {
+                "coefficient": 1.0,
+                "rates": [
+                  "kFE"
+                ],
+                "coordinate": "Craw"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "rule": "kFE",
+      "coordinate": "Craw",
+      "output": {
+        "ode_count": 1,
+        "equations": [
+          {
+            "coordinate": "Craw",
+            "terms": [
+              {
+                "coefficient": -2.0,
+                "rates": [
+                  "kFE"
+                ],
+                "coordinate": "Craw"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "rule": "kFC",
+      "coordinate": "E",
+      "output": {
+        "ode_count": 1,
+        "equations": [
+          {
+            "coordinate": "E",
+            "terms": [
+              {
+                "coefficient": -1.0,
+                "rates": [
+                  "kFC"
+                ],
+                "coordinate": "E"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "rule": "kFC",
+      "coordinate": "Craw",
+      "output": {
+        "ode_count": 1,
+        "equations": [
+          {
+            "coordinate": "Craw",
+            "terms": [
+              {
+                "coefficient": 2.0,
+                "rates": [
+                  "kFC"
+                ],
+                "coordinate": "E"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "rule": "kBC",
+      "coordinate": "E",
+      "output": {
+        "ode_count": 1,
+        "equations": [
+          {
+            "coordinate": "E",
+            "terms": [
+              {
+                "coefficient": -1.0,
+                "rates": [
+                  "kBC"
+                ],
+                "coordinate": "E"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "rule": "kBC",
+      "coordinate": "Craw",
+      "output": {
+        "ode_count": 1,
+        "equations": [
+          {
+            "coordinate": "Craw",
+            "terms": [
+              {
+                "coefficient": 2.0,
+                "rates": [
+                  "kBC"
+                ],
+                "coordinate": "E"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "rule": "kBE",
+      "coordinate": "E",
+      "output": {
+        "ode_count": 1,
+        "equations": [
+          {
+            "coordinate": "E",
+            "terms": [
+              {
+                "coefficient": 1.0,
+                "rates": [
+                  "kBE"
+                ],
+                "coordinate": "Craw"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "rule": "kBE",
+      "coordinate": "Craw",
+      "output": {
+        "ode_count": 1,
+        "equations": [
+          {
+            "coordinate": "Craw",
+            "terms": [
+              {
+                "coefficient": -2.0,
+                "rates": [
+                  "kBE"
+                ],
+                "coordinate": "Craw"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

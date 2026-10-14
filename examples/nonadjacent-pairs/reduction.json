@@ -1,0 +1,5 @@
+{
+  "method": "canonical jump-span equality and direct edge/NoEdge contradiction elimination",
+  "no_polynomial_certificate_used": true,
+  "no_target_basis": true
+}

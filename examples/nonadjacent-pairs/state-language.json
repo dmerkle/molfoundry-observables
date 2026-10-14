@@ -1,0 +1,6 @@
+{
+  "closed_under_rule": "Every atom and its bond-order sum is preserved.",
+  "inventory": "Each finite closed initial mixture has a finite reachable space; initial inventories have no uniform bound.",
+  "not_assumed_by_adapter": "The canonical adapter does not use a chemical language counter.",
+  "scope": "All finite explicit-H C/H graphs with ordinary single/double bonds, C valence 4 and H valence 1."
+}

@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "kind": "unbounded-oriented-covalent-switch-macrocycles",
+  "minimum_ring_size": 7,
+  "ring_sizes": "every integer N >= 7",
+  "alphabet": [
+    "Q0",
+    "Q1",
+    "Q2"
+  ],
+  "site_scaffold": {
+    "nodes": [
+      [
+        0,
+        "C"
+      ],
+      [
+        1,
+        "C"
+      ],
+      [
+        2,
+        "C"
+      ],
+      [
+        3,
+        "C"
+      ],
+      [
+        4,
+        "C"
+      ],
+      [
+        5,
+        "C"
+      ],
+      [
+        6,
+        "O"
+      ]
+    ],
+    "edges": [
+      [
+        0,
+        1,
+        "-"
+      ],
+      [
+        1,
+        2,
+        "-"
+      ],
+      [
+        2,
+        3,
+        "-"
+      ],
+      [
+        3,
+        4,
+        "-"
+      ],
+      [
+        4,
+        5,
+        "-"
+      ],
+      [
+        5,
+        6,
+        "="
+      ]
+    ]
+  },
+  "backbone": "covalent oriented repeat p_i-S_i-O_i-p_(i+1)",
+  "state_encoding": {
+    "Q0": "ordinary single C-C closure e0=(c0,c2)",
+    "Q1": "ordinary single C-C closure e1=(c1,c3)",
+    "Q2": "ordinary single C-C closure e2=(c2,c4)"
+  },
+  "axioms": [
+    "Every site has the same pendant carbonyl scaffold.",
+    "Every site has exactly one of e0, e1, e2.",
+    "All sites form one oriented covalent macrocycle.",
+    "Growth consumes a valence-complete capped precursor and releases mapped water.",
+    "Only atom labels C,H,O,S and bond labels - and = occur."
+  ],
+  "cardinality_at_size_N": "3^N distinct switch words before quotienting rotations",
+  "infinite_space_reason": "growth rules connect unbounded N and every N admits exponentially many bond topologies"
+}

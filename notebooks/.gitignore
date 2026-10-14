@@ -1,0 +1,10 @@
+runs/
+.ipynb_checkpoints/
+__pycache__/
+.pytest_cache/
+*.executed.ipynb
+
+# Personal executed combined-notebook backup.
+archive/
+
+visual/inspection/

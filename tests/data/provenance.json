@@ -1,0 +1,18 @@
+{
+  "ring-result": {
+    "upstream_path": "experiments/regression/ring8/result.json",
+    "sha256": "11d706ea8f10cb31b31a25fd9bbb09cb210675bd0cdbe0a36f7e90ab80559496"
+  },
+  "ring-verification": {
+    "upstream_path": "experiments/regression/ring8/verification.json",
+    "sha256": "2a8c581d7842b264f0a605ab7fffbe91951eff13d6503b67b78d5978355aff03"
+  },
+  "ring-dynamics": {
+    "upstream_path": "experiments/ring8/walkthrough-data.json",
+    "sha256": "98602c41441d6ccb9177d5bca45f83bf927b0d0718fc5f37119a76cf67371c37"
+  },
+  "eight-dynamics": {
+    "upstream_path": "experiments/eight-slots/walkthrough-data.json",
+    "sha256": "f25ebb675138c74e0e63721b82d3f314a042d76afbd34d817f463ed8c4b9e966"
+  }
+}

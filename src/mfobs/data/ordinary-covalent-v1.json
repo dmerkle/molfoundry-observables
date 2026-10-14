@@ -1,0 +1,28 @@
+{
+  "schema": "local-covalent-theory-v1",
+  "name": "shared-ordinary-covalent-signature-upper-valence-v1",
+  "scope": "A permissive local signature and upper-valence base for the included chemical graph models; not a complete theory of chemical validity.",
+  "atomTypes": {
+    "C": {"element": "C", "formalCharge": 0, "maxValence": "4"},
+    "C-": {"element": "C", "formalCharge": -1, "maxValence": "4"},
+    "H": {"element": "H", "formalCharge": 0, "maxValence": "1"},
+    "Cl": {"element": "Cl", "formalCharge": 0, "maxValence": "1"},
+    "N": {"element": "N", "formalCharge": 0, "maxValence": "3"},
+    "O": {"element": "O", "formalCharge": 0, "maxValence": "2"},
+    "S": {"element": "S", "formalCharge": 0, "maxValence": "2"}
+  },
+  "bondTypes": {
+    "-": {"order": "1"},
+    "=": {"order": "2"},
+    ":": {"order": "3/2"}
+  },
+  "allowedBondPairs": {
+    "-": [
+      ["C", "C"], ["C", "C-"], ["C", "H"], ["C", "Cl"],
+      ["C", "N"], ["C", "O"], ["C", "S"], ["Cl", "H"],
+      ["H", "H"], ["H", "O"], ["O", "S"]
+    ],
+    "=": [["C", "C"], ["C", "O"]],
+    ":": [["C", "C"], ["C", "C-"]]
+  }
+}

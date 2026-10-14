@@ -1,0 +1,20 @@
+rule [
+  ruleID "C_ABA"
+  context [
+    node [ id 0 label "Position" ]
+    node [ id 1 label "Symbol:A" ]
+    node [ id 2 label "Position" ]
+    node [ id 3 label "Symbol:B" ]
+    node [ id 4 label "Position" ]
+    node [ id 5 label "Symbol:A" ]
+    node [ id 6 label "Next" ]
+    node [ id 7 label "Next" ]
+    edge [ source 0 target 1 label "kind" ]
+    edge [ source 2 target 3 label "kind" ]
+    edge [ source 4 target 5 label "kind" ]
+    edge [ source 0 target 6 label "src" ]
+    edge [ source 6 target 2 label "tgt" ]
+    edge [ source 2 target 7 label "src" ]
+    edge [ source 7 target 4 label "tgt" ]
+  ]
+]

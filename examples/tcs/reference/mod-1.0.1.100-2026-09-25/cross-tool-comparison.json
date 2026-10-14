@@ -1,0 +1,881 @@
+{
+  "mod_version": "1.0.1.100",
+  "source_sha256": "6b034d023e555d69ab29106eab42fd7d1c3de31a7e9836c3e31d0945360c022d",
+  "scope": "Plain compositions and, for this example, explicit conversion of left/context colon sentinel edges into NoEdge input conditions. Comparison is of resulting conditional rules and per-order multiplicities; not a general correctness theorem for complement encodings.",
+  "checks": [
+    {
+      "mod_run": "plain-complete",
+      "molfoundry_variant": "plain",
+      "comparisons": {
+        "before": {
+          "equal": true,
+          "mod_total": 18,
+          "molfoundry_total": 18,
+          "extra": {},
+          "missing": {}
+        },
+        "after": {
+          "equal": true,
+          "mod_total": 13,
+          "molfoundry_total": 13,
+          "extra": {},
+          "missing": {}
+        }
+      },
+      "mappings": [
+        {
+          "id": 14,
+          "name": "'r_{14}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r14.gml",
+          "isomorphic_molfoundry_classes": [
+            "r12"
+          ],
+          "translated_gml": null,
+          "colon_preconditions": [],
+          "molfoundry_key_sha256": "630515b0e2ba716370a777381ad52a1431d9804fef649736beadf3b45a8ef112",
+          "molfoundry_plain_class": "r12",
+          "molfoundry_gml": "molfoundry/plain/composite-11.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 81,
+          "name": "'r_{81}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r81.gml",
+          "isomorphic_molfoundry_classes": [
+            "r79"
+          ],
+          "translated_gml": null,
+          "colon_preconditions": [],
+          "molfoundry_key_sha256": "4264acfb47eb92ee79155bf9eb7363ea0374085fc04a1c3b7bac03ac016d8557",
+          "molfoundry_plain_class": "r79",
+          "molfoundry_gml": "molfoundry/plain/composite-12.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 2,
+          "name": "'r_{2}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r2.gml",
+          "isomorphic_molfoundry_classes": [
+            "r+"
+          ],
+          "translated_gml": null,
+          "colon_preconditions": [],
+          "molfoundry_key_sha256": "1057c7e8d7565d6decf827dd0a2f5bc75654e79e11b3d4b490b42b222a192777",
+          "molfoundry_plain_class": "r+",
+          "molfoundry_gml": "molfoundry/plain/composite-19.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 20,
+          "name": "'r_{20}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r20.gml",
+          "isomorphic_molfoundry_classes": [
+            "r18"
+          ],
+          "translated_gml": null,
+          "colon_preconditions": [],
+          "molfoundry_key_sha256": "43fad49aacde157d5b8d9b7280e8c4fae8e66d47a5ddebd76f18fac868a319d6",
+          "molfoundry_plain_class": "r18",
+          "molfoundry_gml": "molfoundry/plain/composite-02.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 91,
+          "name": "'r_{91}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r91.gml",
+          "isomorphic_molfoundry_classes": [
+            "r89"
+          ],
+          "translated_gml": null,
+          "colon_preconditions": [],
+          "molfoundry_key_sha256": "b625e92c40e8592eb66411b9c4094a4a1c2289cd94805cb56346fed064574f8a",
+          "molfoundry_plain_class": "r89",
+          "molfoundry_gml": "molfoundry/plain/composite-01.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 9,
+          "name": "'r_{9}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r9.gml",
+          "isomorphic_molfoundry_classes": [
+            "r7"
+          ],
+          "translated_gml": null,
+          "colon_preconditions": [],
+          "molfoundry_key_sha256": "7cae90c9c8247283a9f532c3430fe94517d58d34619e2c7bf7e05a71450b8e0c",
+          "molfoundry_plain_class": "r7",
+          "molfoundry_gml": "molfoundry/plain/composite-15.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 49,
+          "name": "'r_{49}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r49.gml",
+          "isomorphic_molfoundry_classes": [
+            "r47"
+          ],
+          "translated_gml": null,
+          "colon_preconditions": [],
+          "molfoundry_key_sha256": "87791c1c607449d36867755ee2986ccf275009ecebbb4d6d90c36971c31df89b",
+          "molfoundry_plain_class": "r47",
+          "molfoundry_gml": "molfoundry/plain/composite-04.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 70,
+          "name": "'r_{70}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r70.gml",
+          "isomorphic_molfoundry_classes": [
+            "r68"
+          ],
+          "translated_gml": null,
+          "colon_preconditions": [],
+          "molfoundry_key_sha256": "31132e6f0c513013359d648b684d1f2b9d84e4c3eb631a58f86eb59ad05f7a02",
+          "molfoundry_plain_class": "r68",
+          "molfoundry_gml": "molfoundry/plain/composite-05.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 75,
+          "name": "'r_{75}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r75.gml",
+          "isomorphic_molfoundry_classes": [
+            "r73"
+          ],
+          "translated_gml": null,
+          "colon_preconditions": [],
+          "molfoundry_key_sha256": "a65ba17930aa271a1997819f988eeefc834984d0d872ec7e3ffe87cc6e30cc63",
+          "molfoundry_plain_class": "r73",
+          "molfoundry_gml": "molfoundry/plain/composite-10.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 122,
+          "name": "'r_{122}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r122.gml",
+          "isomorphic_molfoundry_classes": [
+            "r120"
+          ],
+          "translated_gml": null,
+          "colon_preconditions": [],
+          "molfoundry_key_sha256": "14aa3c71187871abf3045d6e097f47b691f63b60eb570933a963aa6278c27334",
+          "molfoundry_plain_class": "r120",
+          "molfoundry_gml": "molfoundry/plain/composite-09.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 96,
+          "name": "'r_{96}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r96.gml",
+          "isomorphic_molfoundry_classes": [
+            "r94"
+          ],
+          "translated_gml": null,
+          "colon_preconditions": [],
+          "molfoundry_key_sha256": "6b0c95201f688191c6235c00f363b99f3247cccfcc771a46c79901b336eaeeaa",
+          "molfoundry_plain_class": "r94",
+          "molfoundry_gml": "molfoundry/plain/composite-07.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 44,
+          "name": "'r_{44}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r44.gml",
+          "isomorphic_molfoundry_classes": [
+            "r42"
+          ],
+          "translated_gml": null,
+          "colon_preconditions": [],
+          "molfoundry_key_sha256": "2eb0059395916b9339c0213c01c781e482c4b80fac9944b124522220c662760e",
+          "molfoundry_plain_class": "r42",
+          "molfoundry_gml": "molfoundry/plain/composite-00.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 109,
+          "name": "'r_{109}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r109.gml",
+          "isomorphic_molfoundry_classes": [
+            "r107"
+          ],
+          "translated_gml": null,
+          "colon_preconditions": [],
+          "molfoundry_key_sha256": "beefb2a0c0d47a1a4ba02d31af1d2233857276df9dfb042ec1980827fdc3d1a0",
+          "molfoundry_plain_class": "r107",
+          "molfoundry_gml": "molfoundry/plain/composite-16.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 31,
+          "name": "'r_{31}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r31.gml",
+          "isomorphic_molfoundry_classes": [
+            "r29"
+          ],
+          "translated_gml": null,
+          "colon_preconditions": [],
+          "molfoundry_key_sha256": "deebbee30755bb1ac682914e40106e631a215ef9b59148d6ca0c2aaadb9a2fc2",
+          "molfoundry_plain_class": "r29",
+          "molfoundry_gml": "molfoundry/plain/composite-21.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 182,
+          "name": "'r_{182}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r182.gml",
+          "isomorphic_molfoundry_classes": [
+            "r180"
+          ],
+          "translated_gml": null,
+          "colon_preconditions": [],
+          "molfoundry_key_sha256": "a0d20706b3bfcc9cf2d9f782d1e3797864ff24e5c8378e4d645fe7d11f10209b",
+          "molfoundry_plain_class": "r180",
+          "molfoundry_gml": "molfoundry/plain/composite-13.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 4,
+          "name": "'r_{4}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r4.gml",
+          "isomorphic_molfoundry_classes": [
+            "r2"
+          ],
+          "translated_gml": null,
+          "colon_preconditions": [],
+          "molfoundry_key_sha256": "ed7c23b4bcf24baede91bb4c4f58aebc4eb360baf6f6866ebcf01d2bbcbdd208",
+          "molfoundry_plain_class": "r2",
+          "molfoundry_gml": "molfoundry/plain/composite-18.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 187,
+          "name": "'r_{187}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r187.gml",
+          "isomorphic_molfoundry_classes": [
+            "r185"
+          ],
+          "translated_gml": null,
+          "colon_preconditions": [],
+          "molfoundry_key_sha256": "b243e5af6671ccd3c3b82b0f363615154f962d564d147022344fd941959559e8",
+          "molfoundry_plain_class": "r185",
+          "molfoundry_gml": "molfoundry/plain/composite-14.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 193,
+          "name": "'r_{193}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r193.gml",
+          "isomorphic_molfoundry_classes": [
+            "r191"
+          ],
+          "translated_gml": null,
+          "colon_preconditions": [],
+          "molfoundry_key_sha256": "b66008f17e96c9aa052e306d5f119f63af795c281fbadcf441e6b7c7c01d7cb6",
+          "molfoundry_plain_class": "r191",
+          "molfoundry_gml": "molfoundry/plain/composite-17.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 236,
+          "name": "'r_{236}'",
+          "before": 0,
+          "after": 1,
+          "gml": "r236.gml",
+          "isomorphic_molfoundry_classes": [
+            "r234"
+          ],
+          "translated_gml": null,
+          "colon_preconditions": [],
+          "molfoundry_key_sha256": "70b13d221099df4bbabeb01d641cdc1c954b099fc3d245ceb1b5b558b02a31de",
+          "molfoundry_plain_class": "r234",
+          "molfoundry_gml": "molfoundry/plain/composite-06.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 254,
+          "name": "'r_{254}'",
+          "before": 0,
+          "after": 1,
+          "gml": "r254.gml",
+          "isomorphic_molfoundry_classes": [
+            "r252"
+          ],
+          "translated_gml": null,
+          "colon_preconditions": [],
+          "molfoundry_key_sha256": "d25e4d8c97e246d14ed756335b8088e6ccabd55e3d82db22253f589a191fc414",
+          "molfoundry_plain_class": "r252",
+          "molfoundry_gml": "molfoundry/plain/composite-08.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 260,
+          "name": "'r_{260}'",
+          "before": 0,
+          "after": 1,
+          "gml": "r260.gml",
+          "isomorphic_molfoundry_classes": [
+            "r258"
+          ],
+          "translated_gml": null,
+          "colon_preconditions": [],
+          "molfoundry_key_sha256": "12eead34be11f85ceb88dd7727ea019dcf6fdb471959b17c1d959cb7958c8931",
+          "molfoundry_plain_class": "r258",
+          "molfoundry_gml": "molfoundry/plain/composite-20.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 978,
+          "name": "'r_{978}'",
+          "before": 0,
+          "after": 1,
+          "gml": "r978.gml",
+          "isomorphic_molfoundry_classes": [
+            "new-f7c8786fa6b1"
+          ],
+          "translated_gml": null,
+          "colon_preconditions": [],
+          "molfoundry_key_sha256": "f7c8786fa6b12efed5014520b96173d474a6cd31237f7a3f562251cebcfb6ff8",
+          "molfoundry_plain_class": "new-f7c8786fa6b1",
+          "molfoundry_gml": "molfoundry/plain/composite-03.gml",
+          "isomorphic_after_explicit_translation": true
+        }
+      ]
+    },
+    {
+      "mod_run": "encoded-noedge-complete",
+      "molfoundry_variant": "reaction_and_query_noedge",
+      "comparisons": {
+        "before": {
+          "equal": true,
+          "mod_total": 18,
+          "molfoundry_total": 18,
+          "extra": {},
+          "missing": {}
+        },
+        "after": {
+          "equal": true,
+          "mod_total": 10,
+          "molfoundry_total": 10,
+          "extra": {},
+          "missing": {}
+        }
+      },
+      "mappings": [
+        {
+          "id": 1078,
+          "name": "'r_{1078}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1078.gml",
+          "translated_gml": "translated-noedge/r1078.gml",
+          "colon_preconditions": [
+            [
+              0,
+              7
+            ],
+            [
+              0,
+              5
+            ]
+          ],
+          "molfoundry_key_sha256": "35c909ecb340e8bd916d927361a8b17927049fb9a623a5dccb10e7ccb92cb0a9",
+          "molfoundry_plain_class": "r18",
+          "molfoundry_gml": "molfoundry/reaction_and_query_noedge/composite-06.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 1067,
+          "name": "'r_{1067}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r1067.gml",
+          "translated_gml": "translated-noedge/r1067.gml",
+          "colon_preconditions": [
+            [
+              0,
+              10
+            ],
+            [
+              0,
+              5
+            ]
+          ],
+          "molfoundry_key_sha256": "4d51dc848cb5f7d3f7ff9b05581b6aae6afabf03845bd8ce4b0c9755fa19f03b",
+          "molfoundry_plain_class": "r7",
+          "molfoundry_gml": "molfoundry/reaction_and_query_noedge/composite-19.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 1107,
+          "name": "'r_{1107}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1107.gml",
+          "translated_gml": "translated-noedge/r1107.gml",
+          "colon_preconditions": [
+            [
+              0,
+              5
+            ]
+          ],
+          "molfoundry_key_sha256": "87791c1c607449d36867755ee2986ccf275009ecebbb4d6d90c36971c31df89b",
+          "molfoundry_plain_class": "r47",
+          "molfoundry_gml": "molfoundry/reaction_and_query_noedge/composite-03.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 1232,
+          "name": "'r_{1232}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1232.gml",
+          "translated_gml": "translated-noedge/r1232.gml",
+          "colon_preconditions": [
+            [
+              5,
+              6
+            ],
+            [
+              0,
+              5
+            ]
+          ],
+          "molfoundry_key_sha256": "085776ea40904a9c17cf5f9f4a080f8783c9ce725257613f0be04b83cd6f8c97",
+          "molfoundry_plain_class": "r180",
+          "molfoundry_gml": "molfoundry/reaction_and_query_noedge/composite-15.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 1089,
+          "name": "'r_{1089}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1089.gml",
+          "translated_gml": "translated-noedge/r1089.gml",
+          "colon_preconditions": [
+            [
+              0,
+              5
+            ]
+          ],
+          "molfoundry_key_sha256": "deebbee30755bb1ac682914e40106e631a215ef9b59148d6ca0c2aaadb9a2fc2",
+          "molfoundry_plain_class": "r29",
+          "molfoundry_gml": "molfoundry/reaction_and_query_noedge/composite-22.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 1128,
+          "name": "'r_{1128}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1128.gml",
+          "translated_gml": "translated-noedge/r1128.gml",
+          "colon_preconditions": [
+            [
+              0,
+              5
+            ]
+          ],
+          "molfoundry_key_sha256": "31132e6f0c513013359d648b684d1f2b9d84e4c3eb631a58f86eb59ad05f7a02",
+          "molfoundry_plain_class": "r68",
+          "molfoundry_gml": "molfoundry/reaction_and_query_noedge/composite-04.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 1247,
+          "name": "'r_{1247}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r1247.gml",
+          "translated_gml": "translated-noedge/r1247.gml",
+          "colon_preconditions": [
+            [
+              5,
+              6
+            ],
+            [
+              0,
+              5
+            ]
+          ],
+          "molfoundry_key_sha256": "b8ad36e0f0d4ae0e7f2e494573e4ccad379f4c3652ac1c2b569d9647180dfc5b",
+          "molfoundry_plain_class": "r191",
+          "molfoundry_gml": "molfoundry/reaction_and_query_noedge/composite-16.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 3,
+          "name": "'r_{3}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r3.gml",
+          "translated_gml": "translated-noedge/r3.gml",
+          "colon_preconditions": [
+            [
+              0,
+              5
+            ]
+          ],
+          "molfoundry_key_sha256": "1057c7e8d7565d6decf827dd0a2f5bc75654e79e11b3d4b490b42b222a192777",
+          "molfoundry_plain_class": "r+",
+          "molfoundry_gml": "molfoundry/reaction_and_query_noedge/composite-21.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 1133,
+          "name": "'r_{1133}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1133.gml",
+          "translated_gml": "translated-noedge/r1133.gml",
+          "colon_preconditions": [
+            [
+              0,
+              5
+            ]
+          ],
+          "molfoundry_key_sha256": "a65ba17930aa271a1997819f988eeefc834984d0d872ec7e3ffe87cc6e30cc63",
+          "molfoundry_plain_class": "r73",
+          "molfoundry_gml": "molfoundry/reaction_and_query_noedge/composite-10.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 1072,
+          "name": "'r_{1072}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1072.gml",
+          "translated_gml": "translated-noedge/r1072.gml",
+          "colon_preconditions": [
+            [
+              0,
+              9
+            ],
+            [
+              0,
+              5
+            ]
+          ],
+          "molfoundry_key_sha256": "c2dda392071f20ab32f868de359bd6eb4f4f2766518837284d44ce7f20b05947",
+          "molfoundry_plain_class": "r12",
+          "molfoundry_gml": "molfoundry/reaction_and_query_noedge/composite-14.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 1143,
+          "name": "'r_{1143}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1143.gml",
+          "translated_gml": "translated-noedge/r1143.gml",
+          "colon_preconditions": [
+            [
+              1,
+              9
+            ],
+            [
+              0,
+              5
+            ]
+          ],
+          "molfoundry_key_sha256": "d0187f0ba2a62a9b238f949b54779972638c63bbf7e520f281cc0fd07fcb3fdc",
+          "molfoundry_plain_class": "r79",
+          "molfoundry_gml": "molfoundry/reaction_and_query_noedge/composite-12.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 1511,
+          "name": "'r_{1511}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1511.gml",
+          "translated_gml": "translated-noedge/r1511.gml",
+          "colon_preconditions": [
+            [
+              1,
+              5
+            ],
+            [
+              0,
+              5
+            ]
+          ],
+          "molfoundry_key_sha256": "e751899e0118543392b21d26c6bbd9bfaa4cff744aa8072c3aaffc1165602da7",
+          "molfoundry_plain_class": "r94",
+          "molfoundry_gml": "molfoundry/reaction_and_query_noedge/composite-08.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 1506,
+          "name": "'r_{1506}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1506.gml",
+          "translated_gml": "translated-noedge/r1506.gml",
+          "colon_preconditions": [
+            [
+              1,
+              5
+            ],
+            [
+              0,
+              5
+            ]
+          ],
+          "molfoundry_key_sha256": "88cba3e6577175763ce9fa706d771ed949ffe74b457b0b3ab2b665011d51b7cb",
+          "molfoundry_plain_class": "r89",
+          "molfoundry_gml": "molfoundry/reaction_and_query_noedge/composite-02.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 1102,
+          "name": "'r_{1102}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1102.gml",
+          "translated_gml": "translated-noedge/r1102.gml",
+          "colon_preconditions": [
+            [
+              0,
+              5
+            ]
+          ],
+          "molfoundry_key_sha256": "2eb0059395916b9339c0213c01c781e482c4b80fac9944b124522220c662760e",
+          "molfoundry_plain_class": "r42",
+          "molfoundry_gml": "molfoundry/reaction_and_query_noedge/composite-01.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 1155,
+          "name": "'r_{1155}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r1155.gml",
+          "translated_gml": "translated-noedge/r1155.gml",
+          "colon_preconditions": [
+            [
+              5,
+              10
+            ],
+            [
+              0,
+              5
+            ]
+          ],
+          "molfoundry_key_sha256": "71ee429dd577d1317d5537f4cf1b95d7bb3bcf828cc7391bf2c598a2cbbd7668",
+          "molfoundry_plain_class": "r107",
+          "molfoundry_gml": "molfoundry/reaction_and_query_noedge/composite-17.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 1062,
+          "name": "'r_{1062}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r1062.gml",
+          "translated_gml": "translated-noedge/r1062.gml",
+          "colon_preconditions": [
+            [
+              6,
+              11
+            ],
+            [
+              0,
+              5
+            ]
+          ],
+          "molfoundry_key_sha256": "f4df2b16c10bbb4e2a07603e933ea41f81053da77e20954da02d197dee830201",
+          "molfoundry_plain_class": "r2",
+          "molfoundry_gml": "molfoundry/reaction_and_query_noedge/composite-20.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 1167,
+          "name": "'r_{1167}'",
+          "before": 1,
+          "after": 0,
+          "gml": "r1167.gml",
+          "translated_gml": "translated-noedge/r1167.gml",
+          "colon_preconditions": [
+            [
+              0,
+              5
+            ]
+          ],
+          "molfoundry_key_sha256": "14aa3c71187871abf3045d6e097f47b691f63b60eb570933a963aa6278c27334",
+          "molfoundry_plain_class": "r120",
+          "molfoundry_gml": "molfoundry/reaction_and_query_noedge/composite-09.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 1237,
+          "name": "'r_{1237}'",
+          "before": 1,
+          "after": 1,
+          "gml": "r1237.gml",
+          "translated_gml": "translated-noedge/r1237.gml",
+          "colon_preconditions": [
+            [
+              0,
+              6
+            ],
+            [
+              0,
+              5
+            ]
+          ],
+          "molfoundry_key_sha256": "e4c4143908897811e8fa8258cf8304e59f19a7a9ada85166d6c59dced4926152",
+          "molfoundry_plain_class": "r185",
+          "molfoundry_gml": "molfoundry/reaction_and_query_noedge/composite-18.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 1365,
+          "name": "'r_{1365}'",
+          "before": 0,
+          "after": 1,
+          "gml": "r1365.gml",
+          "translated_gml": "translated-noedge/r1365.gml",
+          "colon_preconditions": [
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              6
+            ]
+          ],
+          "molfoundry_key_sha256": "b307ddec209d2f15a39b348ec6d5538986318ccf5438cfd1e805530d43c7b7ba",
+          "molfoundry_plain_class": "r180",
+          "molfoundry_gml": "molfoundry/reaction_and_query_noedge/composite-13.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 1919,
+          "name": "'r_{1919}'",
+          "before": 0,
+          "after": 1,
+          "gml": "r1919.gml",
+          "translated_gml": "translated-noedge/r1919.gml",
+          "colon_preconditions": [
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              5
+            ]
+          ],
+          "molfoundry_key_sha256": "6bc9e104a7d79f2e937416e04d85020b1077ab579e4cd655c9492e69c80e01f1",
+          "molfoundry_plain_class": "r234",
+          "molfoundry_gml": "molfoundry/reaction_and_query_noedge/composite-07.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 1310,
+          "name": "'r_{1310}'",
+          "before": 0,
+          "after": 1,
+          "gml": "r1310.gml",
+          "translated_gml": "translated-noedge/r1310.gml",
+          "colon_preconditions": [
+            [
+              0,
+              5
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "molfoundry_key_sha256": "3bd0f81f208d4ed2c0d3991222b673b6f5c0044ac6b7f5fdd2e99a1a23e3b8d1",
+          "molfoundry_plain_class": "r252",
+          "molfoundry_gml": "molfoundry/reaction_and_query_noedge/composite-11.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 1316,
+          "name": "'r_{1316}'",
+          "before": 0,
+          "after": 1,
+          "gml": "r1316.gml",
+          "translated_gml": "translated-noedge/r1316.gml",
+          "colon_preconditions": [
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              6
+            ]
+          ],
+          "molfoundry_key_sha256": "349c10e229fa17d223e5bcaaf5f4866a9420351621e389b886ba6dd03b073872",
+          "molfoundry_plain_class": "r258",
+          "molfoundry_gml": "molfoundry/reaction_and_query_noedge/composite-00.gml",
+          "isomorphic_after_explicit_translation": true
+        },
+        {
+          "id": 2032,
+          "name": "'r_{2032}'",
+          "before": 0,
+          "after": 1,
+          "gml": "r2032.gml",
+          "translated_gml": "translated-noedge/r2032.gml",
+          "colon_preconditions": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ]
+          ],
+          "molfoundry_key_sha256": "91d6e09a1e7ea6c65e58d6c27bb95c126bce923afdc33c8678510dfec689087b",
+          "molfoundry_plain_class": "new-f7c8786fa6b1",
+          "molfoundry_gml": "molfoundry/reaction_and_query_noedge/composite-05.gml",
+          "isomorphic_after_explicit_translation": true
+        }
+      ]
+    }
+  ]
+}

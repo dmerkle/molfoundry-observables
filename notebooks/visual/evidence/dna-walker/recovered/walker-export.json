@@ -1,0 +1,2184 @@
+{
+  "rules": [
+    {
+      "name": "kFE",
+      "left": {
+        "nodes": [
+          {
+            "id": "b",
+            "label": "bimotor"
+          },
+          {
+            "id": "c1",
+            "label": "chain"
+          },
+          {
+            "id": "c2",
+            "label": "chain"
+          }
+        ],
+        "edges": [
+          {
+            "id": 0,
+            "source": "b",
+            "target": "c1"
+          },
+          {
+            "id": 1,
+            "source": "b",
+            "target": "c1"
+          },
+          {
+            "id": 4,
+            "source": "c1",
+            "target": "c2"
+          }
+        ]
+      },
+      "right": {
+        "nodes": [
+          {
+            "id": "b",
+            "label": "bimotor"
+          },
+          {
+            "id": "c1",
+            "label": "chain"
+          },
+          {
+            "id": "c2",
+            "label": "chain"
+          }
+        ],
+        "edges": [
+          {
+            "id": 1,
+            "source": "b",
+            "target": "c1"
+          },
+          {
+            "id": 2,
+            "source": "b",
+            "target": "c2"
+          },
+          {
+            "id": 4,
+            "source": "c1",
+            "target": "c2"
+          }
+        ]
+      },
+      "preserved_nodes": [
+        [
+          "b",
+          "b"
+        ],
+        [
+          "c1",
+          "c1"
+        ],
+        [
+          "c2",
+          "c2"
+        ]
+      ],
+      "preserved_edges": [
+        [
+          1,
+          1
+        ],
+        [
+          4,
+          4
+        ]
+      ]
+    },
+    {
+      "name": "kFC",
+      "left": {
+        "nodes": [
+          {
+            "id": "b",
+            "label": "bimotor"
+          },
+          {
+            "id": "c1",
+            "label": "chain"
+          },
+          {
+            "id": "c2",
+            "label": "chain"
+          }
+        ],
+        "edges": [
+          {
+            "id": 1,
+            "source": "b",
+            "target": "c1"
+          },
+          {
+            "id": 2,
+            "source": "b",
+            "target": "c2"
+          },
+          {
+            "id": 4,
+            "source": "c1",
+            "target": "c2"
+          }
+        ]
+      },
+      "right": {
+        "nodes": [
+          {
+            "id": "b",
+            "label": "bimotor"
+          },
+          {
+            "id": "c1",
+            "label": "chain"
+          },
+          {
+            "id": "c2",
+            "label": "chain"
+          }
+        ],
+        "edges": [
+          {
+            "id": 2,
+            "source": "b",
+            "target": "c2"
+          },
+          {
+            "id": 3,
+            "source": "b",
+            "target": "c2"
+          },
+          {
+            "id": 4,
+            "source": "c1",
+            "target": "c2"
+          }
+        ]
+      },
+      "preserved_nodes": [
+        [
+          "b",
+          "b"
+        ],
+        [
+          "c1",
+          "c1"
+        ],
+        [
+          "c2",
+          "c2"
+        ]
+      ],
+      "preserved_edges": [
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ]
+      ]
+    },
+    {
+      "name": "kBC",
+      "left": {
+        "nodes": [
+          {
+            "id": "b",
+            "label": "bimotor"
+          },
+          {
+            "id": "c1",
+            "label": "chain"
+          },
+          {
+            "id": "c2",
+            "label": "chain"
+          }
+        ],
+        "edges": [
+          {
+            "id": 1,
+            "source": "b",
+            "target": "c1"
+          },
+          {
+            "id": 2,
+            "source": "b",
+            "target": "c2"
+          },
+          {
+            "id": 4,
+            "source": "c1",
+            "target": "c2"
+          }
+        ]
+      },
+      "right": {
+        "nodes": [
+          {
+            "id": "b",
+            "label": "bimotor"
+          },
+          {
+            "id": "c1",
+            "label": "chain"
+          },
+          {
+            "id": "c2",
+            "label": "chain"
+          }
+        ],
+        "edges": [
+          {
+            "id": 0,
+            "source": "b",
+            "target": "c1"
+          },
+          {
+            "id": 1,
+            "source": "b",
+            "target": "c1"
+          },
+          {
+            "id": 4,
+            "source": "c1",
+            "target": "c2"
+          }
+        ]
+      },
+      "preserved_nodes": [
+        [
+          "b",
+          "b"
+        ],
+        [
+          "c1",
+          "c1"
+        ],
+        [
+          "c2",
+          "c2"
+        ]
+      ],
+      "preserved_edges": [
+        [
+          1,
+          1
+        ],
+        [
+          4,
+          4
+        ]
+      ]
+    },
+    {
+      "name": "kBE",
+      "left": {
+        "nodes": [
+          {
+            "id": "b",
+            "label": "bimotor"
+          },
+          {
+            "id": "c1",
+            "label": "chain"
+          },
+          {
+            "id": "c2",
+            "label": "chain"
+          }
+        ],
+        "edges": [
+          {
+            "id": 2,
+            "source": "b",
+            "target": "c2"
+          },
+          {
+            "id": 3,
+            "source": "b",
+            "target": "c2"
+          },
+          {
+            "id": 4,
+            "source": "c1",
+            "target": "c2"
+          }
+        ]
+      },
+      "right": {
+        "nodes": [
+          {
+            "id": "b",
+            "label": "bimotor"
+          },
+          {
+            "id": "c1",
+            "label": "chain"
+          },
+          {
+            "id": "c2",
+            "label": "chain"
+          }
+        ],
+        "edges": [
+          {
+            "id": 1,
+            "source": "b",
+            "target": "c1"
+          },
+          {
+            "id": 2,
+            "source": "b",
+            "target": "c2"
+          },
+          {
+            "id": 4,
+            "source": "c1",
+            "target": "c2"
+          }
+        ]
+      },
+      "preserved_nodes": [
+        [
+          "b",
+          "b"
+        ],
+        [
+          "c1",
+          "c1"
+        ],
+        [
+          "c2",
+          "c2"
+        ]
+      ],
+      "preserved_edges": [
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ]
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "nodes": [
+        {
+          "id": "b",
+          "label": "bimotor"
+        },
+        {
+          "id": "c1",
+          "label": "chain"
+        },
+        {
+          "id": "c2",
+          "label": "chain"
+        }
+      ],
+      "edges": [
+        {
+          "id": 0,
+          "source": "b",
+          "target": "c1"
+        },
+        {
+          "id": 1,
+          "source": "b",
+          "target": "c1"
+        },
+        {
+          "id": 4,
+          "source": "c1",
+          "target": "c2"
+        }
+      ]
+    },
+    {
+      "nodes": [
+        {
+          "id": "b",
+          "label": "bimotor"
+        },
+        {
+          "id": "c1",
+          "label": "chain"
+        },
+        {
+          "id": "c2",
+          "label": "chain"
+        }
+      ],
+      "edges": [
+        {
+          "id": 1,
+          "source": "b",
+          "target": "c1"
+        },
+        {
+          "id": 2,
+          "source": "b",
+          "target": "c2"
+        },
+        {
+          "id": 4,
+          "source": "c1",
+          "target": "c2"
+        }
+      ]
+    },
+    {
+      "nodes": [
+        {
+          "id": "b",
+          "label": "bimotor"
+        },
+        {
+          "id": "c1",
+          "label": "chain"
+        },
+        {
+          "id": "c2",
+          "label": "chain"
+        }
+      ],
+      "edges": [
+        {
+          "id": 2,
+          "source": "b",
+          "target": "c2"
+        },
+        {
+          "id": 3,
+          "source": "b",
+          "target": "c2"
+        },
+        {
+          "id": 4,
+          "source": "c1",
+          "target": "c2"
+        }
+      ]
+    }
+  ],
+  "extended_query": {
+    "nodes": [
+      {
+        "id": "b",
+        "label": "bimotor"
+      },
+      {
+        "id": "c1",
+        "label": "chain"
+      },
+      {
+        "id": "c2",
+        "label": "chain"
+      }
+    ],
+    "edges": [
+      {
+        "id": 1,
+        "source": "b",
+        "target": "c1"
+      },
+      {
+        "id": 2,
+        "source": "b",
+        "target": "c2"
+      },
+      {
+        "id": 4,
+        "source": "c1",
+        "target": "c2"
+      }
+    ]
+  },
+  "compressed_query": {
+    "nodes": [
+      {
+        "id": "b",
+        "label": "bimotor"
+      },
+      {
+        "id": "c1",
+        "label": "chain"
+      }
+    ],
+    "edges": [
+      {
+        "id": 0,
+        "source": "b",
+        "target": "c1"
+      },
+      {
+        "id": 1,
+        "source": "b",
+        "target": "c1"
+      }
+    ]
+  },
+  "original_query_run": {
+    "ode_count": 2,
+    "equations": [
+      {
+        "lhs": {
+          "nodes": [
+            {
+              "id": "b",
+              "label": "bimotor"
+            },
+            {
+              "id": "c1",
+              "label": "chain"
+            },
+            {
+              "id": "c2",
+              "label": "chain"
+            }
+          ],
+          "edges": [
+            {
+              "id": 1,
+              "source": "b",
+              "target": "c1"
+            },
+            {
+              "id": 2,
+              "source": "b",
+              "target": "c2"
+            },
+            {
+              "id": 4,
+              "source": "c1",
+              "target": "c2"
+            }
+          ]
+        },
+        "terms": [
+          {
+            "coefficient": 1.0,
+            "rates": [
+              "kBE"
+            ],
+            "graph": {
+              "nodes": [
+                {
+                  "id": "b",
+                  "label": "bimotor"
+                },
+                {
+                  "id": "c1",
+                  "label": "chain"
+                }
+              ],
+              "edges": [
+                {
+                  "id": 0,
+                  "source": "b",
+                  "target": "c1"
+                },
+                {
+                  "id": 1,
+                  "source": "b",
+                  "target": "c1"
+                }
+              ]
+            }
+          },
+          {
+            "coefficient": 1.0,
+            "rates": [
+              "kFE"
+            ],
+            "graph": {
+              "nodes": [
+                {
+                  "id": "b",
+                  "label": "bimotor"
+                },
+                {
+                  "id": "c1",
+                  "label": "chain"
+                }
+              ],
+              "edges": [
+                {
+                  "id": 0,
+                  "source": "b",
+                  "target": "c1"
+                },
+                {
+                  "id": 1,
+                  "source": "b",
+                  "target": "c1"
+                }
+              ]
+            }
+          },
+          {
+            "coefficient": -1.0,
+            "rates": [
+              "kBC"
+            ],
+            "graph": {
+              "nodes": [
+                {
+                  "id": "b",
+                  "label": "bimotor"
+                },
+                {
+                  "id": "c1",
+                  "label": "chain"
+                },
+                {
+                  "id": "c2",
+                  "label": "chain"
+                }
+              ],
+              "edges": [
+                {
+                  "id": 1,
+                  "source": "b",
+                  "target": "c1"
+                },
+                {
+                  "id": 2,
+                  "source": "b",
+                  "target": "c2"
+                },
+                {
+                  "id": 4,
+                  "source": "c1",
+                  "target": "c2"
+                }
+              ]
+            }
+          },
+          {
+            "coefficient": -1.0,
+            "rates": [
+              "kFC"
+            ],
+            "graph": {
+              "nodes": [
+                {
+                  "id": "b",
+                  "label": "bimotor"
+                },
+                {
+                  "id": "c1",
+                  "label": "chain"
+                },
+                {
+                  "id": "c2",
+                  "label": "chain"
+                }
+              ],
+              "edges": [
+                {
+                  "id": 1,
+                  "source": "b",
+                  "target": "c1"
+                },
+                {
+                  "id": 2,
+                  "source": "b",
+                  "target": "c2"
+                },
+                {
+                  "id": 4,
+                  "source": "c1",
+                  "target": "c2"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "lhs": {
+          "nodes": [
+            {
+              "id": "b",
+              "label": "bimotor"
+            },
+            {
+              "id": "c1",
+              "label": "chain"
+            }
+          ],
+          "edges": [
+            {
+              "id": 0,
+              "source": "b",
+              "target": "c1"
+            },
+            {
+              "id": 1,
+              "source": "b",
+              "target": "c1"
+            }
+          ]
+        },
+        "terms": [
+          {
+            "coefficient": -1.0,
+            "rates": [
+              "kBE"
+            ],
+            "graph": {
+              "nodes": [
+                {
+                  "id": "b",
+                  "label": "bimotor"
+                },
+                {
+                  "id": "c1",
+                  "label": "chain"
+                }
+              ],
+              "edges": [
+                {
+                  "id": 0,
+                  "source": "b",
+                  "target": "c1"
+                },
+                {
+                  "id": 1,
+                  "source": "b",
+                  "target": "c1"
+                }
+              ]
+            }
+          },
+          {
+            "coefficient": -1.0,
+            "rates": [
+              "kFE"
+            ],
+            "graph": {
+              "nodes": [
+                {
+                  "id": "b",
+                  "label": "bimotor"
+                },
+                {
+                  "id": "c1",
+                  "label": "chain"
+                }
+              ],
+              "edges": [
+                {
+                  "id": 0,
+                  "source": "b",
+                  "target": "c1"
+                },
+                {
+                  "id": 1,
+                  "source": "b",
+                  "target": "c1"
+                }
+              ]
+            }
+          },
+          {
+            "coefficient": 1.0,
+            "rates": [
+              "kBC"
+            ],
+            "graph": {
+              "nodes": [
+                {
+                  "id": "b",
+                  "label": "bimotor"
+                },
+                {
+                  "id": "c1",
+                  "label": "chain"
+                },
+                {
+                  "id": "c2",
+                  "label": "chain"
+                }
+              ],
+              "edges": [
+                {
+                  "id": 1,
+                  "source": "b",
+                  "target": "c1"
+                },
+                {
+                  "id": 2,
+                  "source": "b",
+                  "target": "c2"
+                },
+                {
+                  "id": 4,
+                  "source": "c1",
+                  "target": "c2"
+                }
+              ]
+            }
+          },
+          {
+            "coefficient": 1.0,
+            "rates": [
+              "kFC"
+            ],
+            "graph": {
+              "nodes": [
+                {
+                  "id": "b",
+                  "label": "bimotor"
+                },
+                {
+                  "id": "c1",
+                  "label": "chain"
+                },
+                {
+                  "id": "c2",
+                  "label": "chain"
+                }
+              ],
+              "edges": [
+                {
+                  "id": 1,
+                  "source": "b",
+                  "target": "c1"
+                },
+                {
+                  "id": 2,
+                  "source": "b",
+                  "target": "c2"
+                },
+                {
+                  "id": 4,
+                  "source": "c1",
+                  "target": "c2"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": []
+  },
+  "single_query_run": {
+    "ode_count": 2,
+    "equations": [
+      {
+        "lhs": {
+          "nodes": [
+            {
+              "id": "b",
+              "label": "bimotor"
+            },
+            {
+              "id": "c1",
+              "label": "chain"
+            },
+            {
+              "id": "c2",
+              "label": "chain"
+            }
+          ],
+          "edges": [
+            {
+              "id": 1,
+              "source": "b",
+              "target": "c1"
+            },
+            {
+              "id": 2,
+              "source": "b",
+              "target": "c2"
+            },
+            {
+              "id": 4,
+              "source": "c1",
+              "target": "c2"
+            }
+          ]
+        },
+        "terms": [
+          {
+            "coefficient": 1.0,
+            "rates": [
+              "kBE"
+            ],
+            "graph": {
+              "nodes": [
+                {
+                  "id": "b",
+                  "label": "bimotor"
+                },
+                {
+                  "id": "c1",
+                  "label": "chain"
+                }
+              ],
+              "edges": [
+                {
+                  "id": 0,
+                  "source": "b",
+                  "target": "c1"
+                },
+                {
+                  "id": 1,
+                  "source": "b",
+                  "target": "c1"
+                }
+              ]
+            }
+          },
+          {
+            "coefficient": 1.0,
+            "rates": [
+              "kFE"
+            ],
+            "graph": {
+              "nodes": [
+                {
+                  "id": "b",
+                  "label": "bimotor"
+                },
+                {
+                  "id": "c1",
+                  "label": "chain"
+                }
+              ],
+              "edges": [
+                {
+                  "id": 0,
+                  "source": "b",
+                  "target": "c1"
+                },
+                {
+                  "id": 1,
+                  "source": "b",
+                  "target": "c1"
+                }
+              ]
+            }
+          },
+          {
+            "coefficient": -1.0,
+            "rates": [
+              "kBC"
+            ],
+            "graph": {
+              "nodes": [
+                {
+                  "id": "b",
+                  "label": "bimotor"
+                },
+                {
+                  "id": "c1",
+                  "label": "chain"
+                },
+                {
+                  "id": "c2",
+                  "label": "chain"
+                }
+              ],
+              "edges": [
+                {
+                  "id": 1,
+                  "source": "b",
+                  "target": "c1"
+                },
+                {
+                  "id": 2,
+                  "source": "b",
+                  "target": "c2"
+                },
+                {
+                  "id": 4,
+                  "source": "c1",
+                  "target": "c2"
+                }
+              ]
+            }
+          },
+          {
+            "coefficient": -1.0,
+            "rates": [
+              "kFC"
+            ],
+            "graph": {
+              "nodes": [
+                {
+                  "id": "b",
+                  "label": "bimotor"
+                },
+                {
+                  "id": "c1",
+                  "label": "chain"
+                },
+                {
+                  "id": "c2",
+                  "label": "chain"
+                }
+              ],
+              "edges": [
+                {
+                  "id": 1,
+                  "source": "b",
+                  "target": "c1"
+                },
+                {
+                  "id": 2,
+                  "source": "b",
+                  "target": "c2"
+                },
+                {
+                  "id": 4,
+                  "source": "c1",
+                  "target": "c2"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "lhs": {
+          "nodes": [
+            {
+              "id": "b",
+              "label": "bimotor"
+            },
+            {
+              "id": "c1",
+              "label": "chain"
+            }
+          ],
+          "edges": [
+            {
+              "id": 0,
+              "source": "b",
+              "target": "c1"
+            },
+            {
+              "id": 1,
+              "source": "b",
+              "target": "c1"
+            }
+          ]
+        },
+        "terms": [
+          {
+            "coefficient": -1.0,
+            "rates": [
+              "kBE"
+            ],
+            "graph": {
+              "nodes": [
+                {
+                  "id": "b",
+                  "label": "bimotor"
+                },
+                {
+                  "id": "c1",
+                  "label": "chain"
+                }
+              ],
+              "edges": [
+                {
+                  "id": 0,
+                  "source": "b",
+                  "target": "c1"
+                },
+                {
+                  "id": 1,
+                  "source": "b",
+                  "target": "c1"
+                }
+              ]
+            }
+          },
+          {
+            "coefficient": -1.0,
+            "rates": [
+              "kFE"
+            ],
+            "graph": {
+              "nodes": [
+                {
+                  "id": "b",
+                  "label": "bimotor"
+                },
+                {
+                  "id": "c1",
+                  "label": "chain"
+                }
+              ],
+              "edges": [
+                {
+                  "id": 0,
+                  "source": "b",
+                  "target": "c1"
+                },
+                {
+                  "id": 1,
+                  "source": "b",
+                  "target": "c1"
+                }
+              ]
+            }
+          },
+          {
+            "coefficient": 1.0,
+            "rates": [
+              "kBC"
+            ],
+            "graph": {
+              "nodes": [
+                {
+                  "id": "b",
+                  "label": "bimotor"
+                },
+                {
+                  "id": "c1",
+                  "label": "chain"
+                },
+                {
+                  "id": "c2",
+                  "label": "chain"
+                }
+              ],
+              "edges": [
+                {
+                  "id": 1,
+                  "source": "b",
+                  "target": "c1"
+                },
+                {
+                  "id": 2,
+                  "source": "b",
+                  "target": "c2"
+                },
+                {
+                  "id": 4,
+                  "source": "c1",
+                  "target": "c2"
+                }
+              ]
+            }
+          },
+          {
+            "coefficient": 1.0,
+            "rates": [
+              "kFC"
+            ],
+            "graph": {
+              "nodes": [
+                {
+                  "id": "b",
+                  "label": "bimotor"
+                },
+                {
+                  "id": "c1",
+                  "label": "chain"
+                },
+                {
+                  "id": "c2",
+                  "label": "chain"
+                }
+              ],
+              "edges": [
+                {
+                  "id": 1,
+                  "source": "b",
+                  "target": "c1"
+                },
+                {
+                  "id": 2,
+                  "source": "b",
+                  "target": "c2"
+                },
+                {
+                  "id": 4,
+                  "source": "c1",
+                  "target": "c2"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "unresolved": []
+  },
+  "individual_channels": [
+    {
+      "rule": "kFE",
+      "query": {
+        "nodes": [
+          {
+            "id": "b",
+            "label": "bimotor"
+          },
+          {
+            "id": "c1",
+            "label": "chain"
+          },
+          {
+            "id": "c2",
+            "label": "chain"
+          }
+        ],
+        "edges": [
+          {
+            "id": 1,
+            "source": "b",
+            "target": "c1"
+          },
+          {
+            "id": 2,
+            "source": "b",
+            "target": "c2"
+          },
+          {
+            "id": 4,
+            "source": "c1",
+            "target": "c2"
+          }
+        ]
+      },
+      "output": {
+        "ode_count": 1,
+        "equations": [
+          {
+            "lhs": {
+              "nodes": [
+                {
+                  "id": "b",
+                  "label": "bimotor"
+                },
+                {
+                  "id": "c1",
+                  "label": "chain"
+                },
+                {
+                  "id": "c2",
+                  "label": "chain"
+                }
+              ],
+              "edges": [
+                {
+                  "id": 1,
+                  "source": "b",
+                  "target": "c1"
+                },
+                {
+                  "id": 2,
+                  "source": "b",
+                  "target": "c2"
+                },
+                {
+                  "id": 4,
+                  "source": "c1",
+                  "target": "c2"
+                }
+              ]
+            },
+            "terms": [
+              {
+                "coefficient": 1.0,
+                "rates": [
+                  "kFE"
+                ],
+                "graph": {
+                  "nodes": [
+                    {
+                      "id": "b",
+                      "label": "bimotor"
+                    },
+                    {
+                      "id": "c1",
+                      "label": "chain"
+                    }
+                  ],
+                  "edges": [
+                    {
+                      "id": 0,
+                      "source": "b",
+                      "target": "c1"
+                    },
+                    {
+                      "id": 1,
+                      "source": "b",
+                      "target": "c1"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "unresolved": [
+          {
+            "nodes": [
+              {
+                "id": "b",
+                "label": "bimotor"
+              },
+              {
+                "id": "c1",
+                "label": "chain"
+              }
+            ],
+            "edges": [
+              {
+                "id": 0,
+                "source": "b",
+                "target": "c1"
+              },
+              {
+                "id": 1,
+                "source": "b",
+                "target": "c1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "rule": "kFE",
+      "query": {
+        "nodes": [
+          {
+            "id": "b",
+            "label": "bimotor"
+          },
+          {
+            "id": "c1",
+            "label": "chain"
+          }
+        ],
+        "edges": [
+          {
+            "id": 0,
+            "source": "b",
+            "target": "c1"
+          },
+          {
+            "id": 1,
+            "source": "b",
+            "target": "c1"
+          }
+        ]
+      },
+      "output": {
+        "ode_count": 1,
+        "equations": [
+          {
+            "lhs": {
+              "nodes": [
+                {
+                  "id": "b",
+                  "label": "bimotor"
+                },
+                {
+                  "id": "c1",
+                  "label": "chain"
+                }
+              ],
+              "edges": [
+                {
+                  "id": 0,
+                  "source": "b",
+                  "target": "c1"
+                },
+                {
+                  "id": 1,
+                  "source": "b",
+                  "target": "c1"
+                }
+              ]
+            },
+            "terms": [
+              {
+                "coefficient": -1.0,
+                "rates": [
+                  "kFE"
+                ],
+                "graph": {
+                  "nodes": [
+                    {
+                      "id": "b",
+                      "label": "bimotor"
+                    },
+                    {
+                      "id": "c1",
+                      "label": "chain"
+                    }
+                  ],
+                  "edges": [
+                    {
+                      "id": 0,
+                      "source": "b",
+                      "target": "c1"
+                    },
+                    {
+                      "id": 1,
+                      "source": "b",
+                      "target": "c1"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "unresolved": []
+      }
+    },
+    {
+      "rule": "kFC",
+      "query": {
+        "nodes": [
+          {
+            "id": "b",
+            "label": "bimotor"
+          },
+          {
+            "id": "c1",
+            "label": "chain"
+          },
+          {
+            "id": "c2",
+            "label": "chain"
+          }
+        ],
+        "edges": [
+          {
+            "id": 1,
+            "source": "b",
+            "target": "c1"
+          },
+          {
+            "id": 2,
+            "source": "b",
+            "target": "c2"
+          },
+          {
+            "id": 4,
+            "source": "c1",
+            "target": "c2"
+          }
+        ]
+      },
+      "output": {
+        "ode_count": 1,
+        "equations": [
+          {
+            "lhs": {
+              "nodes": [
+                {
+                  "id": "b",
+                  "label": "bimotor"
+                },
+                {
+                  "id": "c1",
+                  "label": "chain"
+                },
+                {
+                  "id": "c2",
+                  "label": "chain"
+                }
+              ],
+              "edges": [
+                {
+                  "id": 1,
+                  "source": "b",
+                  "target": "c1"
+                },
+                {
+                  "id": 2,
+                  "source": "b",
+                  "target": "c2"
+                },
+                {
+                  "id": 4,
+                  "source": "c1",
+                  "target": "c2"
+                }
+              ]
+            },
+            "terms": [
+              {
+                "coefficient": -1.0,
+                "rates": [
+                  "kFC"
+                ],
+                "graph": {
+                  "nodes": [
+                    {
+                      "id": "b",
+                      "label": "bimotor"
+                    },
+                    {
+                      "id": "c1",
+                      "label": "chain"
+                    },
+                    {
+                      "id": "c2",
+                      "label": "chain"
+                    }
+                  ],
+                  "edges": [
+                    {
+                      "id": 1,
+                      "source": "b",
+                      "target": "c1"
+                    },
+                    {
+                      "id": 2,
+                      "source": "b",
+                      "target": "c2"
+                    },
+                    {
+                      "id": 4,
+                      "source": "c1",
+                      "target": "c2"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "unresolved": []
+      }
+    },
+    {
+      "rule": "kFC",
+      "query": {
+        "nodes": [
+          {
+            "id": "b",
+            "label": "bimotor"
+          },
+          {
+            "id": "c1",
+            "label": "chain"
+          }
+        ],
+        "edges": [
+          {
+            "id": 0,
+            "source": "b",
+            "target": "c1"
+          },
+          {
+            "id": 1,
+            "source": "b",
+            "target": "c1"
+          }
+        ]
+      },
+      "output": {
+        "ode_count": 1,
+        "equations": [
+          {
+            "lhs": {
+              "nodes": [
+                {
+                  "id": "b",
+                  "label": "bimotor"
+                },
+                {
+                  "id": "c1",
+                  "label": "chain"
+                }
+              ],
+              "edges": [
+                {
+                  "id": 0,
+                  "source": "b",
+                  "target": "c1"
+                },
+                {
+                  "id": 1,
+                  "source": "b",
+                  "target": "c1"
+                }
+              ]
+            },
+            "terms": [
+              {
+                "coefficient": 1.0,
+                "rates": [
+                  "kFC"
+                ],
+                "graph": {
+                  "nodes": [
+                    {
+                      "id": "(,c1)",
+                      "label": "chain"
+                    },
+                    {
+                      "id": "(b,b)",
+                      "label": "bimotor"
+                    },
+                    {
+                      "id": "(c1,c2)",
+                      "label": "chain"
+                    }
+                  ],
+                  "edges": [
+                    {
+                      "id": 0,
+                      "source": "(b,b)",
+                      "target": "(c1,c2)"
+                    },
+                    {
+                      "id": 0,
+                      "source": "(b,b)",
+                      "target": "(,c1)"
+                    },
+                    {
+                      "id": 2,
+                      "source": "(,c1)",
+                      "target": "(c1,c2)"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "unresolved": [
+          {
+            "nodes": [
+              {
+                "id": "(,c1)",
+                "label": "chain"
+              },
+              {
+                "id": "(b,b)",
+                "label": "bimotor"
+              },
+              {
+                "id": "(c1,c2)",
+                "label": "chain"
+              }
+            ],
+            "edges": [
+              {
+                "id": 0,
+                "source": "(b,b)",
+                "target": "(c1,c2)"
+              },
+              {
+                "id": 0,
+                "source": "(b,b)",
+                "target": "(,c1)"
+              },
+              {
+                "id": 2,
+                "source": "(,c1)",
+                "target": "(c1,c2)"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "rule": "kBC",
+      "query": {
+        "nodes": [
+          {
+            "id": "b",
+            "label": "bimotor"
+          },
+          {
+            "id": "c1",
+            "label": "chain"
+          },
+          {
+            "id": "c2",
+            "label": "chain"
+          }
+        ],
+        "edges": [
+          {
+            "id": 1,
+            "source": "b",
+            "target": "c1"
+          },
+          {
+            "id": 2,
+            "source": "b",
+            "target": "c2"
+          },
+          {
+            "id": 4,
+            "source": "c1",
+            "target": "c2"
+          }
+        ]
+      },
+      "output": {
+        "ode_count": 1,
+        "equations": [
+          {
+            "lhs": {
+              "nodes": [
+                {
+                  "id": "b",
+                  "label": "bimotor"
+                },
+                {
+                  "id": "c1",
+                  "label": "chain"
+                },
+                {
+                  "id": "c2",
+                  "label": "chain"
+                }
+              ],
+              "edges": [
+                {
+                  "id": 1,
+                  "source": "b",
+                  "target": "c1"
+                },
+                {
+                  "id": 2,
+                  "source": "b",
+                  "target": "c2"
+                },
+                {
+                  "id": 4,
+                  "source": "c1",
+                  "target": "c2"
+                }
+              ]
+            },
+            "terms": [
+              {
+                "coefficient": -1.0,
+                "rates": [
+                  "kBC"
+                ],
+                "graph": {
+                  "nodes": [
+                    {
+                      "id": "b",
+                      "label": "bimotor"
+                    },
+                    {
+                      "id": "c1",
+                      "label": "chain"
+                    },
+                    {
+                      "id": "c2",
+                      "label": "chain"
+                    }
+                  ],
+                  "edges": [
+                    {
+                      "id": 1,
+                      "source": "b",
+                      "target": "c1"
+                    },
+                    {
+                      "id": 2,
+                      "source": "b",
+                      "target": "c2"
+                    },
+                    {
+                      "id": 4,
+                      "source": "c1",
+                      "target": "c2"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "unresolved": []
+      }
+    },
+    {
+      "rule": "kBC",
+      "query": {
+        "nodes": [
+          {
+            "id": "b",
+            "label": "bimotor"
+          },
+          {
+            "id": "c1",
+            "label": "chain"
+          }
+        ],
+        "edges": [
+          {
+            "id": 0,
+            "source": "b",
+            "target": "c1"
+          },
+          {
+            "id": 1,
+            "source": "b",
+            "target": "c1"
+          }
+        ]
+      },
+      "output": {
+        "ode_count": 1,
+        "equations": [
+          {
+            "lhs": {
+              "nodes": [
+                {
+                  "id": "b",
+                  "label": "bimotor"
+                },
+                {
+                  "id": "c1",
+                  "label": "chain"
+                }
+              ],
+              "edges": [
+                {
+                  "id": 0,
+                  "source": "b",
+                  "target": "c1"
+                },
+                {
+                  "id": 1,
+                  "source": "b",
+                  "target": "c1"
+                }
+              ]
+            },
+            "terms": [
+              {
+                "coefficient": 1.0,
+                "rates": [
+                  "kBC"
+                ],
+                "graph": {
+                  "nodes": [
+                    {
+                      "id": "(,c2)",
+                      "label": "chain"
+                    },
+                    {
+                      "id": "(b,b)",
+                      "label": "bimotor"
+                    },
+                    {
+                      "id": "(c1,c1)",
+                      "label": "chain"
+                    }
+                  ],
+                  "edges": [
+                    {
+                      "id": 0,
+                      "source": "(b,b)",
+                      "target": "(,c2)"
+                    },
+                    {
+                      "id": 1,
+                      "source": "(b,b)",
+                      "target": "(c1,c1)"
+                    },
+                    {
+                      "id": 2,
+                      "source": "(c1,c1)",
+                      "target": "(,c2)"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "unresolved": [
+          {
+            "nodes": [
+              {
+                "id": "(,c2)",
+                "label": "chain"
+              },
+              {
+                "id": "(b,b)",
+                "label": "bimotor"
+              },
+              {
+                "id": "(c1,c1)",
+                "label": "chain"
+              }
+            ],
+            "edges": [
+              {
+                "id": 0,
+                "source": "(b,b)",
+                "target": "(,c2)"
+              },
+              {
+                "id": 1,
+                "source": "(b,b)",
+                "target": "(c1,c1)"
+              },
+              {
+                "id": 2,
+                "source": "(c1,c1)",
+                "target": "(,c2)"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "rule": "kBE",
+      "query": {
+        "nodes": [
+          {
+            "id": "b",
+            "label": "bimotor"
+          },
+          {
+            "id": "c1",
+            "label": "chain"
+          },
+          {
+            "id": "c2",
+            "label": "chain"
+          }
+        ],
+        "edges": [
+          {
+            "id": 1,
+            "source": "b",
+            "target": "c1"
+          },
+          {
+            "id": 2,
+            "source": "b",
+            "target": "c2"
+          },
+          {
+            "id": 4,
+            "source": "c1",
+            "target": "c2"
+          }
+        ]
+      },
+      "output": {
+        "ode_count": 1,
+        "equations": [
+          {
+            "lhs": {
+              "nodes": [
+                {
+                  "id": "b",
+                  "label": "bimotor"
+                },
+                {
+                  "id": "c1",
+                  "label": "chain"
+                },
+                {
+                  "id": "c2",
+                  "label": "chain"
+                }
+              ],
+              "edges": [
+                {
+                  "id": 1,
+                  "source": "b",
+                  "target": "c1"
+                },
+                {
+                  "id": 2,
+                  "source": "b",
+                  "target": "c2"
+                },
+                {
+                  "id": 4,
+                  "source": "c1",
+                  "target": "c2"
+                }
+              ]
+            },
+            "terms": [
+              {
+                "coefficient": 1.0,
+                "rates": [
+                  "kBE"
+                ],
+                "graph": {
+                  "nodes": [
+                    {
+                      "id": "b",
+                      "label": "bimotor"
+                    },
+                    {
+                      "id": "c1",
+                      "label": "chain"
+                    }
+                  ],
+                  "edges": [
+                    {
+                      "id": 0,
+                      "source": "b",
+                      "target": "c1"
+                    },
+                    {
+                      "id": 1,
+                      "source": "b",
+                      "target": "c1"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "unresolved": [
+          {
+            "nodes": [
+              {
+                "id": "b",
+                "label": "bimotor"
+              },
+              {
+                "id": "c1",
+                "label": "chain"
+              }
+            ],
+            "edges": [
+              {
+                "id": 0,
+                "source": "b",
+                "target": "c1"
+              },
+              {
+                "id": 1,
+                "source": "b",
+                "target": "c1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "rule": "kBE",
+      "query": {
+        "nodes": [
+          {
+            "id": "b",
+            "label": "bimotor"
+          },
+          {
+            "id": "c1",
+            "label": "chain"
+          }
+        ],
+        "edges": [
+          {
+            "id": 0,
+            "source": "b",
+            "target": "c1"
+          },
+          {
+            "id": 1,
+            "source": "b",
+            "target": "c1"
+          }
+        ]
+      },
+      "output": {
+        "ode_count": 1,
+        "equations": [
+          {
+            "lhs": {
+              "nodes": [
+                {
+                  "id": "b",
+                  "label": "bimotor"
+                },
+                {
+                  "id": "c1",
+                  "label": "chain"
+                }
+              ],
+              "edges": [
+                {
+                  "id": 0,
+                  "source": "b",
+                  "target": "c1"
+                },
+                {
+                  "id": 1,
+                  "source": "b",
+                  "target": "c1"
+                }
+              ]
+            },
+            "terms": [
+              {
+                "coefficient": -1.0,
+                "rates": [
+                  "kBE"
+                ],
+                "graph": {
+                  "nodes": [
+                    {
+                      "id": "b",
+                      "label": "bimotor"
+                    },
+                    {
+                      "id": "c1",
+                      "label": "chain"
+                    }
+                  ],
+                  "edges": [
+                    {
+                      "id": 0,
+                      "source": "b",
+                      "target": "c1"
+                    },
+                    {
+                      "id": 1,
+                      "source": "b",
+                      "target": "c1"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "unresolved": []
+      }
+    }
+  ]
+}

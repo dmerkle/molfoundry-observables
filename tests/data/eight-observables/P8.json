@@ -1,0 +1,34 @@
+[
+  {
+    "coefficient": "-2",
+    "file": "P8-0.gml"
+  },
+  {
+    "coefficient": "2",
+    "file": "P8-1.gml"
+  },
+  {
+    "coefficient": "1",
+    "file": "P8-2.gml"
+  },
+  {
+    "coefficient": "-1",
+    "file": "P8-3.gml"
+  },
+  {
+    "coefficient": "-1",
+    "file": "P8-4.gml"
+  },
+  {
+    "coefficient": "2",
+    "file": "P8-5.gml"
+  },
+  {
+    "coefficient": "-2",
+    "file": "P8-6.gml"
+  },
+  {
+    "coefficient": "-2",
+    "file": "P8-7.gml"
+  }
+]

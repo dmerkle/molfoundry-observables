@@ -1,0 +1,16 @@
+{
+  "kind": "eight-two-regular-owned-slots-v1",
+  "local_slots": {
+    "kind": "local-owned-slots-v1",
+    "node_labels": ["C", "P", "L"],
+    "edge_types": [["C", "P", "cp"], ["C", "L", "cl"], ["C", "C", "next"], ["P", "L", "bound"]],
+    "each_C_exactly_one_P_and_one_L": true,
+    "each_P_L_at_most_one_C": true,
+    "each_P_L_at_most_one_bound_partner": true,
+    "bound_endpoints_have_the_same_C": true,
+    "next_max_degree": 2
+  },
+  "total_C": 8,
+  "each_C_exactly_two_next_neighbours": true,
+  "require_connected": false
+}

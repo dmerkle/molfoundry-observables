@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "status": "MANUAL_TRANSCRIPTION",
+  "source": {
+    "article": "Rewriting Theory for the Life Sciences: A Unifying Theory of CTMC Semantics",
+    "arxiv": "2106.02573v1",
+    "location": "Appendix F, Table 1, PDF page 56",
+    "doi": "10.1016/j.tcs.2021.07.026"
+  },
+  "scope": "Published composition-count table transcribed for inspection; these rows are not computed by the local replay.",
+  "columns": [
+    "rule",
+    "r_plus_after_r_id",
+    "r_id_after_r_plus",
+    "violates_C1",
+    "violates_C2"
+  ],
+  "rows": [
+    {"rule": "r+",   "r_plus_after_r_id": 0, "r_id_after_r_plus": 1, "violates_C1": false, "violates_C2": false},
+    {"rule": "r2",   "r_plus_after_r_id": 1, "r_id_after_r_plus": 1, "violates_C1": false, "violates_C2": false},
+    {"rule": "r7",   "r_plus_after_r_id": 1, "r_id_after_r_plus": 1, "violates_C1": true,  "violates_C2": false},
+    {"rule": "r12",  "r_plus_after_r_id": 0, "r_id_after_r_plus": 1, "violates_C1": false, "violates_C2": true},
+    {"rule": "r18",  "r_plus_after_r_id": 0, "r_id_after_r_plus": 1, "violates_C1": false, "violates_C2": false},
+    {"rule": "r29",  "r_plus_after_r_id": 0, "r_id_after_r_plus": 1, "violates_C1": true,  "violates_C2": true},
+    {"rule": "r42",  "r_plus_after_r_id": 0, "r_id_after_r_plus": 1, "violates_C1": false, "violates_C2": true},
+    {"rule": "r47",  "r_plus_after_r_id": 0, "r_id_after_r_plus": 1, "violates_C1": true,  "violates_C2": true},
+    {"rule": "r68",  "r_plus_after_r_id": 0, "r_id_after_r_plus": 1, "violates_C1": true,  "violates_C2": false},
+    {"rule": "r73",  "r_plus_after_r_id": 0, "r_id_after_r_plus": 1, "violates_C1": true,  "violates_C2": false},
+    {"rule": "r79",  "r_plus_after_r_id": 0, "r_id_after_r_plus": 1, "violates_C1": false, "violates_C2": false},
+    {"rule": "r89",  "r_plus_after_r_id": 0, "r_id_after_r_plus": 1, "violates_C1": false, "violates_C2": false},
+    {"rule": "r94",  "r_plus_after_r_id": 0, "r_id_after_r_plus": 1, "violates_C1": true,  "violates_C2": true},
+    {"rule": "r107", "r_plus_after_r_id": 1, "r_id_after_r_plus": 1, "violates_C1": true,  "violates_C2": false},
+    {"rule": "r120", "r_plus_after_r_id": 0, "r_id_after_r_plus": 1, "violates_C1": true,  "violates_C2": false},
+    {"rule": "r180", "r_plus_after_r_id": 1, "r_id_after_r_plus": 1, "violates_C1": false, "violates_C2": false},
+    {"rule": "r185", "r_plus_after_r_id": 1, "r_id_after_r_plus": 1, "violates_C1": true,  "violates_C2": false},
+    {"rule": "r191", "r_plus_after_r_id": 1, "r_id_after_r_plus": 1, "violates_C1": true,  "violates_C2": true},
+    {"rule": "r234", "r_plus_after_r_id": 1, "r_id_after_r_plus": 0, "violates_C1": true,  "violates_C2": false},
+    {"rule": "r252", "r_plus_after_r_id": 1, "r_id_after_r_plus": 0, "violates_C1": true,  "violates_C2": false},
+    {"rule": "r258", "r_plus_after_r_id": 1, "r_id_after_r_plus": 0, "violates_C1": true,  "violates_C2": false},
+    {"rule": "rA",   "r_plus_after_r_id": 1, "r_id_after_r_plus": 0, "violates_C1": true,  "violates_C2": false},
+    {"rule": "rB",   "r_plus_after_r_id": 1, "r_id_after_r_plus": 0, "violates_C1": true,  "violates_C2": false},
+    {"rule": "rC",   "r_plus_after_r_id": 1, "r_id_after_r_plus": 0, "violates_C1": true,  "violates_C2": false}
+  ],
+  "manual_only_rules": ["rA", "rB", "rC"]
+}

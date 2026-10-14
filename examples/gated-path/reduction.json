@@ -1,0 +1,17 @@
+{
+  "method": "exact-footprints-and-dynamic-span",
+  "max_components": 12,
+  "failed_count": "UNKNOWN",
+  "target_basis": "not supplied",
+  "chain_interpolation": "not used",
+  "preservation_evidence": {
+    "level": "theorem-argument",
+    "scope": "all finite declared path lengths, both controller states, and all spectator multiplicities",
+    "proof_document": "docs/reusable-family.md",
+    "rule_claims": {
+      "subdivide": "Subdividing one path edge produces a path one edge longer and leaves the controller and spectators unchanged.",
+      "close": "Adds only the optional controller edge and leaves the path and spectators unchanged.",
+      "open": "Deletes only the optional controller edge and leaves the path and spectators unchanged."
+    }
+  }
+}

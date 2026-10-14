@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "id": "bond_isomer_brusselator_moment_discovery",
+  "title": "Exact factorial-moment discovery for the bond-isomer Brusselator",
+  "adapter": "mfobs.models.brusselator_moments:Adapter",
+  "rules": [
+    {
+      "id": "source",
+      "file": "rules/source.gml",
+      "rate": "k1",
+      "per_match": "1/128",
+      "kind": "chemical"
+    },
+    {
+      "id": "autocatalysis",
+      "file": "rules/autocatalysis.gml",
+      "rate": "k2",
+      "per_match": "1/27648",
+      "kind": "chemical"
+    },
+    {
+      "id": "conversion",
+      "file": "rules/conversion.gml",
+      "rate": "k3",
+      "per_match": "1/1152",
+      "kind": "chemical"
+    },
+    {
+      "id": "sink",
+      "file": "rules/sink.gml",
+      "rate": "k4",
+      "per_match": "1/24",
+      "kind": "chemical"
+    }
+  ],
+  "observables": [
+    {
+      "id": "X",
+      "file": "observables/X.gml"
+    },
+    {
+      "id": "Y",
+      "file": "observables/Y.gml"
+    }
+  ],
+  "initial_observables": [
+    "X",
+    "Y"
+  ],
+  "composition": {
+    "mode": "public",
+    "connected": false,
+    "include_empty": true
+  },
+  "forbidden": null,
+  "state_language": "moment-state-language.json",
+  "reduction": "moment-reduction.json",
+  "normalisation": {
+    "X": {
+      "scale": "24",
+      "meaning": "N_X"
+    },
+    "Y": {
+      "scale": "48",
+      "meaning": "N_Y"
+    }
+  },
+  "initial_state": {
+    "X": 80,
+    "Y": 500,
+    "V": 200
+  },
+  "parameters": "moment-parameters.json",
+  "reference": null
+}

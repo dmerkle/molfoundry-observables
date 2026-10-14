@@ -1,0 +1,409 @@
+{
+  "rules": [
+    {
+      "name": "kFE",
+      "left": {
+        "nodes": [
+          {
+            "id": "b",
+            "label": "bimotor"
+          },
+          {
+            "id": "c1",
+            "label": "chain"
+          },
+          {
+            "id": "c2",
+            "label": "chain"
+          }
+        ],
+        "edges": [
+          {
+            "id": 0,
+            "source": "b",
+            "target": "c1"
+          },
+          {
+            "id": 1,
+            "source": "b",
+            "target": "c1"
+          },
+          {
+            "id": 4,
+            "source": "c1",
+            "target": "c2"
+          }
+        ]
+      },
+      "right": {
+        "nodes": [
+          {
+            "id": "b",
+            "label": "bimotor"
+          },
+          {
+            "id": "c1",
+            "label": "chain"
+          },
+          {
+            "id": "c2",
+            "label": "chain"
+          }
+        ],
+        "edges": [
+          {
+            "id": 1,
+            "source": "b",
+            "target": "c1"
+          },
+          {
+            "id": 2,
+            "source": "b",
+            "target": "c2"
+          },
+          {
+            "id": 4,
+            "source": "c1",
+            "target": "c2"
+          }
+        ]
+      },
+      "preserved_nodes": [
+        [
+          "b",
+          "b"
+        ],
+        [
+          "c1",
+          "c1"
+        ],
+        [
+          "c2",
+          "c2"
+        ]
+      ],
+      "preserved_edges": [
+        [
+          1,
+          1
+        ],
+        [
+          4,
+          4
+        ]
+      ]
+    },
+    {
+      "name": "kFC",
+      "left": {
+        "nodes": [
+          {
+            "id": "b",
+            "label": "bimotor"
+          },
+          {
+            "id": "c1",
+            "label": "chain"
+          },
+          {
+            "id": "c2",
+            "label": "chain"
+          }
+        ],
+        "edges": [
+          {
+            "id": 1,
+            "source": "b",
+            "target": "c1"
+          },
+          {
+            "id": 2,
+            "source": "b",
+            "target": "c2"
+          },
+          {
+            "id": 4,
+            "source": "c1",
+            "target": "c2"
+          }
+        ]
+      },
+      "right": {
+        "nodes": [
+          {
+            "id": "b",
+            "label": "bimotor"
+          },
+          {
+            "id": "c1",
+            "label": "chain"
+          },
+          {
+            "id": "c2",
+            "label": "chain"
+          }
+        ],
+        "edges": [
+          {
+            "id": 2,
+            "source": "b",
+            "target": "c2"
+          },
+          {
+            "id": 3,
+            "source": "b",
+            "target": "c2"
+          },
+          {
+            "id": 4,
+            "source": "c1",
+            "target": "c2"
+          }
+        ]
+      },
+      "preserved_nodes": [
+        [
+          "b",
+          "b"
+        ],
+        [
+          "c1",
+          "c1"
+        ],
+        [
+          "c2",
+          "c2"
+        ]
+      ],
+      "preserved_edges": [
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ]
+      ]
+    },
+    {
+      "name": "kBC",
+      "left": {
+        "nodes": [
+          {
+            "id": "b",
+            "label": "bimotor"
+          },
+          {
+            "id": "c1",
+            "label": "chain"
+          },
+          {
+            "id": "c2",
+            "label": "chain"
+          }
+        ],
+        "edges": [
+          {
+            "id": 1,
+            "source": "b",
+            "target": "c1"
+          },
+          {
+            "id": 2,
+            "source": "b",
+            "target": "c2"
+          },
+          {
+            "id": 4,
+            "source": "c1",
+            "target": "c2"
+          }
+        ]
+      },
+      "right": {
+        "nodes": [
+          {
+            "id": "b",
+            "label": "bimotor"
+          },
+          {
+            "id": "c1",
+            "label": "chain"
+          },
+          {
+            "id": "c2",
+            "label": "chain"
+          }
+        ],
+        "edges": [
+          {
+            "id": 0,
+            "source": "b",
+            "target": "c1"
+          },
+          {
+            "id": 1,
+            "source": "b",
+            "target": "c1"
+          },
+          {
+            "id": 4,
+            "source": "c1",
+            "target": "c2"
+          }
+        ]
+      },
+      "preserved_nodes": [
+        [
+          "b",
+          "b"
+        ],
+        [
+          "c1",
+          "c1"
+        ],
+        [
+          "c2",
+          "c2"
+        ]
+      ],
+      "preserved_edges": [
+        [
+          1,
+          1
+        ],
+        [
+          4,
+          4
+        ]
+      ]
+    },
+    {
+      "name": "kBE",
+      "left": {
+        "nodes": [
+          {
+            "id": "b",
+            "label": "bimotor"
+          },
+          {
+            "id": "c1",
+            "label": "chain"
+          },
+          {
+            "id": "c2",
+            "label": "chain"
+          }
+        ],
+        "edges": [
+          {
+            "id": 2,
+            "source": "b",
+            "target": "c2"
+          },
+          {
+            "id": 3,
+            "source": "b",
+            "target": "c2"
+          },
+          {
+            "id": 4,
+            "source": "c1",
+            "target": "c2"
+          }
+        ]
+      },
+      "right": {
+        "nodes": [
+          {
+            "id": "b",
+            "label": "bimotor"
+          },
+          {
+            "id": "c1",
+            "label": "chain"
+          },
+          {
+            "id": "c2",
+            "label": "chain"
+          }
+        ],
+        "edges": [
+          {
+            "id": 1,
+            "source": "b",
+            "target": "c1"
+          },
+          {
+            "id": 2,
+            "source": "b",
+            "target": "c2"
+          },
+          {
+            "id": 4,
+            "source": "c1",
+            "target": "c2"
+          }
+        ]
+      },
+      "preserved_nodes": [
+        [
+          "b",
+          "b"
+        ],
+        [
+          "c1",
+          "c1"
+        ],
+        [
+          "c2",
+          "c2"
+        ]
+      ],
+      "preserved_edges": [
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ]
+      ]
+    }
+  ],
+  "query": {
+    "nodes": [
+      {
+        "id": "b",
+        "label": "bimotor"
+      },
+      {
+        "id": "c1",
+        "label": "chain"
+      },
+      {
+        "id": "c2",
+        "label": "chain"
+      }
+    ],
+    "edges": [
+      {
+        "id": 1,
+        "source": "b",
+        "target": "c1"
+      },
+      {
+        "id": 2,
+        "source": "b",
+        "target": "c2"
+      },
+      {
+        "id": 4,
+        "source": "c1",
+        "target": "c2"
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "coefficient": "-2",
+    "file": "P12-0.gml"
+  },
+  {
+    "coefficient": "-2",
+    "file": "P12-1.gml"
+  },
+  {
+    "coefficient": "4",
+    "file": "P12-2.gml"
+  },
+  {
+    "coefficient": "1",
+    "file": "P12-3.gml"
+  },
+  {
+    "coefficient": "-3",
+    "file": "P12-4.gml"
+  },
+  {
+    "coefficient": "-3",
+    "file": "P12-5.gml"
+  },
+  {
+    "coefficient": "1",
+    "file": "P12-6.gml"
+  },
+  {
+    "coefficient": "-1",
+    "file": "P12-7.gml"
+  },
+  {
+    "coefficient": "-1",
+    "file": "P12-8.gml"
+  },
+  {
+    "coefficient": "-2",
+    "file": "P12-9.gml"
+  },
+  {
+    "coefficient": "-2",
+    "file": "P12-10.gml"
+  }
+]
